@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="./assets/logo.png" alt="ERC-8004 Logo" width="200"/>
+  <img src="./assets/logo.png" alt="ERC-8004 Logo" width="300"/>
+  
+  # Awesome ERC-8004
 </div>
-
-# Awesome ERC-8004
 
 > A curated list of awesome resources for ERC-8004: Trustless Agents
 
