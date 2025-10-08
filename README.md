@@ -60,13 +60,26 @@ ERC-8004 introduces three lightweight, on-chain registries:
 
 ### Active Builder Projects
 
-_Projects actively building with ERC-8004, as showcased in community calls_
+_Projects actively building with ERC-8004_
 
 - [Praxis Protocol](https://twitter.com/Praxis_Protocol) - Showcased ERC-8004 implementation at Trustless Agents Call #1
+  - [Praxis Python SDK](https://github.com/prxs-ai/praxis-py-sdk)
+  - [Praxis Go SDK](https://github.com/prxs-ai/praxis-go-sdk)
+- [Ensemble Framework](https://x.com/EnsembleCodes) - Building a trustless agent collaboration layer
+  - [Ensemble Docs](https://docs.ensemble.codes)
+- [ISEK](https://x.com/ISEK_Official) - Building autonomous collaborative agents 
+  - [ISEK Source](https://github.com/isekOS/ISEK)
 - [Ch40s Chain](https://twitter.com/Ch40sChain) - Demonstrated ERC-8004 integration at community call
+  - [Reference Implementation for ERC-8004](https://github.com/ChaosChain/trustless-agents-erc-ri)
+  - [Chaos Chain SDK for building autonomous agents](https://docs.chaoscha.in/sdk/installation)
 - [Phala Network](https://twitter.com/PhalaNetwork) - Presented trustless agent implementation using ERC-8004
+  - [Deploy ERC-8004 Agent in a TEE](https://github.com/Dstack-TEE/dstack)
+  - [TEE based ERC-8004 implementation](https://github.com/HashWarlock/erc-8004-ex-phala/)
 - [Cotten IO (Scypted)](https://twitter.com/CottenIO) - Showcased ERC-8004 project at community call
-- [Sparsity](https://twitter.com/sparsity_xyz) - Active contributor presenting ERC-8004 work
+- [Sparsity](https://twitter.com/sparsity_xyz) - Active contributor presenting ERC-8004 work, presented verifiable agents during community call
+  - [ERC-8004 AI agent demo](https://github.com/sparsity-xyz/sparsity-demo)
+- [Vistara Labs](https://x.com/vistaralabs) - Active development on ERC-8004 infrastructure for the agent economy
+  - [Vistara Agent Arena SDK](https://github.com/vistara-apps/agent-arena-v1)
 
 ## Research & Papers
 
