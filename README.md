@@ -166,12 +166,25 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 
 - **[Trustless Agents Call #1 - September 23, 2025](https://youtu.be/kooO3DGzYek)** - First community call with demos and roadmap updates
 - **[Community Call #1 Slides](https://docs.google.com/presentation/d/1DUAl2MxHw0J5jSr7Ap5eCCzNLMSbCQ3LcCZyFMNm3Y4/edit?usp=sharing)** - Presentation slides from September 23, 2025 call
+- **[Trustless Agents Call #2](https://www.youtube.com/watch?v=J3PkdQEZWK0)** - Second community call recording
+
+### 🎪 Events & Conferences
+
+- **[Trustless Agents Day - Devconnect](https://devconnect.org/calendar?event=trustlessagentsday)** - Full-day summit at Devconnect exploring Ethereum as coordination layer for AI economy (November 21, 2025)
 
 ---
 
 ## 🌟 Active Builder Projects
 
 ### 🚀 Infrastructure & SDKs
+
+**[Automata Network](https://www.ata.network/)**
+
+- [Automata DCAP Attestation](https://github.com/automata-network/automata-dcap-attestation) - Solidity library for onchain Intel SGX and TDX attestation verification, supporting RISC Zero and Succinct
+- [Intel TDX Attestation SDK](https://github.com/automata-network/tdx-attestation-sdk) - SDK for generating Intel TDX quotes across cloud providers with ZK proof generation
+- [AMD SEV-SNP Attestation SDK](https://github.com/automata-network/amd-sev-snp-attestation-sdk) - SDK for AMD SEV-SNP attestation reports with ZK proof support
+- [AWS Nitro Enclave Attestation](https://github.com/automata-network/aws-nitro-enclave-attestation) - CLI for AWS Nitro Enclave attestation
+- [Automata SGX SDK](https://github.com/automata-network/automata-sgx-sdk) - Rust-native SDK for Intel SGX secure enclave development
 
 **[Praxis Protocol](https://twitter.com/Praxis_Protocol)**
 
@@ -215,6 +228,16 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 
 **[Cotten IO (Scypted)](https://twitter.com/CottenIO)**
 
+**Community Projects**
+
+- **[TrustlessAgents](https://github.com/CasualHackathon/TrustlessAgents)** - Community hackathon project implementing ERC-8004
+- **[8004 Implementation](https://github.com/zpaynow/8004)** - Community-driven ERC-8004 implementation
+
+### 🎓 Educational Resources
+
+- **[Trustless Agents Course](https://intensivecolearn.ing/en/programs/trustless-agents)** - Comprehensive course on trustless agents and ERC-8004
+- **[Sparsity AI Workshop](https://www.youtube.com/watch?v=jqOZj399BLE)** - Build an ERC-8004 Trustless Agent with TEE
+
 ## 💬 Discussions & Forums
 
 ### 🏛️ Official Channels
@@ -241,7 +264,33 @@ _This section is currently being populated. Contribute research papers and acade
 1. **Read the [EIP-8004 Specification](https://eips.ethereum.org/EIPS/eip-8004)**
 2. **Join the [Builder Program](http://bit.ly/8004builderprogram)**
 3. **Check out [Reference Implementations](#-active-builder-projects)**
-4. **Join the [Developer Community](http://t.me/ERC8004)**
+4. **Review [Contract Deployments](#-contract-deployments)**
+5. **Join the [Developer Community](http://t.me/ERC8004)**
+
+### 🏗️ Contract Deployments
+
+**Official Implementation:** [erc-8004/erc-8004-contracts](https://github.com/erc-8004/erc-8004-contracts)
+
+The reference implementation contracts are deployed on multiple testnets including Ethereum Sepolia, Base Sepolia, Linea Sepolia, and Hedera Testnet. Complete deployment addresses and supported networks are available in the contracts repository.
+
+**Mainnet Status:**
+
+- **Planned Release:** End of October 2025
+- **Target Networks:** Major L2s and EVM-compatible L1s
+- **Governance:** Multi-signature governance structure
+- **Governance Contact:** [davide.crapis@ethereum.org](mailto:davide.crapis@ethereum.org)
+
+### 🛠️ SDKs and Libraries
+
+#### JavaScript/TypeScript
+
+- **[ChaosChain SDK](https://github.com/ChaosChain/chaoschain/tree/main/packages/sdk)** - Full-featured JavaScript/TypeScript SDK
+- **[erc-8004-js](https://github.com/tetratorus/erc-8004-js)** - Lightweight JavaScript library
+
+#### Python
+
+- **[erc-8004-py](https://github.com/tetratorus/erc-8004-py)** - Python implementation
+- **[chaoschain-sdk](https://pypi.org/project/chaoschain-sdk/)** - Available on PyPI
 
 ---
 
