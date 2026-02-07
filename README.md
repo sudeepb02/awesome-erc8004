@@ -213,6 +213,12 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 - [ISEK Decentralized agent network](https://github.com/isekOS/ISEK)
 - [Awesome A2A agents](https://github.com/isekOS/awesome-a2a-agents)
 
+### 💰 Payment Infrastructure
+
+**[Primev](https://primev.xyz)**
+
+- [Primev FastRPC x402 Facilitator](https://github.com/primev/mainnet-x402-facilitator) - Fee-free x402 payment facilitator on Ethereum mainnet with sub-200ms settlement via mev-commit preconfirmations. Registered as [Agent #23175](https://etherscan.io/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/23175) on the Identity Registry.
+
 ### 🔐 Security & Verification
 
 **[Phala Network](https://twitter.com/PhalaNetwork)**
