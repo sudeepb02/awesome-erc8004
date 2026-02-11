@@ -224,6 +224,14 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 
 - [ERC-8004 AI agent demo](https://github.com/sparsity-xyz/sparsity-demo)
 
+### 🐦 Agent Services (x402 + ERC-8004)
+
+**[xbird](https://github.com/checkra1neth/xbird-skill)**
+
+- [xbird MCP Server](https://www.npmjs.com/package/xbird-mcp) - Twitter/X API with 30 tools (read, search, post, engage, media upload) using x402 micropayments on Base
+- [Agent Card](https://xbirdapi.up.railway.app/.well-known/agent.json) - ERC-8004 compliant agent card with x402 endpoints
+- Registered on ERC-8004 Identity Registry on Base (`0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`)
+
 ### 🎮 Applications & Demos
 
 **[Cotten IO (Scypted)](https://twitter.com/CottenIO)**
