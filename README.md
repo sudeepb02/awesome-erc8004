@@ -240,6 +240,9 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 
 ### 🎮 Applications & Demos
 
+**[AgentStore](https://agentstore.tools)** - Open-source marketplace for AI agents using ERC-8004 identity and x402 payments for trustless agent discovery and USDC settlement.
+- [AgentStore GitHub](https://github.com/techgangboss/agentstore) - MIT-licensed monorepo with CLI, API, and web frontend
+
 **[Cotten IO (Scypted)](https://twitter.com/CottenIO)**
 
 **Community Projects**
