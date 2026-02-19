@@ -202,6 +202,12 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 - [Vistara Agent Arena SDK](https://github.com/vistara-apps/agent-arena-v1)
 - [ERC-8004 Example](https://github.com/vistara-apps/erc-8004-example)
 
+**[M2M TRC-8004 Registry](https://m2mregistry.io)**
+
+- [Smart Contracts (Solidity)](https://github.com/M2M-TRC8004-Registry/smart-contracts) - ERC-8004 implementation on TRON with 4 registries: Identity, Reputation, Validation, and Incident. Live on mainnet and Shasta testnet.
+- [Python SDK](https://github.com/M2M-TRC8004-Registry/trc8004-m2m-sdk) - `pip install trc8004-m2m` — Async Python SDK with TronClient, RegistryAPI, and IPFS integration
+- [Backend API](https://github.com/M2M-TRC8004-Registry/backend-api) - FastAPI service with event indexing, full-text search, and PostgreSQL. 332 unit tests, 97.9% coverage.
+
 ### 🤝 Collaboration Frameworks
 
 **[Ensemble Framework](https://x.com/EnsembleCodes)**
@@ -297,6 +303,10 @@ The reference implementation contracts are deployed on multiple testnets includi
 - **Governance:** Multi-signature governance structure
 - **Governance Contact:** [davide.crapis@ethereum.org](mailto:davide.crapis@ethereum.org)
 
+**TRON Implementation:** [M2M-TRC8004-Registry](https://github.com/M2M-TRC8004-Registry)
+
+The TRC-8004 implementation on TRON is deployed on both mainnet and Shasta testnet with four registries (Identity, Reputation, Validation, Incident). See [m2mregistry.io](https://m2mregistry.io) for details.
+
 ### 🛠️ SDKs and Libraries
 
 #### JavaScript/TypeScript
@@ -308,6 +318,7 @@ The reference implementation contracts are deployed on multiple testnets includi
 
 - **[erc-8004-py](https://github.com/tetratorus/erc-8004-py)** - Python implementation
 - **[chaoschain-sdk](https://pypi.org/project/chaoschain-sdk/)** - Available on PyPI
+- **[trc8004-m2m](https://github.com/M2M-TRC8004-Registry/trc8004-m2m-sdk)** - TRC-8004 Python SDK for TRON (async, Pydantic models)
 
 ---
 
