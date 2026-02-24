@@ -308,6 +308,7 @@ The reference implementation contracts are deployed on multiple testnets includi
 
 - **[erc-8004-py](https://github.com/tetratorus/erc-8004-py)** - Python implementation
 - **[chaoschain-sdk](https://pypi.org/project/chaoschain-sdk/)** - Available on PyPI
+- **[agentwallet-sdk](https://www.npmjs.com/package/agentwallet-sdk)** - Non-custodial TypeScript SDK for AI agents: ERC-8004 identity, x402 payments, CCTP cross-chain transfers, Uniswap V3 swaps. First ERC-8004 implementation on npm with 158 tests.
 
 ---
 
