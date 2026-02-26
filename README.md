@@ -230,6 +230,10 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 
 - [ERC-8004 AI agent demo](https://github.com/sparsity-xyz/sparsity-demo)
 
+**[DJD Agent Score](https://agentscore.ai)**
+
+- [DJD Agent Score API](https://agentscore.ai/docs) - Behavioral reputation scoring engine for autonomous AI agents on Base. Analyzes on-chain transaction patterns (wash trading, sybil clusters, volume consistency) to produce composite trust scores (0–100) with dimension breakdowns. Paid via x402 micropayments with Bazaar discovery for agent-native access.
+
 ### 🪪 Identity & Trust
 
 **[Chitin](https://chitin.id)**
