@@ -238,6 +238,13 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 - [Chitin MCP Server](https://www.npmjs.com/package/chitin-mcp-server) - MCP server for AI assistants to verify agent identities, resolve DIDs, and manage certificates (`npx chitin-mcp-server`)
 - [Chitin Contracts](https://github.com/Tiida-Tech/chitin-contracts) - Open source smart contracts (MIT). Solidity 0.8.28 + Foundry, 146 tests, verified on Basescan.
 
+**[DJD Agent Score](https://djdagentscore.dev)**
+
+- [DJD Agent Score](https://djdagentscore.dev) - Reputation API for the agent economy on Base L2. Returns a 0-100 behavioral trust score for any wallet, combining 7 scoring dimensions (transaction history, partner diversity, volume patterns, account age, balance stability, activity consistency, USDC usage) with sybil detection and gaming velocity checks. Scores feed directly into the ERC-8004 Reputation Registry as off-chain attestations. Monetized via x402 micropayments on Base USDC.
+- [djd-agent-score-client](https://www.npmjs.com/package/djd-agent-score-client) - TypeScript SDK for querying wallet reputation scores (`npm i djd-agent-score-client`)
+- [x402-agent-score](https://www.npmjs.com/package/x402-agent-score) - Hono middleware to gate outbound agent payments by counterparty reputation score
+- [DJD Agent Score GitHub](https://github.com/jacobsd32-cpu/djdagentscore) - Open source scoring engine. TypeScript, Hono 4, SQLite, 298 tests.
+
 ### 🎮 Applications & Demos
 
 **[AgentStore](https://agentstore.tools)** - Open-source marketplace for AI agents using ERC-8004 identity and x402 payments for trustless agent discovery and USDC settlement.
