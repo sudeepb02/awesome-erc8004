@@ -238,6 +238,11 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 - [Chitin MCP Server](https://www.npmjs.com/package/chitin-mcp-server) - MCP server for AI assistants to verify agent identities, resolve DIDs, and manage certificates (`npx chitin-mcp-server`)
 - [Chitin Contracts](https://github.com/Tiida-Tech/chitin-contracts) - Open source smart contracts (MIT). Solidity 0.8.28 + Foundry, 146 tests, verified on Basescan.
 
+**[DJD Agent Score](https://djd-agent-score.fly.dev)**
+
+- [DJD Agent Score](https://djd-agent-score.fly.dev) - Behavioral reputation scoring API for AI agent wallets on Base. Computes 0–100 trust scores across 5 dimensions (identity, behavior, reliability, viability, capability) using on-chain transaction patterns, sybil detection, and gaming velocity checks. Scores can feed ERC-8004 `giveFeedback()` as off-chain reputation signals. x402-native monetization, MCP server distribution, and free tier available.
+- [DJD Agent Score GitHub](https://github.com/jacobsd32-cpu/djd-agent-score) - TypeScript API with SDK client package (`djd-agent-score-client`)
+
 ### 🎮 Applications & Demos
 
 **[AgentStore](https://agentstore.tools)** - Open-source marketplace for AI agents using ERC-8004 identity and x402 payments for trustless agent discovery and USDC settlement.
