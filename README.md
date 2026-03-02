@@ -270,9 +270,35 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 
 ## 🔬 Research & Papers
 
-> 📚 Academic papers and research related to trustless agents and ERC-8004
+> 📚 Academic papers and research related to trustless agents, AI agent identity, and ERC-8004
 
-_This section is currently being populated. Contribute research papers and academic work!_
+### 📖 Agent Identity & Trust
+
+- **[AI Agents with Decentralized Identifiers and Verifiable Credentials](https://arxiv.org/abs/2511.02841)** (Nov 2025) - Proposes equipping each AI agent with a self-controlled DID and Verifiable Credentials for trust establishment in agent-to-agent dialogue. Directly addresses the identity bootstrapping problem that ERC-8004's Identity Registry tackles on-chain.
+
+- **[A Novel Zero-Trust Identity Framework for Agentic AI](https://arxiv.org/abs/2505.19301)** (May 2025) - Argues that traditional IAM is fundamentally inadequate for AI agents and proposes rich, verifiable Agent Identities using DIDs and VCs that encode capabilities, provenance, behavioral scope, and security posture.
+
+- **[Binding Agent ID: Unleashing the Power of AI Agents with Identity](https://arxiv.org/abs/2512.17538)** (Dec 2025) - Explores binding unique identifiers to agentic AI instances for runtime attribution and accountability. Relevant to ERC-8004's on-chain identity binding model.
+
+- **[Trusted AI Agents in the Cloud](https://arxiv.org/abs/2512.05951)** (Dec 2025) - Establishes that cross-principal trust requires compositional, verifiable identity reflecting the code, model, and dependencies involved in each invocation. Complements ERC-8004's validation registry approach.
+
+### 🔒 Security & Governance
+
+- **[A Survey of Agentic AI and Cybersecurity](https://arxiv.org/abs/2601.05293)** (Jan 2026) - Comprehensive survey covering BlockA2A (securing A2A communication using decentralized identity and blockchain-anchored audit logs), agent hijacking, and supply chain attacks. Essential context for why ERC-8004's trust layer matters.
+
+- **[Sovereign Agents](https://arxiv.org/abs/2602.14951)** (Feb 2026) - Introduces "agentic sovereignty" — the capacity of an agent to persist, act, and control resources with non-overrideability inherited from infrastructure. Analyzes TEEs, DePIN, and agent key continuity protocols. Raises the accountability question for agents that become non-terminable.
+
+- **[Practices for Governing Agentic AI Systems](https://cdn.openai.com/papers/practices-for-governing-agentic-ai-systems.pdf)** (OpenAI) - Framework for governing autonomous AI systems, addressing delegation chains, oversight mechanisms, and accountability structures.
+
+### 🏛️ Policy & Frameworks
+
+- **[Model AI Governance Framework for Agentic AI](https://www.imda.gov.sg/-/media/imda/files/about/emerging-tech-and-research/artificial-intelligence/mgf-for-agentic-ai.pdf)** (Singapore IMDA, Jan 2026) - World's first government governance framework specifically for autonomous AI agents. Four dimensions: bounding risks, human accountability, technical controls, end-user responsibility.
+
+- **[NIST AI Agent Standards Initiative](https://www.nist.gov/caisi/ai-agent-standards-initiative)** (Feb 2026) - U.S. federal initiative for interoperable and secure AI agent standards, including [RFI on AI Agent Security](https://www.federalregister.gov/documents/2026/01/08/2026-00206/request-for-information-regarding-security-considerations-for-artificial-intelligence-agents) and [NCCoE Concept Paper on Agent Identity and Authorization](https://www.nccoe.nist.gov/projects/software-and-ai-agent-identity-and-authorization).
+
+### 📊 Industry Reports
+
+- **[Securing Autonomous AI Agents](https://www.strata.io/blog/agentic-identity/the-ai-agent-identity-crisis-new-research-reveals-a-governance-gap/)** (Strata Identity & Cloud Security Alliance, Feb 2026) - Survey finding only 23% of organizations have formal agent identity management strategies, 45.6% still use shared API keys for agent authentication, and only 21.9% treat agents as independent identity-bearing entities.
 
 ## 🛠️ Development Resources
 
