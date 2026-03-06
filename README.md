@@ -232,6 +232,12 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 
 ### 🪪 Identity & Trust
 
+**[Helixa](https://helixa.xyz)**
+
+- [Helixa](https://helixa.xyz) - Onchain identity and reputation protocol for AI agents on Base. 1,000+ agents minted. Features an 11-factor Cred Score system (0-100) with five tiers (JUNK → PREFERRED), SIWA (Sign-In With Agent) authentication, $CRED token staking, and agent discovery via `.well-known/ai-plugin.json`. Contract: [`0x2e3B541C59D38b84E3Bc54e977200230A204Fe60`](https://basescan.org/address/0x2e3B541C59D38b84E3Bc54e977200230A204Fe60).
+- [Helixa API](https://api.helixa.xyz) - REST API for agent identity, Cred Scores, search, and staking. OpenAPI spec at `/.well-known/openapi.json`.
+- [Helixa Agent Skill](https://github.com/Bendr-20/helixa) - Open-source agent skill with 13 shell scripts and reference docs for AI agents to interact with the protocol (mint, verify, query scores, stake).
+
 **[Chitin](https://chitin.id)**
 
 - [Chitin](https://chitin.id) - Soul identity layer for AI agents on Base L2. Uses ERC-8004 `register()` for agent passports + Soulbound Tokens (EIP-5192) as permanent soul certificates. Includes W3C DID resolution, on-chain certificates, multi-method governance voting, and A2A readiness verification. Live on Base Mainnet.
