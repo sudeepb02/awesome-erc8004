@@ -242,6 +242,9 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 
 **[AgentStore](https://agentstore.tools)** - Open-source marketplace for AI agents using ERC-8004 identity and x402 payments for trustless agent discovery and USDC settlement.
 - [AgentStore GitHub](https://github.com/techgangboss/agentstore) - MIT-licensed monorepo with CLI, API, and web frontend
+**[Social Intel API](https://api.socialintel.dev)** - Instagram & social media data API for AI agents with x402 micropayments. Search leads by follower count, engagement, and location; pay $0.10/request in USDC on Base — no API keys, no subscriptions. Data flows to ERC-8004 agents as structured intelligence for outreach and targeting.
+- [Social Intel MCP](https://github.com/socialinteldev/social-intel-mcp) - Open-source MCP server for AI agent integration (Claude Desktop, Smithery)
+
 
 **[Cotten IO (Scypted)](https://twitter.com/CottenIO)**
 
@@ -698,3 +701,4 @@ To the extent possible under law, the contributors have waived all copyright and
 <p><em>Made with ❤️ by the ERC-8004 community</em></p>
 
 </div>
+
