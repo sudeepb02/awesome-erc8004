@@ -178,6 +178,10 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 
 ### 🚀 Infrastructure & SDKs
 
+**[UFX Agentic Commerce](https://github.com/ufosearchspace-create/ERC8183)**
+
+- [ERC-8183 Hook & Reputation Middleware](https://github.com/ufosearchspace-create/ERC8183) - First `IACPHook` implementations and ERC-8004 reputation bridge for ERC-8183 (Agentic Commerce Protocol). Includes ReputationHook (auto-writes job outcomes to ReputationRegistry), ReputationGateHook (reputation-based funding gate), SLAHook (deadline enforcement), AI evaluators, and Python SDK. 208 Solidity tests (incl. 9 fuzz). Live on Base Mainnet with [Iamalive Agent #1734](https://basescan.org/address/0x3F41E8699D774Eb738967A6506B3A9E919aA1c8B). MIT licensed.
+
 **[Automata Network](https://www.ata.network/)**
 
 - [Automata DCAP Attestation](https://github.com/automata-network/automata-dcap-attestation) - Solidity library for onchain Intel SGX and TDX attestation verification, supporting RISC Zero and Succinct
