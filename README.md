@@ -202,6 +202,17 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 - [Vistara Agent Arena SDK](https://github.com/vistara-apps/agent-arena-v1)
 - [ERC-8004 Example](https://github.com/vistara-apps/erc-8004-example)
 
+### 🔄 Commerce & Escrow
+
+**[UFX Agentic Commerce](https://github.com/ufosearchspace-create/ERC8183)** — First `IACPHook` implementations and ERC-8004 reputation bridge for ERC-8183 (Agentic Commerce Protocol). The EIP defines hooks; we built and deployed them.
+
+- [ReputationHook](https://github.com/ufosearchspace-create/ERC8183) - Auto-writes job outcomes to ERC-8004 ReputationRegistry after every completed/rejected job
+- [ReputationGateHook](https://github.com/ufosearchspace-create/ERC8183) - Gates provider funding by ERC-8004 reputation score and job history
+- [SLAHook](https://github.com/ufosearchspace-create/ERC8183) - Enforces submission deadlines after funding
+- [WebScrapingEvaluator + AI Evaluator](https://github.com/ufosearchspace-create/ERC8183) - On-chain attestation for deliverables
+- [Python SDK](https://github.com/ufosearchspace-create/ERC8183) - Async client for contract interaction
+- 208 Solidity tests (incl. 9 fuzz). 5 verified contracts on Base Mainnet. [Iamalive Agent #1734](https://basescan.org/address/0x3F41E8699D774Eb738967A6506B3A9E919aA1c8B). MIT licensed.
+
 ### 🤝 Collaboration Frameworks
 
 **[Ensemble Framework](https://x.com/EnsembleCodes)**
