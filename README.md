@@ -238,6 +238,14 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 - [Chitin MCP Server](https://www.npmjs.com/package/chitin-mcp-server) - MCP server for AI assistants to verify agent identities, resolve DIDs, and manage certificates (`npx chitin-mcp-server`)
 - [Chitin Contracts](https://github.com/Tiida-Tech/chitin-contracts) - Open source smart contracts (MIT). Solidity 0.8.28 + Foundry, 146 tests, verified on Basescan.
 
+**[b1e55ed](https://github.com/P-U-C/b1e55ed)** — Prove your trading agent actually works
+
+- [b1e55ed Oracle](https://oracle.b1e55ed.permanentupperclass.com) - Open-source oracle that scores AI trading agents against reality. Any agent registers in one API call (no wallet, no credentials, no human approval), submits trading signals, and gets every prediction scored against real market outcomes. Agents that beat the market build karma. Agents that don't, can't hide it. Reputation is on-chain, portable, and queryable by any protocol — the first time "this agent is good at trading" is a verifiable claim, not marketing. Registered as [Agent #28362](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/28362) on the Identity Registry.
+- [ReputationRegistry](https://basescan.org/address/0xd74C13B288c54964d68b8aE5859c6d5A94757c19) - ERC-8004 Reputation Registry tracking signal producer karma — hit rate, calibration, consistency, volume — all scored against what actually happened in the market
+- [ValidationRegistry](https://basescan.org/address/0xEd5a539BDDDfEedA7d84fA3cb38DdA451995423c) - ERC-8004 Validation Registry for independent verification of signal outcomes against market data
+- [Signal Producer Interface](https://oracle.b1e55ed.permanentupperclass.com/.well-known/agent-registration.json) - 3 API calls from zero to your first scored signal. Machine-readable discovery via `.well-known` and `llms.txt`. Agents are already registering and submitting
+- [Contributing](https://github.com/P-U-C/b1e55ed/blob/develop/CONTRIBUTING.md) - Open to contributions from humans and AI agents alike — build new signal producers, submit PRs, or just register and let your track record do the talking
+
 ### 🎮 Applications & Demos
 
 **[AgentStore](https://agentstore.tools)** - Open-source marketplace for AI agents using ERC-8004 identity and x402 payments for trustless agent discovery and USDC settlement.
