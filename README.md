@@ -232,6 +232,10 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 
 ### 🪪 Identity & Trust
 
+**[8k4 Protocol](https://8k4protocol.com)**
+
+- [8k4 API](https://api.8k4protocol.com) - Reputation infrastructure for ERC-8004 agents: trust scoring (IGGY-Score), metadata hosting, and cross-chain lookup. Public stats currently show 106,996 indexed agents across Base (33,939), BSC (44,020), and Ethereum (29,037), with x402 pay-per-query support (USDC on Base).
+
 **[Chitin](https://chitin.id)**
 
 - [Chitin](https://chitin.id) - Soul identity layer for AI agents on Base L2. Uses ERC-8004 `register()` for agent passports + Soulbound Tokens (EIP-5192) as permanent soul certificates. Includes W3C DID resolution, on-chain certificates, multi-method governance voting, and A2A readiness verification. Live on Base Mainnet.
