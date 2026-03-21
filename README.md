@@ -238,6 +238,11 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 - [Chitin MCP Server](https://www.npmjs.com/package/chitin-mcp-server) - MCP server for AI assistants to verify agent identities, resolve DIDs, and manage certificates (`npx chitin-mcp-server`)
 - [Chitin Contracts](https://github.com/Tiida-Tech/chitin-contracts) - Open source smart contracts (MIT). Solidity 0.8.28 + Foundry, 146 tests, verified on Basescan.
 
+**[AgentStamp](https://agentstamp.org)**
+
+- [AgentStamp](https://agentstamp.org) - Trust intelligence platform for AI agents with ERC-8004 bridge — identity stamps, reputation scoring (0-100), forensic audit trails, and x402 micropayments. Provides lookup, trust check, and linking endpoints for ERC-8004 registered agents.
+- [AgentStamp GitHub](https://github.com/vinaybhosle/agentstamp) - Open-source Node.js server and SDK with MCP tools, HMAC signature verification, and admin audit endpoints
+
 ### 🎮 Applications & Demos
 
 **[AgentStore](https://agentstore.tools)** - Open-source marketplace for AI agents using ERC-8004 identity and x402 payments for trustless agent discovery and USDC settlement.
