@@ -48,7 +48,7 @@ ERC-8004 is an Ethereum standard that extends the Agent-to-Agent (A2A) Protocol 
 
 ### Trust Models
 
-1. **Reputation-based** - Client feedback with scores, tags, and metadata
+1. **Reputation-based** - Client feedback using signed fixed-point values, tags, and metadata
 2. **Crypto-economic** - Stake-secured validation with economic incentives
 3. **Crypto-verification** - TEE attestations and zkML proofs for cryptographic trust
 
@@ -62,10 +62,9 @@ ERC-8004 is an Ethereum standard that extends the Agent-to-Agent (A2A) Protocol 
 
 ### Current Status
 
-- **Status**: Peer Review
-- **Version**: v1 Complete
-- **Registries**: 3 operational (Identity, Reputation, Validation)
-- **Community**: Active builder ecosystem with implementations
+- **Status**: Draft (EIP process), contracts are audited and final
+- **Registries**: Identity and Reputation final contracts deployed; Validation Registry under active revision
+- **Specification**: [ERC8004SPEC.md](https://github.com/erc-8004/erc-8004-contracts/blob/master/ERC8004SPEC.md) in the contracts repository
 
 ### Architecture Overview
 
@@ -115,7 +114,11 @@ ERC-8004 is an Ethereum standard that extends the Agent-to-Agent (A2A) Protocol 
   "name": "myAgentName",
   "description": "A natural language description of the Agent...",
   "image": "https://example.com/agentimage.png",
-  "endpoints": [
+  "services": [
+    {
+      "name": "web",
+      "endpoint": "https://web.agentxyz.com/"
+    },
     {
       "name": "A2A",
       "endpoint": "https://agent.example/.well-known/agent-card.json",
@@ -125,11 +128,42 @@ ERC-8004 is an Ethereum standard that extends the Agent-to-Agent (A2A) Protocol 
       "name": "MCP",
       "endpoint": "https://mcp.agent.eth/",
       "version": "2025-06-18"
+    },
+    {
+      "name": "OASF",
+      "endpoint": "ipfs://{cid}",
+      "version": "0.8",
+      "skills": [],
+      "domains": []
+    },
+    {
+      "name": "ENS",
+      "endpoint": "agent.eth",
+      "version": "v1"
+    },
+    {
+      "name": "DID",
+      "endpoint": "did:method:foobar",
+      "version": "v1"
+    },
+    {
+      "name": "email",
+      "endpoint": "mail@myagent.com"
+    }
+  ],
+  "x402Support": false,
+  "active": true,
+  "registrations": [
+    {
+      "agentId": 22,
+      "agentRegistry": "{namespace}:{chainId}:{identityRegistry}"
     }
   ],
   "supportedTrust": ["reputation", "crypto-economic", "tee-attestation"]
 }
 ```
+
+The `type`, `name`, `description`, and `image` fields ensure compatibility with ERC-721 apps. The `services` list is fully customizable. The `supportedTrust` field is optional; if absent, the registration is used for discovery only.
 
 ## Community Calls & Content
 
@@ -284,58 +318,146 @@ The reference implementation contracts are deployed on multiple testnets includi
 
 ### Identity Registry (ERC-721 Compatible)
 
-```solidity
-// Register new agent
-function register(string tokenURI, MetadataEntry[] calldata metadata)
-    returns (uint256 agentId)
+Agents are identified globally by:
 
-// Manage metadata
-function setMetadata(uint256 agentId, string key, bytes value)
-function getMetadata(uint256 agentId, string key) returns (bytes)
+- `agentRegistry`: `{namespace}:{chainId}:{identityRegistry}` (e.g., `eip155:1:0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`)
+- `agentId`: the ERC-721 `tokenId` assigned incrementally by the registry
+
+```solidity
+// Register a new agent (three overloads)
+function register(string agentURI, MetadataEntry[] calldata metadata) external returns (uint256 agentId)
+function register(string agentURI) external returns (uint256 agentId)
+function register() external returns (uint256 agentId)
+
+// Update agent URI
+function setAgentURI(uint256 agentId, string calldata newURI) external
+
+// Optional on-chain metadata
+function getMetadata(uint256 agentId, string memory metadataKey) external view returns (bytes memory)
+function setMetadata(uint256 agentId, string memory metadataKey, bytes memory metadataValue) external
+
+// Agent wallet (reserved metadata key, requires EIP-712 or ERC-1271 proof)
+function setAgentWallet(uint256 agentId, address newWallet, uint256 deadline, bytes calldata signature) external
+function getAgentWallet(uint256 agentId) external view returns (address)
+function unsetAgentWallet(uint256 agentId) external
 ```
 
 ### Reputation Registry
 
+Feedback is stored as a signed fixed-point value (`int128` + `uint8` decimals), enabling a wide range of metrics (quality scores, uptime percentages, response times, revenues, etc.).
+
 ```solidity
-// Give feedback (requires agent signature)
+// Submit feedback for an agent (caller must not be owner or operator of agentId)
 function giveFeedback(
     uint256 agentId,
-    uint8 score,
-    bytes32 tag1,
-    bytes32 tag2,
-    string fileuri,
-    bytes32 filehash,
-    bytes feedbackAuth
+    int128 value,
+    uint8 valueDecimals,
+    string calldata tag1,
+    string calldata tag2,
+    string calldata endpoint,
+    string calldata feedbackURI,
+    bytes32 feedbackHash
+) external
+
+// Revoke previously given feedback
+function revokeFeedback(uint256 agentId, uint64 feedbackIndex) external
+
+// Append a response to received feedback (anyone may call)
+function appendResponse(
+    uint256 agentId,
+    address clientAddress,
+    uint64 feedbackIndex,
+    string calldata responseURI,
+    bytes32 responseHash
+) external
+
+// Read a specific feedback entry
+function readFeedback(
+    uint256 agentId,
+    address clientAddress,
+    uint64 feedbackIndex
+) external view returns (int128 value, uint8 valueDecimals, string memory tag1, string memory tag2, bool isRevoked)
+
+// Read all feedback for an agent
+function readAllFeedback(
+    uint256 agentId,
+    address[] calldata clientAddresses,
+    string calldata tag1,
+    string calldata tag2,
+    bool includeRevoked
+) external view returns (
+    address[] memory clients,
+    uint64[] memory feedbackIndexes,
+    int128[] memory values,
+    uint8[] memory valueDecimals,
+    string[] memory tag1s,
+    string[] memory tag2s,
+    bool[] memory revokedStatuses
 )
 
-// Query reputation
+// Count responses appended to a feedback entry
+function getResponseCount(
+    uint256 agentId,
+    address clientAddress,
+    uint64 feedbackIndex,
+    address[] calldata responders
+) external view returns (uint64 count)
+
+// Aggregated summary
 function getSummary(
     uint256 agentId,
-    address[] clientAddresses,
-    bytes32 tag1,
-    bytes32 tag2
-) returns (uint64 count, uint8 averageScore)
+    address[] calldata clientAddresses,
+    string calldata tag1,
+    string calldata tag2
+) external view returns (uint64 count, int128 summaryValue, uint8 summaryValueDecimals)
+
+// Enumerate clients and feedback indexes
+function getClients(uint256 agentId) external view returns (address[] memory)
+function getLastIndex(uint256 agentId, address clientAddress) external view returns (uint64)
 ```
 
 ### Validation Registry
 
 ```solidity
-// Request validation
+// Request validation (must be called by the owner or operator of agentId)
 function validationRequest(
     address validatorAddress,
     uint256 agentId,
-    string requestUri,
+    string calldata requestURI,
     bytes32 requestHash
-)
+) external
 
-// Provide validation response
+// Provide validation response (must be called by the validatorAddress from the request)
 function validationResponse(
     bytes32 requestHash,
     uint8 response,
-    string responseUri,
+    string calldata responseURI,
     bytes32 responseHash,
-    bytes32 tag
+    string calldata tag
+) external
+
+// Query a specific validation record
+function getValidationStatus(
+    bytes32 requestHash
+) external view returns (
+    address validatorAddress,
+    uint256 agentId,
+    uint8 response,
+    bytes32 responseHash,
+    string memory tag,
+    uint256 lastUpdate
 )
+
+// Aggregated validation statistics (agentId mandatory; validatorAddresses and tag are optional filters)
+function getSummary(
+    uint256 agentId,
+    address[] calldata validatorAddresses,
+    string calldata tag
+) external view returns (uint64 count, uint8 averageResponse)
+
+// List all validation request hashes for an agent or validator
+function getAgentValidations(uint256 agentId) external view returns (bytes32[] memory requestHashes)
+function getValidatorRequests(address validatorAddress) external view returns (bytes32[] memory requestHashes)
 ```
 
 ---
@@ -399,7 +521,7 @@ ERC-8004 supports three pluggable trust models:
 <details>
 <summary><strong>What is the current status of the ERC-8004 specification?</strong></summary>
 
-ERC-8004 is in **peer review status** with a complete specification available. The protocol includes three operational registries (Identity, Reputation, and Validation) and has strong community support with builders actively developing implementations.
+ERC-8004 is currently in **Draft** status in the EIP process. The final audited contracts for Identity and Reputation registries are deployed on Ethereum mainnet and 20+ networks. The Validation Registry is under active revision with the TEE community.
 
 </details>
 
@@ -410,7 +532,7 @@ The current specification includes:
 
 - Complete smart contract interfaces for all three registries
 - ERC-721 compatible Identity Registry with metadata support
-- Comprehensive feedback system with on-chain scoring and off-chain metadata
+- Comprehensive feedback system using signed fixed-point values (`int128` + `uint8` decimals) and off-chain metadata
 - Validation framework supporting crypto-economic and crypto-verification models
 - Full compatibility with A2A Protocol and MCP endpoints
 - Deployment-ready smart contract specifications
