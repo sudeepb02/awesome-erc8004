@@ -202,6 +202,12 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 - [Vistara Agent Arena SDK](https://github.com/vistara-apps/agent-arena-v1)
 - [ERC-8004 Example](https://github.com/vistara-apps/erc-8004-example)
 
+**[M2M TRC-8004 Registry](https://m2mregistry.io)**
+
+- [Smart Contracts (Solidity)](https://github.com/M2M-TRC8004-Registry/smart-contracts) - ERC-8004 implementation on TRON with 4 registries: Identity, Reputation, Validation, and Incident. Live on mainnet and Shasta testnet.
+- [Python SDK](https://github.com/M2M-TRC8004-Registry/trc8004-m2m-sdk) - `pip install trc8004-m2m` — Async Python SDK with TronClient, RegistryAPI, and IPFS integration
+- [Backend API](https://github.com/M2M-TRC8004-Registry/backend-api) - FastAPI service with event indexing, full-text search, and PostgreSQL. 332 unit tests, 97.9% coverage.
+
 ### 🤝 Collaboration Frameworks
 
 **[Ensemble Framework](https://x.com/EnsembleCodes)**
@@ -219,6 +225,10 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 
 - [Primev FastRPC x402 Facilitator](https://github.com/primev/mainnet-x402-facilitator) - Fee-free x402 payment facilitator on Ethereum mainnet with sub-200ms settlement via mev-commit preconfirmations. Registered as [Agent #23175](https://etherscan.io/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/23175) on the Identity Registry.
 
+**[AsterPay](https://asterpay.io)**
+
+- [AsterPay EUR Settlement](https://asterpay.io) - EUR settlement infrastructure for x402 payments. USDC→EUR via SEPA Instant for EU/EEA businesses with MiCA compliance. Registered as [Agent #16850](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/16850) on the Identity Registry. Python SDK available (`pip install asterpay`).
+
 ### 🔐 Security & Verification
 
 **[Phala Network](https://twitter.com/PhalaNetwork)**
@@ -229,6 +239,14 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 **[Sparsity](https://twitter.com/sparsity_xyz)**
 
 - [ERC-8004 AI agent demo](https://github.com/sparsity-xyz/sparsity-demo)
+
+### 🐦 Agent Services (x402 + ERC-8004)
+
+**[xbird](https://github.com/checkra1neth/xbird-skill)**
+
+- [xbird MCP Server](https://www.npmjs.com/package/xbird-mcp) - Twitter/X API with 30 tools (read, search, post, engage, media upload) using x402 micropayments on Base
+- [Agent Card](https://xbirdapi.up.railway.app/.well-known/agent.json) - ERC-8004 compliant agent card with x402 endpoints
+- Registered on ERC-8004 Identity Registry on Base (`0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`)
 
 ### 🪪 Identity & Trust
 
@@ -242,12 +260,22 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 
 - [MolTrust MCP Server](https://github.com/MoltyCel/moltrust-mcp-server) - Python MCP server for decentralized agent identity and reputation. 11 tools for DID creation, trust scoring, credential verification, and ERC-8004 on-chain identity. Registered as [Agent #21023](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/21023) on the Identity Registry (Base). Features dual registration (DID + on-chain agent in one call), on-chain reputation bridge, and remote MCP endpoint (`pip install moltrust-mcp-server`).
 
+**[DJD Agent Score](https://djdagentscore.dev)**
+
+- [DJD Agent Score](https://djdagentscore.dev) - Reputation API for the agent economy on Base L2. Returns a 0-100 behavioral trust score for any wallet, combining 7 scoring dimensions (transaction history, partner diversity, volume patterns, account age, balance stability, activity consistency, USDC usage) with sybil detection and gaming velocity checks. Scores feed directly into the ERC-8004 Reputation Registry as off-chain attestations. Monetized via x402 micropayments on Base USDC.
+- [djd-agent-score-client](https://www.npmjs.com/package/djd-agent-score-client) - TypeScript SDK for querying wallet reputation scores (`npm i djd-agent-score-client`)
+- [x402-agent-score](https://www.npmjs.com/package/x402-agent-score) - Hono middleware to gate outbound agent payments by counterparty reputation score
+- [DJD Agent Score GitHub](https://github.com/jacobsd32-cpu/djdagentscore) - Open source scoring engine. TypeScript, Hono 4, SQLite, 298 tests.
+
 ### 🎮 Applications & Demos
 
 **[AgentStore](https://agentstore.tools)** - Open-source marketplace for AI agents using ERC-8004 identity and x402 payments for trustless agent discovery and USDC settlement.
 - [AgentStore GitHub](https://github.com/techgangboss/agentstore) - MIT-licensed monorepo with CLI, API, and web frontend
 
 **[Cotten IO (Scypted)](https://twitter.com/CottenIO)**
+
+**[Theagora](https://theagoralabs.ai)** - AI agent exchange with atomic escrow, 4-tier cryptographic verification, per-function reputation, and ERC-8004 agent identity integration. Agents link on-chain ERC-8004 identities to their Theagora accounts for verified commerce.
+- [Theagora MCP Server](https://github.com/theagoralabs/mcp) - MCP server with 27 tools for agent registration, function listing, order placement, escrow settlement, and reputation queries (`npm i @theagora/mcp`)
 
 **Community Projects**
 
@@ -301,6 +329,10 @@ The reference implementation contracts are deployed on multiple testnets includi
 - **Governance:** Multi-signature governance structure
 - **Governance Contact:** [davide.crapis@ethereum.org](mailto:davide.crapis@ethereum.org)
 
+**TRON Implementation:** [M2M-TRC8004-Registry](https://github.com/M2M-TRC8004-Registry)
+
+The TRC-8004 implementation on TRON is deployed on both mainnet and Shasta testnet with four registries (Identity, Reputation, Validation, Incident). See [m2mregistry.io](https://m2mregistry.io) for details.
+
 ### 🛠️ SDKs and Libraries
 
 #### JavaScript/TypeScript
@@ -312,6 +344,7 @@ The reference implementation contracts are deployed on multiple testnets includi
 
 - **[erc-8004-py](https://github.com/tetratorus/erc-8004-py)** - Python implementation
 - **[chaoschain-sdk](https://pypi.org/project/chaoschain-sdk/)** - Available on PyPI
+- **[trc8004-m2m](https://github.com/M2M-TRC8004-Registry/trc8004-m2m-sdk)** - TRC-8004 Python SDK for TRON (async, Pydantic models)
 
 ---
 
