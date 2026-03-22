@@ -17,6 +17,7 @@
 - [Builder Projects](#builder-projects)
 - [Discussions & Forums](#discussions--forums)
 - [Research & Papers](#research--papers)
+- [Explorer & Scanner Tools](#explorer--scanner-tools)
 - [Development Resources](#development-resources)
 - [Smart Contract Interfaces](#smart-contract-interfaces)
 - [Standards & References](#standards--references)
@@ -56,6 +57,10 @@ ERC-8004 is an Ethereum standard that extends the Agent-to-Agent (A2A) Protocol 
 
 - **[ERC-8004 Official Website](http://8004.org)** - Official website for ERC-8004: Trustless Agents
 - **[EIP-8004 Specification](https://eips.ethereum.org/EIPS/eip-8004)** - Official Ethereum Improvement Proposal
+- **[ERC8004SPEC.md](https://github.com/erc-8004/erc-8004-contracts/blob/master/ERC8004SPEC.md)** - Specification file in the contracts repository
+- **[ERC-8004 Best Practices](https://github.com/erc-8004/best-practices)** - Official guides covering agent registration (`Registration.md`) and reputation usage (`Reputation.md`)
+- **[8004.org/build](https://www.8004.org/build)** - Developer hub with tools, SDKs, and integration resources
+- **[8004.org Blog](https://www.8004.org/blog)** - Official blog
 - **[A2A Protocol Specification](https://a2a-protocol.org/latest/specification/)** - Agent-to-Agent Protocol that ERC-8004 extends
 
 ## Specification
@@ -277,6 +282,15 @@ The `type`, `name`, `description`, and `image` fields ensure compatibility with 
 ## Research & Papers
 
 _Academic papers and research related to ERC-8004 and trustless agents._
+
+## Explorer & Scanner Tools
+
+Tools for browsing and querying on-chain ERC-8004 registries.
+
+- **[8004scan.io](https://8004scan.io)** - Primary explorer built by AltLayer; tracks registered agents, feedback records, and cross-chain activity (iOS and Android apps available)
+- **[agentscan.info](https://agentscan.info)** - On-chain agent explorer with registry lookup
+- **[8004agents.ai](https://8004agents.ai)** - Agent discovery interface
+- **[trust8004.xyz](https://www.trust8004.xyz)** - Agent discovery and management tool
 
 ## Development Resources
 
