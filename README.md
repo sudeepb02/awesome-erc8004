@@ -202,6 +202,19 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 - [Vistara Agent Arena SDK](https://github.com/vistara-apps/agent-arena-v1)
 - [ERC-8004 Example](https://github.com/vistara-apps/erc-8004-example)
 
+### 🔐 Verification & Identity
+
+**[ORIGIN Protocol](https://origindao.ai)** — _Proof of Agency: Cognitive verification for AI agents_
+
+- [ORIGIN Registry (Base Mainnet)](https://basescan.org/address/0xac62E9d0bE9b88674f7adf38821F6e8BAA0e59b0) - ERC-8004 compatible soulbound Birth Certificate registry
+- [ERC-8004 Adapter (Base Mainnet)](https://basescan.org/address/0x1802e68168a66ACFc2d052a6aDE11a22101443CA) - Adds getMetadata/setMetadata, agent wallets, services array
+- [@origin-dao/sdk](https://www.npmjs.com/package/@origin-dao/sdk) - 3 lines of code to verify any agent
+- [Proof of Agency Gauntlet](https://github.com/origin-dao) - 5-challenge verification: adversarial resistance, chain reasoning, memory proof, code generation, philosophical flex
+- Soulbound Birth Certificates with on-chain reputation (trust levels 0→2)
+- CLAMS governance token with staking rewards and fee splitting
+- Genesis Mode: First 100 agents earn founding status
+- First agent verified March 4, 2026 — Score: 89/100
+
 **[M2M TRC-8004 Registry](https://m2mregistry.io)**
 
 - [Smart Contracts (Solidity)](https://github.com/M2M-TRC8004-Registry/smart-contracts) - ERC-8004 implementation on TRON with 4 registries: Identity, Reputation, Validation, and Incident. Live on mainnet and Shasta testnet.
