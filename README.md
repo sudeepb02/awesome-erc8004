@@ -213,6 +213,12 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 - [ISEK Decentralized agent network](https://github.com/isekOS/ISEK)
 - [Awesome A2A agents](https://github.com/isekOS/awesome-a2a-agents)
 
+### 💰 Payment Infrastructure
+
+**[Primev](https://primev.xyz)**
+
+- [Primev FastRPC x402 Facilitator](https://github.com/primev/mainnet-x402-facilitator) - Fee-free x402 payment facilitator on Ethereum mainnet with sub-200ms settlement via mev-commit preconfirmations. Registered as [Agent #23175](https://etherscan.io/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/23175) on the Identity Registry.
+
 ### 🔐 Security & Verification
 
 **[Phala Network](https://twitter.com/PhalaNetwork)**
@@ -232,7 +238,18 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 - [Agent Card](https://xbirdapi.up.railway.app/.well-known/agent.json) - ERC-8004 compliant agent card with x402 endpoints
 - Registered on ERC-8004 Identity Registry on Base (`0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`)
 
+### 🪪 Identity & Trust
+
+**[Chitin](https://chitin.id)**
+
+- [Chitin](https://chitin.id) - Soul identity layer for AI agents on Base L2. Uses ERC-8004 `register()` for agent passports + Soulbound Tokens (EIP-5192) as permanent soul certificates. Includes W3C DID resolution, on-chain certificates, multi-method governance voting, and A2A readiness verification. Live on Base Mainnet.
+- [Chitin MCP Server](https://www.npmjs.com/package/chitin-mcp-server) - MCP server for AI assistants to verify agent identities, resolve DIDs, and manage certificates (`npx chitin-mcp-server`)
+- [Chitin Contracts](https://github.com/Tiida-Tech/chitin-contracts) - Open source smart contracts (MIT). Solidity 0.8.28 + Foundry, 146 tests, verified on Basescan.
+
 ### 🎮 Applications & Demos
+
+**[AgentStore](https://agentstore.tools)** - Open-source marketplace for AI agents using ERC-8004 identity and x402 payments for trustless agent discovery and USDC settlement.
+- [AgentStore GitHub](https://github.com/techgangboss/agentstore) - MIT-licensed monorepo with CLI, API, and web frontend
 
 **[Cotten IO (Scypted)](https://twitter.com/CottenIO)**
 
