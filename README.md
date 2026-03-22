@@ -256,6 +256,10 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 - [Chitin MCP Server](https://www.npmjs.com/package/chitin-mcp-server) - MCP server for AI assistants to verify agent identities, resolve DIDs, and manage certificates (`npx chitin-mcp-server`)
 - [Chitin Contracts](https://github.com/Tiida-Tech/chitin-contracts) - Open source smart contracts (MIT). Solidity 0.8.28 + Foundry, 146 tests, verified on Basescan.
 
+**[MolTrust](https://moltrust.ch)**
+
+- [MolTrust MCP Server](https://github.com/MoltyCel/moltrust-mcp-server) - Python MCP server for decentralized agent identity and reputation. 11 tools for DID creation, trust scoring, credential verification, and ERC-8004 on-chain identity. Registered as [Agent #21023](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/21023) on the Identity Registry (Base). Features dual registration (DID + on-chain agent in one call), on-chain reputation bridge, and remote MCP endpoint (`pip install moltrust-mcp-server`).
+
 **[DJD Agent Score](https://djdagentscore.dev)**
 
 - [DJD Agent Score](https://djdagentscore.dev) - Reputation API for the agent economy on Base L2. Returns a 0-100 behavioral trust score for any wallet, combining 7 scoring dimensions (transaction history, partner diversity, volume patterns, account age, balance stability, activity consistency, USDC usage) with sybil detection and gaming velocity checks. Scores feed directly into the ERC-8004 Reputation Registry as off-chain attestations. Monetized via x402 micropayments on Base USDC.
