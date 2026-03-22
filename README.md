@@ -181,6 +181,10 @@ The `type`, `name`, `description`, and `image` fields ensure compatibility with 
 ### Events & Conferences
 
 - **[Trustless Agents Day - Devconnect](https://devconnect.org/calendar?event=trustlessagentsday)** - Full-day summit at Devconnect exploring Ethereum as coordination layer for AI economy (November 21, 2025)
+- **[8004 Community Call #3](https://lu.ma/2kvxberc)** - Third community call (November 12, 2025)
+- **[Builder Nights Denver](https://lu.ma/bndenver)** - In-person builder event in Denver (February 17, 2026)
+- **[Agentic Brunch - ERC-8004](https://lu.ma/j57z0k64)** - Community brunch event (February 25, 2026)
+- **[8004 Launch Day](https://lu.ma/658en7zs)** - Official mainnet launch event (March 17, 2026)
 
 ---
 
