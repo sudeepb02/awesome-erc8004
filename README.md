@@ -291,14 +291,32 @@ _Academic papers and research related to ERC-8004 and trustless agents._
 
 **Official Implementation:** [erc-8004/erc-8004-contracts](https://github.com/erc-8004/erc-8004-contracts)
 
-The reference implementation contracts are deployed on multiple testnets including Ethereum Sepolia, Base Sepolia, Linea Sepolia, and Hedera Testnet. Complete deployment addresses and supported networks are available in the contracts repository.
+The contracts are deployed as per-chain singletons. The Identity Registry uses vanity address `0x8004A169...` on mainnets and `0x8004A818...` on testnets. Complete deployment addresses for all networks are maintained in the [contracts repository](https://github.com/erc-8004/erc-8004-contracts).
 
-**Mainnet Status:**
+**Security Audits:** The contracts have been audited by [Cyfrin](https://cyfrin.io/), [Nethermind](https://www.nethermind.io/), and the Ethereum Foundation Security Team.
 
-- **Planned Release:** End of October 2025
-- **Target Networks:** Major L2s and EVM-compatible L1s
-- **Governance:** Multi-signature governance structure
-- **Governance Contact:** [davide.crapis@ethereum.org](mailto:davide.crapis@ethereum.org)
+#### Mainnet Deployments (selected)
+
+| Network   | Identity Registry                                                                                       | Reputation Registry                                                                                     |
+| --------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| Ethereum  | [0x8004A169...432](https://etherscan.io/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)             | [0x8004BAa1...b63](https://etherscan.io/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)             |
+| Base      | [0x8004A169...432](https://basescan.org/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)             | [0x8004BAa1...b63](https://basescan.org/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)             |
+| Arbitrum  | [0x8004A169...432](https://arbiscan.io/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)              | [0x8004BAa1...b63](https://arbiscan.io/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)              |
+| Optimism  | [0x8004A169...432](https://explorer.optimism.io/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)     | [0x8004BAa1...b63](https://explorer.optimism.io/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)     |
+| Polygon   | [0x8004A169...432](https://polygonscan.com/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)          | [0x8004BAa1...b63](https://polygonscan.com/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)          |
+| Linea     | [0x8004A169...432](https://lineascan.build/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)          | [0x8004BAa1...b63](https://lineascan.build/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)          |
+| Scroll    | [0x8004A169...432](https://scrollscan.com/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)           | [0x8004BAa1...b63](https://scrollscan.com/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)           |
+| Avalanche | [0x8004A169...432](https://snowtrace.io/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)             | [0x8004BAa1...b63](https://snowtrace.io/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)             |
+| BNB Chain | [0x8004A169...432](https://bscscan.com/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)              | [0x8004BAa1...b63](https://bscscan.com/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)              |
+| Celo      | [0x8004A169...432](https://celoscan.io/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)              | [0x8004BAa1...b63](https://celoscan.io/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)              |
+| Gnosis    | [0x8004A169...432](https://gnosisscan.io/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)            | [0x8004BAa1...b63](https://gnosisscan.io/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)            |
+| Monad     | [0x8004A169...432](https://monadscan.com/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)            | [0x8004BAa1...b63](https://monadscan.com/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)            |
+| Abstract  | [0x8004A169...432](https://explorer.mainnet.abs.xyz/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432) | [0x8004BAa1...b63](https://explorer.mainnet.abs.xyz/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63) |
+| Mantle    | [0x8004A169...432](https://mantlescan.xyz/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)           | [0x8004BAa1...b63](https://mantlescan.xyz/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)           |
+| Soneium   | [0x8004A169...432](https://soneium.blockscout.com/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)   | [0x8004BAa1...b63](https://soneium.blockscout.com/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)   |
+| Taiko     | [0x8004A169...432](https://taikoscan.io/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)             | [0x8004BAa1...b63](https://taikoscan.io/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)             |
+
+See the [contracts repository](https://github.com/erc-8004/erc-8004-contracts) for the full list including SKALE, GOAT Network, MegaETH, Metis, XLayer, and all testnet addresses (Hedera, Arc).
 
 ### SDKs and Libraries
 
