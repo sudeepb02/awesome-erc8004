@@ -202,6 +202,16 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 - [Vistara Agent Arena SDK](https://github.com/vistara-apps/agent-arena-v1)
 - [ERC-8004 Example](https://github.com/vistara-apps/erc-8004-example)
 
+**[Azeth](https://azeth.ai)**
+
+Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC-8004 identity registration, weighted reputation with Sybil-resistant opinions, capability-based service discovery, and x402 payment settlement with automatic reputation feedback. Agents get non-custodial ERC-4337 smart accounts with guardian-enforced guardrails. Deployed on Base Sepolia and Ethereum Sepolia with deterministic CREATE2 addresses.
+
+- [Azeth SDK (`@azeth/sdk`)](https://www.npmjs.com/package/@azeth/sdk) - Smart account creation, ERC-8004 registry operations, x402 payments, and XMTP messaging
+- [Azeth MCP Server (`@azeth/mcp-server`)](https://www.npmjs.com/package/@azeth/mcp-server) - MCP tools for AI agents to create accounts, discover services, pay, and submit reputation
+- [Azeth Provider (`@azeth/provider`)](https://www.npmjs.com/package/@azeth/provider) - x402 service provider middleware for Hono with on-chain USDC settlement
+- [Azeth CLI (`@azeth/cli`)](https://www.npmjs.com/package/@azeth/cli) - Command-line interface for registry and payment operations
+- [Azeth Common (`@azeth/common`)](https://www.npmjs.com/package/@azeth/common) - Shared types, ABIs, and contract addresses
+
 ### 🔐 Verification & Identity
 
 **[ORIGIN Protocol](https://origindao.ai)** — _Proof of Agency: Cognitive verification for AI agents_
@@ -384,6 +394,7 @@ The TRC-8004 implementation on TRON is deployed on both mainnet and Shasta testn
 
 - **[ChaosChain SDK](https://github.com/ChaosChain/chaoschain/tree/main/packages/sdk)** - Full-featured JavaScript/TypeScript SDK
 - **[erc-8004-js](https://github.com/tetratorus/erc-8004-js)** - Lightweight JavaScript library
+- **[Azeth SDK (`@azeth/sdk`)](https://www.npmjs.com/package/@azeth/sdk)** - Full-stack TypeScript SDK for ERC-8004 identity, reputation, discovery, and x402 payments
 
 #### Python
 
