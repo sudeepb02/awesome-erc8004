@@ -301,6 +301,10 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 **[AgentStore](https://agentstore.tools)** - Open-source marketplace for AI agents using ERC-8004 identity and x402 payments for trustless agent discovery and USDC settlement.
 - [AgentStore GitHub](https://github.com/techgangboss/agentstore) - MIT-licensed monorepo with CLI, API, and web frontend
 
+**[Obol](https://obol.sh)** - x402-gated AI code generation API. Describe what you want, Obol generates production-ready code and opens a GitHub PR. 7 endpoints ($5 USDC/call on Base): site cloning, Farcaster mini apps, APIs, tests, docs, CI/CD, and refactoring. Registered as [Agent #26522](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/26522) on the Base Identity Registry.
+- [Obol API](https://api.obol.sh) - Cloudflare Worker serving 7 x402-gated endpoints at `api.obol.sh`
+- [Agent Card](https://api.obol.sh/.well-known/agent.json) - A2A-compatible agent descriptor
+
 **[Cotten IO (Scypted)](https://twitter.com/CottenIO)**
 
 **[Theagora](https://theagoralabs.ai)** - AI agent exchange with atomic escrow, 4-tier cryptographic verification, per-function reputation, and ERC-8004 agent identity integration. Agents link on-chain ERC-8004 identities to their Theagora accounts for verified commerce.
