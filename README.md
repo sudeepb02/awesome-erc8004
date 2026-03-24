@@ -287,7 +287,9 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 
 **[MolTrust](https://moltrust.ch)**
 
-- [MolTrust MCP Server](https://github.com/MoltyCel/moltrust-mcp-server) - Python MCP server for decentralized agent identity and reputation. 11 tools for DID creation, trust scoring, credential verification, and ERC-8004 on-chain identity. Registered as [Agent #21023](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/21023) on the Identity Registry (Base). Features dual registration (DID + on-chain agent in one call), on-chain reputation bridge, and remote MCP endpoint (`pip install moltrust-mcp-server`).
+- [MolTrust](https://moltrust.ch) - Swiss trust infrastructure for the AI agent economy. W3C DID-based identity, Ed25519 signed Verifiable Credentials anchored on Base mainnet. ERC-8004 registered (agentId [#21023](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/21023)). 7 verticals including [MT Salesguard](https://moltrust.ch/salesguard.html) for brand product provenance — BrandRegistryCredentials, AuthorizedResellerCredentials, and ProductProvenanceCredentials verifiable by any shopping agent before purchase.
+- [MolTrust MCP Server](https://github.com/MoltyCel/moltrust-mcp-server) - 30 MCP tools for agent identity, trust scoring, skill verification, and credential issuance (`pip install moltrust-mcp-server`)
+- [@moltrust/x402](https://www.npmjs.com/package/@moltrust/x402) - Trust verification middleware for x402 payments (Hono + Express). Extracts wallet from X-PAYMENT header, verifies via MoltGuard trust scoring.
 
 **[DJD Agent Score](https://djdagentscore.dev)**
 
@@ -295,6 +297,7 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 - [djd-agent-score-client](https://www.npmjs.com/package/djd-agent-score-client) - TypeScript SDK for querying wallet reputation scores (`npm i djd-agent-score-client`)
 - [x402-agent-score](https://www.npmjs.com/package/x402-agent-score) - Hono middleware to gate outbound agent payments by counterparty reputation score
 - [DJD Agent Score GitHub](https://github.com/jacobsd32-cpu/djdagentscore) - Open source scoring engine. TypeScript, Hono 4, SQLite, 298 tests.
+
 
 ### 🎮 Applications & Demos
 
