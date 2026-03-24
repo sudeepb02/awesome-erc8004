@@ -202,6 +202,35 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 - [Vistara Agent Arena SDK](https://github.com/vistara-apps/agent-arena-v1)
 - [ERC-8004 Example](https://github.com/vistara-apps/erc-8004-example)
 
+**[Azeth](https://azeth.ai)**
+
+Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC-8004 identity registration, weighted reputation with Sybil-resistant opinions, capability-based service discovery, and x402 payment settlement with automatic reputation feedback. Agents get non-custodial ERC-4337 smart accounts with guardian-enforced guardrails. Deployed on Base Sepolia and Ethereum Sepolia with deterministic CREATE2 addresses.
+
+- [Azeth SDK (`@azeth/sdk`)](https://www.npmjs.com/package/@azeth/sdk) - Smart account creation, ERC-8004 registry operations, x402 payments, and XMTP messaging
+- [Azeth MCP Server (`@azeth/mcp-server`)](https://www.npmjs.com/package/@azeth/mcp-server) - MCP tools for AI agents to create accounts, discover services, pay, and submit reputation
+- [Azeth Provider (`@azeth/provider`)](https://www.npmjs.com/package/@azeth/provider) - x402 service provider middleware for Hono with on-chain USDC settlement
+- [Azeth CLI (`@azeth/cli`)](https://www.npmjs.com/package/@azeth/cli) - Command-line interface for registry and payment operations
+- [Azeth Common (`@azeth/common`)](https://www.npmjs.com/package/@azeth/common) - Shared types, ABIs, and contract addresses
+
+### 🔐 Verification & Identity
+
+**[ORIGIN Protocol](https://origindao.ai)** — _Proof of Agency: Cognitive verification for AI agents_
+
+- [ORIGIN Registry (Base Mainnet)](https://basescan.org/address/0xac62E9d0bE9b88674f7adf38821F6e8BAA0e59b0) - ERC-8004 compatible soulbound Birth Certificate registry
+- [ERC-8004 Adapter (Base Mainnet)](https://basescan.org/address/0x1802e68168a66ACFc2d052a6aDE11a22101443CA) - Adds getMetadata/setMetadata, agent wallets, services array
+- [@origin-dao/sdk](https://www.npmjs.com/package/@origin-dao/sdk) - 3 lines of code to verify any agent
+- [Proof of Agency Gauntlet](https://github.com/origin-dao) - 5-challenge verification: adversarial resistance, chain reasoning, memory proof, code generation, philosophical flex
+- Soulbound Birth Certificates with on-chain reputation (trust levels 0→2)
+- CLAMS governance token with staking rewards and fee splitting
+- Genesis Mode: First 100 agents earn founding status
+- First agent verified March 4, 2026 — Score: 89/100
+
+**[M2M TRC-8004 Registry](https://m2mregistry.io)**
+
+- [Smart Contracts (Solidity)](https://github.com/M2M-TRC8004-Registry/smart-contracts) - ERC-8004 implementation on TRON with 4 registries: Identity, Reputation, Validation, and Incident. Live on mainnet and Shasta testnet.
+- [Python SDK](https://github.com/M2M-TRC8004-Registry/trc8004-m2m-sdk) - `pip install trc8004-m2m` — Async Python SDK with TronClient, RegistryAPI, and IPFS integration
+- [Backend API](https://github.com/M2M-TRC8004-Registry/backend-api) - FastAPI service with event indexing, full-text search, and PostgreSQL. 332 unit tests, 97.9% coverage.
+
 ### 🤝 Collaboration Frameworks
 
 **[Ensemble Framework](https://x.com/EnsembleCodes)**
@@ -219,6 +248,10 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 
 - [Primev FastRPC x402 Facilitator](https://github.com/primev/mainnet-x402-facilitator) - Fee-free x402 payment facilitator on Ethereum mainnet with sub-200ms settlement via mev-commit preconfirmations. Registered as [Agent #23175](https://etherscan.io/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/23175) on the Identity Registry.
 
+**[AsterPay](https://asterpay.io)**
+
+- [AsterPay EUR Settlement](https://asterpay.io) - EUR settlement infrastructure for x402 payments. USDC→EUR via SEPA Instant for EU/EEA businesses with MiCA compliance. Registered as [Agent #16850](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/16850) on the Identity Registry. Python SDK available (`pip install asterpay`).
+
 ### 🔐 Security & Verification
 
 **[Phala Network](https://twitter.com/PhalaNetwork)**
@@ -230,7 +263,21 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 
 - [ERC-8004 AI agent demo](https://github.com/sparsity-xyz/sparsity-demo)
 
+### 🐦 Agent Services (x402 + ERC-8004)
+
+**[xbird](https://github.com/checkra1neth/xbird-skill)**
+
+- [xbird MCP Server](https://www.npmjs.com/package/xbird-mcp) - Twitter/X API with 30 tools (read, search, post, engage, media upload) using x402 micropayments on Base
+- [Agent Card](https://xbirdapi.up.railway.app/.well-known/agent.json) - ERC-8004 compliant agent card with x402 endpoints
+- Registered on ERC-8004 Identity Registry on Base (`0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`)
+
 ### 🪪 Identity & Trust
+
+**[Helixa](https://helixa.xyz)**
+
+- [Helixa](https://helixa.xyz) - Onchain identity and reputation protocol for AI agents on Base. 1,000+ agents minted. Features an 11-factor Cred Score system (0-100) with five tiers (JUNK → PREFERRED), SIWA (Sign-In With Agent) authentication, $CRED token staking, and agent discovery via `.well-known/ai-plugin.json`. Contract: [`0x2e3B541C59D38b84E3Bc54e977200230A204Fe60`](https://basescan.org/address/0x2e3B541C59D38b84E3Bc54e977200230A204Fe60).
+- [Helixa API](https://api.helixa.xyz) - REST API for agent identity, Cred Scores, search, and staking. OpenAPI spec at `/.well-known/openapi.json`.
+- [Helixa Agent Skill](https://github.com/Bendr-20/helixa) - Open-source agent skill with 13 shell scripts and reference docs for AI agents to interact with the protocol (mint, verify, query scores, stake).
 
 **[Chitin](https://chitin.id)**
 
@@ -244,12 +291,27 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 - [MolTrust MCP Server](https://github.com/MoltyCel/moltrust-mcp-server) - 30 MCP tools for agent identity, trust scoring, skill verification, and credential issuance (`pip install moltrust-mcp-server`)
 - [@moltrust/x402](https://www.npmjs.com/package/@moltrust/x402) - Trust verification middleware for x402 payments (Hono + Express). Extracts wallet from X-PAYMENT header, verifies via MoltGuard trust scoring.
 
+**[DJD Agent Score](https://djdagentscore.dev)**
+
+- [DJD Agent Score](https://djdagentscore.dev) - Reputation API for the agent economy on Base L2. Returns a 0-100 behavioral trust score for any wallet, combining 7 scoring dimensions (transaction history, partner diversity, volume patterns, account age, balance stability, activity consistency, USDC usage) with sybil detection and gaming velocity checks. Scores feed directly into the ERC-8004 Reputation Registry as off-chain attestations. Monetized via x402 micropayments on Base USDC.
+- [djd-agent-score-client](https://www.npmjs.com/package/djd-agent-score-client) - TypeScript SDK for querying wallet reputation scores (`npm i djd-agent-score-client`)
+- [x402-agent-score](https://www.npmjs.com/package/x402-agent-score) - Hono middleware to gate outbound agent payments by counterparty reputation score
+- [DJD Agent Score GitHub](https://github.com/jacobsd32-cpu/djdagentscore) - Open source scoring engine. TypeScript, Hono 4, SQLite, 298 tests.
+
+
 ### 🎮 Applications & Demos
 
 **[AgentStore](https://agentstore.tools)** - Open-source marketplace for AI agents using ERC-8004 identity and x402 payments for trustless agent discovery and USDC settlement.
 - [AgentStore GitHub](https://github.com/techgangboss/agentstore) - MIT-licensed monorepo with CLI, API, and web frontend
 
+**[Obol](https://obol.sh)** - x402-gated AI code generation API. Describe what you want, Obol generates production-ready code and opens a GitHub PR. 7 endpoints ($5 USDC/call on Base): site cloning, Farcaster mini apps, APIs, tests, docs, CI/CD, and refactoring. Registered as [Agent #26522](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/26522) on the Base Identity Registry.
+- [Obol API](https://api.obol.sh) - Cloudflare Worker serving 7 x402-gated endpoints at `api.obol.sh`
+- [Agent Card](https://api.obol.sh/.well-known/agent.json) - A2A-compatible agent descriptor
+
 **[Cotten IO (Scypted)](https://twitter.com/CottenIO)**
+
+**[Theagora](https://theagoralabs.ai)** - AI agent exchange with atomic escrow, 4-tier cryptographic verification, per-function reputation, and ERC-8004 agent identity integration. Agents link on-chain ERC-8004 identities to their Theagora accounts for verified commerce.
+- [Theagora MCP Server](https://github.com/theagoralabs/mcp) - MCP server with 27 tools for agent registration, function listing, order placement, escrow settlement, and reputation queries (`npm i @theagora/mcp`)
 
 **Community Projects**
 
@@ -276,9 +338,35 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 
 ## 🔬 Research & Papers
 
-> 📚 Academic papers and research related to trustless agents and ERC-8004
+> 📚 Academic papers and research related to trustless agents, AI agent identity, and ERC-8004
 
-_This section is currently being populated. Contribute research papers and academic work!_
+### 📖 Agent Identity & Trust
+
+- **[AI Agents with Decentralized Identifiers and Verifiable Credentials](https://arxiv.org/abs/2511.02841)** (Nov 2025) - Proposes equipping each AI agent with a self-controlled DID and Verifiable Credentials for trust establishment in agent-to-agent dialogue. Directly addresses the identity bootstrapping problem that ERC-8004's Identity Registry tackles on-chain.
+
+- **[A Novel Zero-Trust Identity Framework for Agentic AI](https://arxiv.org/abs/2505.19301)** (May 2025) - Argues that traditional IAM is fundamentally inadequate for AI agents and proposes rich, verifiable Agent Identities using DIDs and VCs that encode capabilities, provenance, behavioral scope, and security posture.
+
+- **[Binding Agent ID: Unleashing the Power of AI Agents with Identity](https://arxiv.org/abs/2512.17538)** (Dec 2025) - Explores binding unique identifiers to agentic AI instances for runtime attribution and accountability. Relevant to ERC-8004's on-chain identity binding model.
+
+- **[Trusted AI Agents in the Cloud](https://arxiv.org/abs/2512.05951)** (Dec 2025) - Establishes that cross-principal trust requires compositional, verifiable identity reflecting the code, model, and dependencies involved in each invocation. Complements ERC-8004's validation registry approach.
+
+### 🔒 Security & Governance
+
+- **[A Survey of Agentic AI and Cybersecurity](https://arxiv.org/abs/2601.05293)** (Jan 2026) - Comprehensive survey covering BlockA2A (securing A2A communication using decentralized identity and blockchain-anchored audit logs), agent hijacking, and supply chain attacks. Essential context for why ERC-8004's trust layer matters.
+
+- **[Sovereign Agents](https://arxiv.org/abs/2602.14951)** (Feb 2026) - Introduces "agentic sovereignty" — the capacity of an agent to persist, act, and control resources with non-overrideability inherited from infrastructure. Analyzes TEEs, DePIN, and agent key continuity protocols. Raises the accountability question for agents that become non-terminable.
+
+- **[Practices for Governing Agentic AI Systems](https://cdn.openai.com/papers/practices-for-governing-agentic-ai-systems.pdf)** (OpenAI) - Framework for governing autonomous AI systems, addressing delegation chains, oversight mechanisms, and accountability structures.
+
+### 🏛️ Policy & Frameworks
+
+- **[Model AI Governance Framework for Agentic AI](https://www.imda.gov.sg/-/media/imda/files/about/emerging-tech-and-research/artificial-intelligence/mgf-for-agentic-ai.pdf)** (Singapore IMDA, Jan 2026) - World's first government governance framework specifically for autonomous AI agents. Four dimensions: bounding risks, human accountability, technical controls, end-user responsibility.
+
+- **[NIST AI Agent Standards Initiative](https://www.nist.gov/caisi/ai-agent-standards-initiative)** (Feb 2026) - U.S. federal initiative for interoperable and secure AI agent standards, including [RFI on AI Agent Security](https://www.federalregister.gov/documents/2026/01/08/2026-00206/request-for-information-regarding-security-considerations-for-artificial-intelligence-agents) and [NCCoE Concept Paper on Agent Identity and Authorization](https://www.nccoe.nist.gov/projects/software-and-ai-agent-identity-and-authorization).
+
+### 📊 Industry Reports
+
+- **[Securing Autonomous AI Agents](https://www.strata.io/blog/agentic-identity/the-ai-agent-identity-crisis-new-research-reveals-a-governance-gap/)** (Strata Identity & Cloud Security Alliance, Feb 2026) - Survey finding only 23% of organizations have formal agent identity management strategies, 45.6% still use shared API keys for agent authentication, and only 21.9% treat agents as independent identity-bearing entities.
 
 ## 🛠️ Development Resources
 
@@ -303,17 +391,24 @@ The reference implementation contracts are deployed on multiple testnets includi
 - **Governance:** Multi-signature governance structure
 - **Governance Contact:** [davide.crapis@ethereum.org](mailto:davide.crapis@ethereum.org)
 
+**TRON Implementation:** [M2M-TRC8004-Registry](https://github.com/M2M-TRC8004-Registry)
+
+The TRC-8004 implementation on TRON is deployed on both mainnet and Shasta testnet with four registries (Identity, Reputation, Validation, Incident). See [m2mregistry.io](https://m2mregistry.io) for details.
+
 ### 🛠️ SDKs and Libraries
 
 #### JavaScript/TypeScript
 
 - **[ChaosChain SDK](https://github.com/ChaosChain/chaoschain/tree/main/packages/sdk)** - Full-featured JavaScript/TypeScript SDK
 - **[erc-8004-js](https://github.com/tetratorus/erc-8004-js)** - Lightweight JavaScript library
+- **[Azeth SDK (`@azeth/sdk`)](https://www.npmjs.com/package/@azeth/sdk)** - Full-stack TypeScript SDK for ERC-8004 identity, reputation, discovery, and x402 payments
 
 #### Python
 
 - **[erc-8004-py](https://github.com/tetratorus/erc-8004-py)** - Python implementation
 - **[chaoschain-sdk](https://pypi.org/project/chaoschain-sdk/)** - Available on PyPI
+- **[agentwallet-sdk](https://www.npmjs.com/package/agentwallet-sdk)** - Non-custodial TypeScript SDK for AI agents: ERC-8004 identity, x402 payments, CCTP cross-chain transfers, Uniswap V3 swaps. First ERC-8004 implementation on npm with 158 tests.
+- **[trc8004-m2m](https://github.com/M2M-TRC8004-Registry/trc8004-m2m-sdk)** - TRC-8004 Python SDK for TRON (async, Pydantic models)
 
 ---
 
