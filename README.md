@@ -485,6 +485,15 @@ function validationResponse(
 
 - **[EAS (Ethereum Attestation Service)](https://attest.org/)** - Referenced for on-chain attestations
 
+
+## ⛓️ Cross-Chain & Alternative Implementations
+
+**[Hashgraph Online (HOL)](https://hol.org)** — _Trust engine for the agentic internet_
+
+Universal agentic registry built on Hedera Hashgraph. Provides blockchain-based identity for AI agents using ERC-8004 standard and HCS-14 Universal Agent IDs (UAIDs). Enables agent discovery, verification, and autonomous commerce via x402 protocol.
+
+- [Website](https://hol.org) | [Registry](https://hol.org/registry) | [GitHub](https://github.com/hashgraph-online) | [SDK](https://www.npmjs.com/package/@hol-org/standards-sdk)
+
 ## 🔗 Related Standards
 
 ### 🌐 Ethereum Ecosystem
