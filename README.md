@@ -336,7 +336,7 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 
 - [InsumerAPI](https://insumermodel.com/developers/) - REST API that verifies wallet conditions (token balances, NFT ownership, EAS attestations, Farcaster identity) across 30 EVM chains, Solana, XRPL, and Bitcoin. Returns ECDSA P-256 signed booleans — never raw balances. Used by DJD Agent Score and AsterPay KYA as a verification data source for agent trust scoring. Free tier available.
 - [insumer-verify](https://www.npmjs.com/package/insumer-verify) - Zero-dependency verification library. Auto-detects JWT or raw attestation, verifies ES256 signature via JWKS (`npm i insumer-verify`)
-- [mcp-server-insumer](https://www.npmjs.com/package/mcp-server-insumer) - MCP server with 8 tools for wallet verification, trust profiling, and attestation
+- [mcp-server-insumer](https://www.npmjs.com/package/mcp-server-insumer) - MCP server with 26 tools for wallet verification, trust profiling, and attestation
 - [JWKS endpoint](https://insumermodel.com/.well-known/jwks.json) - Public key discovery for offline signature verification (ES256, kid `insumer-attest-v1`)
 - [OpenAPI spec](https://insumermodel.com/openapi.yaml) - Full API specification
 
