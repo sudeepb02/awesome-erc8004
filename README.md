@@ -322,6 +322,13 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 - [x402-agent-score](https://www.npmjs.com/package/x402-agent-score) - Hono middleware to gate outbound agent payments by counterparty reputation score
 - [DJD Agent Score GitHub](https://github.com/jacobsd32-cpu/djdagentscore) - Open source scoring engine. TypeScript, Hono 4, SQLite, 298 tests.
 
+**[InsumerAPI](https://insumermodel.com/developers/)** — _On-chain credential verification across 33 blockchains_
+
+- [InsumerAPI](https://insumermodel.com/developers/) - REST API that verifies wallet conditions (token balances, NFT ownership, EAS attestations, Farcaster identity) across 30 EVM chains, Solana, XRPL, and Bitcoin. Returns ECDSA P-256 signed booleans — never raw balances. Used by DJD Agent Score and AsterPay KYA as a verification data source for agent trust scoring. Free tier available.
+- [insumer-verify](https://www.npmjs.com/package/insumer-verify) - Zero-dependency verification library. Auto-detects JWT or raw attestation, verifies ES256 signature via JWKS (`npm i insumer-verify`)
+- [mcp-server-insumer](https://www.npmjs.com/package/mcp-server-insumer) - MCP server with 8 tools for wallet verification, trust profiling, and attestation
+- [JWKS endpoint](https://insumermodel.com/.well-known/jwks.json) - Public key discovery for offline signature verification (ES256, kid `insumer-attest-v1`)
+- [OpenAPI spec](https://insumermodel.com/openapi.yaml) - Full API specification
 
 ### 🎮 Applications & Demos
 
