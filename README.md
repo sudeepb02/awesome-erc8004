@@ -288,6 +288,16 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 
 ### 🪪 Identity & Trust
 
+**[Mintware Attribution](https://mintware.finance)**
+
+"On-chain reputation scoring for AI agents and wallets across 100+ chains. EIP-712 gasless oracle — oracle signs off-chain, agent submits on-chain. Register once, score accumulates automatically. Registered as Agent #37297 on the Base Identity Registry."
+
+- [AIAttribution.sol (Base Mainnet)](https://basescan.org/address/0x11Ef2c7D84b755f02f3652ca8b16e6E81A96C421) - "ERC-8004 compatible on-chain agent reputation registry"
+- [@mintware/ai-attribution-sdk](https://www.npmjs.com/package/@mintware/ai-attribution-sdk) - "TypeScript SDK — register, claim, query scores"
+- [MCP Server](https://www.npmjs.com/package/mintware-mcp) - "4 MCP tools for Claude/Cursor"
+- [Agent Leaderboard](https://mintware.finance/agents) - "Live rankings by Attribution score on Base"
+- [Oracle Manifest](https://mintware.finance/.well-known/agent-reputation-oracle.json) - "RFC 8615 + ERC-8004 #37297"
+
 **[8k4 Protocol](https://8k4protocol.com)**
 
 - [8k4 API](https://api.8k4protocol.com) - Reputation infrastructure for ERC-8004 agents: trust scoring (IGGY-Score), metadata hosting, and cross-chain lookup. Public stats currently show 106,996 indexed agents across Base (33,939), BSC (44,020), and Ethereum (29,037), with x402 pay-per-query support (USDC on Base).
