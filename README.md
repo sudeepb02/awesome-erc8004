@@ -8,55 +8,27 @@
 
 ---
 
-## 🚀 Quick Start
+## Table of Contents
 
-ERC-8004 is an Ethereum standard that extends the Agent-to-Agent (A2A) Protocol with a trust layer, enabling participants to discover, choose, and interact with agents across organizational boundaries without pre-existing trust. The protocol introduces three lightweight, on-chain registries for identity, reputation, and validation.
-
-**New to ERC-8004?** Start with:
-
-- 📖 [What is ERC-8004?](#what-is-erc-8004)
-- 🔍 [Core Components](#core-components)
-- 💡 [FAQ](#faq)
-- 🛠️ [Getting Started for Developers](#development-resources)
-
----
-
-## 📋 Table of Contents
-
-### 🎯 Getting Started
-
-- [🚀 Quick Start](#-quick-start)
-- [❓ What is ERC-8004?](#-what-is-erc-8004)
-- [💡 FAQ](#-faq)
-
-### 📚 Official Resources
-
-- [📖 Official Documentation](#-official-documentation)
-- [📄 Specification](#-specification)
-- [🏛️ Standards & References](#-standards--references)
-
-### 👥 Community & Projects
-
-- [🌟 Active Builder Projects](#-active-builder-projects)
-- [📹 Community Calls & Content](#-community-calls--content)
-- [💬 Discussions & Forums](#-discussions--forums)
-
-### 🔧 Development
-
-- [🛠️ Development Resources](#-development-resources)
-- [📋 Smart Contract Interfaces](#-smart-contract-interfaces)
-- [🔗 Related Standards](#-related-standards)
-
-### 📊 Research & Resources
-
-- [🔬 Research & Papers](#-research--papers)
-- [🤝 Contributing](#-contributing)
+- [What is ERC-8004?](#what-is-erc-8004)
+- [Official Resources](#official-resources)
+- [Specification](#specification)
+- [Community Calls & Content](#community-calls--content)
+- [Builder Projects](#builder-projects)
+- [Discussions & Forums](#discussions--forums)
+- [Research & Papers](#research--papers)
+- [Explorer & Scanner Tools](#explorer--scanner-tools)
+- [Development Resources](#development-resources)
+- [Smart Contract Interfaces](#smart-contract-interfaces)
+- [Standards & References](#standards--references)
+- [Related Standards](#related-standards)
+- [FAQ](#faq)
 
 ---
 
-## ❓ What is ERC-8004?
+## What is ERC-8004?
 
-ERC-8004 introduces **three lightweight, on-chain registries** that enable trustless agent interactions:
+ERC-8004 is an Ethereum standard that extends the Agent-to-Agent (A2A) Protocol with a trust layer, enabling participants to discover, choose, and interact with agents across organizational boundaries without pre-existing trust. It introduces three lightweight, on-chain registries:
 
 ### Core Components
 
@@ -66,77 +38,80 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 | **Reputation Registry** | Feedback & attestation system          | Standard interface for scores & metadata |
 | **Validation Registry** | Independent verification hooks         | Generic validation framework             |
 
-### 🎯 Key Benefits
+### Key Properties
 
-- **🔍 Cross-organizational Discovery** - Find agents without pre-existing relationships
-- **🔌 Flexible Endpoints** - Support for A2A, MCP, ENS, DIDs, and wallet addresses
-- **⚖️ Modular Trust** - Pluggable trust models from low-stake to high-stake interactions
-- **🔗 On-chain Composability** - Smart contracts can read reputation and validation data
-- **⚡ Gas Efficient** - Off-chain data storage with on-chain integrity
-- **🛡️ Standard Compliant** - Full ERC-721 compatibility for NFT marketplace integration
+- **Cross-organizational Discovery** - Agents can be found without pre-existing relationships
+- **Flexible Endpoints** - Support for A2A, MCP, ENS, DIDs, and wallet addresses
+- **Modular Trust** - Pluggable trust models from low-stake to high-stake interactions
+- **On-chain Composability** - Smart contracts can read reputation and validation data
+- **Gas Efficiency** - Off-chain data storage with on-chain integrity
+- **ERC-721 Compatibility** - Full compatibility for NFT marketplace integration
 
-### 🔐 Trust Models Supported
+### Trust Models
 
-1. **Reputation-based** - Client feedback with scores (0-100), tags, and metadata
+1. **Reputation-based** - Client feedback using signed fixed-point values, tags, and metadata
 2. **Crypto-economic** - Stake-secured validation with economic incentives
 3. **Crypto-verification** - TEE attestations and zkML proofs for cryptographic trust
 
-## 📖 Official Resources
+## Official Resources
 
 - **[ERC-8004 Official Website](http://8004.org)** - Official website for ERC-8004: Trustless Agents
 - **[EIP-8004 Specification](https://eips.ethereum.org/EIPS/eip-8004)** - Official Ethereum Improvement Proposal
+- **[ERC8004SPEC.md](https://github.com/erc-8004/erc-8004-contracts/blob/master/ERC8004SPEC.md)** - Specification file in the contracts repository
+- **[ERC-8004 Best Practices](https://github.com/erc-8004/best-practices)** - Official guides covering agent registration (`Registration.md`) and reputation usage (`Reputation.md`)
+- **[8004.org/build](https://www.8004.org/build)** - Developer hub with tools, SDKs, and integration resources
+- **[8004.org Blog](https://www.8004.org/blog)** - Official blog
 - **[A2A Protocol Specification](https://a2a-protocol.org/latest/specification/)** - Agent-to-Agent Protocol that ERC-8004 extends
 
-## 📄 Specification
+## Specification
 
-### 📊 Current Status
+### Current Status
 
-- **Status**: Peer Review
-- **Version**: v1 Complete
-- **Registries**: 3 operational (Identity, Reputation, Validation)
-- **Community**: Active builder ecosystem with implementations
+- **Status**: Draft (EIP process), contracts are audited and final
+- **Registries**: Identity and Reputation final contracts deployed; Validation Registry under active revision
+- **Specification**: [ERC8004SPEC.md](https://github.com/erc-8004/erc-8004-contracts/blob/master/ERC8004SPEC.md) in the contracts repository
 
-### 🏗️ Architecture Overview
+### Architecture Overview
 
 ```
 ┌─────────────────┐
-│ 🔍 Agent        │
-│    Discovery    │
+│ Agent           │
+│ Discovery       │
 └────────┬────────┘
          │
          ▼
 ┌─────────────────┐
-│ 🏛️ Identity     │
-│    Registry     │
+│ Identity        │
+│ Registry        │
 └────────┬────────┘
          │
          ▼
 ┌─────────────────┐
-│ 📝 Agent        │
-│   Registration  │
+│ Agent           │
+│ Registration    │
 └────┬───────┬────┘
      │       │
      ▼       ▼
 ┌─────────┐ ┌─────────────┐
-│ ⭐ Rep. │ │ ✅ Valid.   │
-│ Registry│ │  Registry   │
+│ Rep.    │ │ Validation  │
+│ Registry│ │ Registry    │
 └────┬────┘ └──────┬──────┘
      │             │
      └──────┬──────┘
             ▼
     ┌─────────────────┐
-    │ 🔐 Trust        │
-    │   Assessment    │
+    │ Trust           │
+    │ Assessment      │
     └────────┬────────┘
              │
              ▼
     ┌─────────────────┐
-    │ 🤝 Agent        │
-    │   Interaction   │
+    │ Agent           │
+    │ Interaction     │
     └─────────────────┘
 ```
 
-### 📋 Agent Registration Schema
+### Agent Registration Schema
 
 ```json
 {
@@ -144,7 +119,11 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
   "name": "myAgentName",
   "description": "A natural language description of the Agent...",
   "image": "https://example.com/agentimage.png",
-  "endpoints": [
+  "services": [
+    {
+      "name": "web",
+      "endpoint": "https://web.agentxyz.com/"
+    },
     {
       "name": "A2A",
       "endpoint": "https://agent.example/.well-known/agent-card.json",
@@ -154,29 +133,64 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
       "name": "MCP",
       "endpoint": "https://mcp.agent.eth/",
       "version": "2025-06-18"
+    },
+    {
+      "name": "OASF",
+      "endpoint": "ipfs://{cid}",
+      "version": "0.8",
+      "skills": [],
+      "domains": []
+    },
+    {
+      "name": "ENS",
+      "endpoint": "agent.eth",
+      "version": "v1"
+    },
+    {
+      "name": "DID",
+      "endpoint": "did:method:foobar",
+      "version": "v1"
+    },
+    {
+      "name": "email",
+      "endpoint": "mail@myagent.com"
+    }
+  ],
+  "x402Support": false,
+  "active": true,
+  "registrations": [
+    {
+      "agentId": 22,
+      "agentRegistry": "{namespace}:{chainId}:{identityRegistry}"
     }
   ],
   "supportedTrust": ["reputation", "crypto-economic", "tee-attestation"]
 }
 ```
 
-## 📹 Community Calls & Content
+The `type`, `name`, `description`, and `image` fields ensure compatibility with ERC-721 apps. The `services` list is fully customizable. The `supportedTrust` field is optional; if absent, the registration is used for discovery only.
 
-### 🎥 Recorded Sessions
+## Community Calls & Content
+
+### Recorded Sessions
 
 - **[Trustless Agents Call #1 - September 23, 2025](https://youtu.be/kooO3DGzYek)** - First community call with demos and roadmap updates
 - **[Community Call #1 Slides](https://docs.google.com/presentation/d/1DUAl2MxHw0J5jSr7Ap5eCCzNLMSbCQ3LcCZyFMNm3Y4/edit?usp=sharing)** - Presentation slides from September 23, 2025 call
 - **[Trustless Agents Call #2](https://www.youtube.com/watch?v=J3PkdQEZWK0)** - Second community call recording
 
-### 🎪 Events & Conferences
+### Events & Conferences
 
 - **[Trustless Agents Day - Devconnect](https://devconnect.org/calendar?event=trustlessagentsday)** - Full-day summit at Devconnect exploring Ethereum as coordination layer for AI economy (November 21, 2025)
+- **[8004 Community Call #3](https://lu.ma/2kvxberc)** - Third community call (November 12, 2025)
+- **[Builder Nights Denver](https://lu.ma/bndenver)** - In-person builder event in Denver (February 17, 2026)
+- **[Agentic Brunch - ERC-8004](https://lu.ma/j57z0k64)** - Community brunch event (February 25, 2026)
+- **[8004 Launch Day](https://lu.ma/658en7zs)** - Official mainnet launch event (March 17, 2026)
 
 ---
 
-## 🌟 Active Builder Projects
+## Builder Projects
 
-### 🚀 Infrastructure & SDKs
+### Infrastructure & SDKs
 
 **[UFX Agentic Commerce](https://github.com/ufosearchspace-create/ERC8183)**
 
@@ -206,7 +220,9 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 - [Vistara Agent Arena SDK](https://github.com/vistara-apps/agent-arena-v1)
 - [ERC-8004 Example](https://github.com/vistara-apps/erc-8004-example)
 
-### 🔄 Commerce & Escrow
+### Collaboration Frameworks
+
+### Commerce & Escrow
 
 **[UFX Agentic Commerce](https://github.com/ufosearchspace-create/ERC8183)** — First `IACPHook` implementations and ERC-8004 reputation bridge for ERC-8183 (Agentic Commerce Protocol). The EIP defines hooks; we built and deployed them.
 
@@ -227,7 +243,7 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 - [Azeth CLI (`@azeth/cli`)](https://www.npmjs.com/package/@azeth/cli) - Command-line interface for registry and payment operations
 - [Azeth Common (`@azeth/common`)](https://www.npmjs.com/package/@azeth/common) - Shared types, ABIs, and contract addresses
 
-### 🔐 Verification & Identity
+### Verification & Identity
 
 **[ORIGIN Protocol](https://origindao.ai)** — _Proof of Agency: Cognitive verification for AI agents_
 
@@ -246,8 +262,6 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 - [Python SDK](https://github.com/M2M-TRC8004-Registry/trc8004-m2m-sdk) - `pip install trc8004-m2m` — Async Python SDK with TronClient, RegistryAPI, and IPFS integration
 - [Backend API](https://github.com/M2M-TRC8004-Registry/backend-api) - FastAPI service with event indexing, full-text search, and PostgreSQL. 332 unit tests, 97.9% coverage.
 
-### 🤝 Collaboration Frameworks
-
 **[Ensemble Framework](https://x.com/EnsembleCodes)**
 
 - [Ensemble Docs](https://docs.ensemble.codes)
@@ -257,17 +271,18 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 - [ISEK Decentralized agent network](https://github.com/isekOS/ISEK)
 - [Awesome A2A agents](https://github.com/isekOS/awesome-a2a-agents)
 
-### 💰 Payment Infrastructure
+### Payment Infrastructure
 
 **[Primev](https://primev.xyz)**
 
 - [Primev FastRPC x402 Facilitator](https://github.com/primev/mainnet-x402-facilitator) - Fee-free x402 payment facilitator on Ethereum mainnet with sub-200ms settlement via mev-commit preconfirmations. Registered as [Agent #23175](https://etherscan.io/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/23175) on the Identity Registry.
 
+### Security & Verification
+
 **[AsterPay](https://asterpay.io)**
 
 - [AsterPay EUR Settlement](https://asterpay.io) - EUR settlement infrastructure for x402 payments. USDC→EUR via SEPA Instant for EU/EEA businesses with MiCA compliance. Registered as [Agent #16850](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/16850) on the Identity Registry. Python SDK available (`pip install asterpay`).
 
-### 🔐 Security & Verification
 
 **[Phala Network](https://twitter.com/PhalaNetwork)**
 
@@ -278,15 +293,15 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 
 - [ERC-8004 AI agent demo](https://github.com/sparsity-xyz/sparsity-demo)
 
-### 🐦 Agent Services (x402 + ERC-8004)
+### Identity & Trust
+
+### Agent Services (x402 + ERC-8004)
 
 **[xbird](https://github.com/checkra1neth/xbird-skill)**
 
 - [xbird MCP Server](https://www.npmjs.com/package/xbird-mcp) - Twitter/X API with 30 tools (read, search, post, engage, media upload) using x402 micropayments on Base
 - [Agent Card](https://xbirdapi.up.railway.app/.well-known/agent.json) - ERC-8004 compliant agent card with x402 endpoints
 - Registered on ERC-8004 Identity Registry on Base (`0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`)
-
-### 🪪 Identity & Trust
 
 **[Mintware Attribution](https://mintware.finance)**
 
@@ -314,6 +329,8 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 - [Chitin MCP Server](https://www.npmjs.com/package/chitin-mcp-server) - MCP server for AI assistants to verify agent identities, resolve DIDs, and manage certificates (`npx chitin-mcp-server`)
 - [Chitin Contracts](https://github.com/Tiida-Tech/chitin-contracts) - Open source smart contracts (MIT). Solidity 0.8.28 + Foundry, 146 tests, verified on Basescan.
 
+### Applications & Demos
+
 **[AgentStamp](https://agentstamp.org)**
 
 - [AgentStamp](https://agentstamp.org) - Trust intelligence platform for AI agents with ERC-8004 bridge — identity stamps, reputation scoring (0-100), forensic audit trails, and x402 micropayments. Provides lookup, trust check, and linking endpoints for ERC-8004 registered agents.
@@ -340,9 +357,9 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 - [JWKS endpoint](https://insumermodel.com/.well-known/jwks.json) - Public key discovery for offline signature verification (ES256, kid `insumer-attest-v1`)
 - [OpenAPI spec](https://insumermodel.com/openapi.yaml) - Full API specification
 
-### 🎮 Applications & Demos
 
 **[AgentStore](https://agentstore.tools)** - Open-source marketplace for AI agents using ERC-8004 identity and x402 payments for trustless agent discovery and USDC settlement.
+
 - [AgentStore GitHub](https://github.com/techgangboss/agentstore) - MIT-licensed monorepo with CLI, API, and web frontend
 
 **[Obol](https://obol.sh)** - x402-gated AI code generation API. Describe what you want, Obol generates production-ready code and opens a GitHub PR. 7 endpoints ($5 USDC/call on Base): site cloning, Farcaster mini apps, APIs, tests, docs, CI/CD, and refactoring. Registered as [Agent #26522](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/26522) on the Base Identity Registry.
@@ -358,30 +375,41 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 
 - **[TrustlessAgents](https://github.com/CasualHackathon/TrustlessAgents)** - Community hackathon project implementing ERC-8004
 - **[8004 Implementation](https://github.com/zpaynow/8004)** - Community-driven ERC-8004 implementation
+- **[erc-8004-demo-agent](https://github.com/Eversmile12/erc-8004-demo-agent)** - Minimal reference agent demonstrating registration and feedback flows
+- **[erc-8004-agents-explorer-demo](https://github.com/Eversmile12/erc-8004-agents-explorer-demo)** - Demo scanner and explorer for browsing on-chain ERC-8004 data
 
-### 🎓 Educational Resources
+### Educational Resources
 
 - **[Trustless Agents Course](https://intensivecolearn.ing/en/programs/trustless-agents)** - Comprehensive course on trustless agents and ERC-8004
 - **[Sparsity AI Workshop](https://www.youtube.com/watch?v=jqOZj399BLE)** - Build an ERC-8004 Trustless Agent with TEE
 
-## 💬 Discussions & Forums
+## Discussions & Forums
 
-### 🏛️ Official Channels
+### Official Channels
 
 - **[Ethereum Magicians Discussion](https://ethereum-magicians.org/t/erc-8004-trustless-agents/25098)** - Official discussion thread for ERC-8004
 - **[GitHub Issues](https://github.com/ethereum/ERCs/pull/1170)** - Technical discussions and feedback on the specification
 
-### 👥 Community Groups
+### Community Groups
 
 - **[ERC-8004 Telegram Group](http://t.me/ERC8004)** - Official builder community and discussion group
 
 ---
 
-## 🔬 Research & Papers
+## Explorer & Scanner Tools
 
-> 📚 Academic papers and research related to trustless agents, AI agent identity, and ERC-8004
+Tools for browsing and querying on-chain ERC-8004 registries.
 
-### 📖 Agent Identity & Trust
+- **[8004scan.io](https://8004scan.io)** - Primary explorer built by AltLayer; tracks registered agents, feedback records, and cross-chain activity (iOS and Android apps available)
+- **[agentscan.info](https://agentscan.info)** - On-chain agent explorer with registry lookup
+- **[8004agents.ai](https://8004agents.ai)** - Agent discovery interface
+- **[trust8004.xyz](https://www.trust8004.xyz)** - Agent discovery and management tool
+
+## Research & Papers
+
+_Academic papers and research related to ERC-8004 and trustless agents._
+
+### Agent Identity & Trust
 
 - **[AI Agents with Decentralized Identifiers and Verifiable Credentials](https://arxiv.org/abs/2511.02841)** (Nov 2025) - Proposes equipping each AI agent with a self-controlled DID and Verifiable Credentials for trust establishment in agent-to-agent dialogue. Directly addresses the identity bootstrapping problem that ERC-8004's Identity Registry tackles on-chain.
 
@@ -391,7 +419,7 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 
 - **[Trusted AI Agents in the Cloud](https://arxiv.org/abs/2512.05951)** (Dec 2025) - Establishes that cross-principal trust requires compositional, verifiable identity reflecting the code, model, and dependencies involved in each invocation. Complements ERC-8004's validation registry approach.
 
-### 🔒 Security & Governance
+### Security & Governance
 
 - **[A Survey of Agentic AI and Cybersecurity](https://arxiv.org/abs/2601.05293)** (Jan 2026) - Comprehensive survey covering BlockA2A (securing A2A communication using decentralized identity and blockchain-anchored audit logs), agent hijacking, and supply chain attacks. Essential context for why ERC-8004's trust layer matters.
 
@@ -399,135 +427,255 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 
 - **[Practices for Governing Agentic AI Systems](https://cdn.openai.com/papers/practices-for-governing-agentic-ai-systems.pdf)** (OpenAI) - Framework for governing autonomous AI systems, addressing delegation chains, oversight mechanisms, and accountability structures.
 
-### 🏛️ Policy & Frameworks
+### Policy & Frameworks
 
 - **[Model AI Governance Framework for Agentic AI](https://www.imda.gov.sg/-/media/imda/files/about/emerging-tech-and-research/artificial-intelligence/mgf-for-agentic-ai.pdf)** (Singapore IMDA, Jan 2026) - World's first government governance framework specifically for autonomous AI agents. Four dimensions: bounding risks, human accountability, technical controls, end-user responsibility.
 
 - **[NIST AI Agent Standards Initiative](https://www.nist.gov/caisi/ai-agent-standards-initiative)** (Feb 2026) - U.S. federal initiative for interoperable and secure AI agent standards, including [RFI on AI Agent Security](https://www.federalregister.gov/documents/2026/01/08/2026-00206/request-for-information-regarding-security-considerations-for-artificial-intelligence-agents) and [NCCoE Concept Paper on Agent Identity and Authorization](https://www.nccoe.nist.gov/projects/software-and-ai-agent-identity-and-authorization).
 
-### 📊 Industry Reports
+### Industry Reports
 
 - **[Securing Autonomous AI Agents](https://www.strata.io/blog/agentic-identity/the-ai-agent-identity-crisis-new-research-reveals-a-governance-gap/)** (Strata Identity & Cloud Security Alliance, Feb 2026) - Survey finding only 23% of organizations have formal agent identity management strategies, 45.6% still use shared API keys for agent authentication, and only 21.9% treat agents as independent identity-bearing entities.
 
-## 🛠️ Development Resources
 
-### 🎯 Getting Started for Developers
+## Development Resources
 
-1. **Read the [EIP-8004 Specification](https://eips.ethereum.org/EIPS/eip-8004)**
-2. **Join the [Builder Program](http://bit.ly/8004builderprogram)**
-3. **Check out [Reference Implementations](#-active-builder-projects)**
-4. **Review [Contract Deployments](#-contract-deployments)**
-5. **Join the [Developer Community](http://t.me/ERC8004)**
+### Getting Started
 
-### 🏗️ Contract Deployments
+1. [EIP-8004 Specification](https://eips.ethereum.org/EIPS/eip-8004)
+2. [ERC-8004 Contracts Repository](https://github.com/erc-8004/erc-8004-contracts)
+3. [Best Practices Guide](https://github.com/erc-8004/best-practices)
+4. [Telegram Community](http://t.me/ERC8004)
+
+### Contract Deployments
 
 **Official Implementation:** [erc-8004/erc-8004-contracts](https://github.com/erc-8004/erc-8004-contracts)
 
-The reference implementation contracts are deployed on multiple testnets including Ethereum Sepolia, Base Sepolia, Linea Sepolia, and Hedera Testnet. Complete deployment addresses and supported networks are available in the contracts repository.
+The contracts are deployed as per-chain singletons. The Identity Registry uses vanity address `0x8004A169...` on mainnets and `0x8004A818...` on testnets. Complete deployment addresses for all networks are maintained in the [contracts repository](https://github.com/erc-8004/erc-8004-contracts).
 
-**Mainnet Status:**
+**Security Audits:** The contracts have been audited by [Cyfrin](https://cyfrin.io/), [Nethermind](https://www.nethermind.io/), and the Ethereum Foundation Security Team.
 
-- **Planned Release:** End of October 2025
-- **Target Networks:** Major L2s and EVM-compatible L1s
-- **Governance:** Multi-signature governance structure
-- **Governance Contact:** [davide.crapis@ethereum.org](mailto:davide.crapis@ethereum.org)
+#### Mainnet Deployments
 
-**TRON Implementation:** [M2M-TRC8004-Registry](https://github.com/M2M-TRC8004-Registry)
+| Network   | Identity Registry                                                                                       | Reputation Registry                                                                                     |
+| --------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| Ethereum  | [0x8004A169...432](https://etherscan.io/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)             | [0x8004BAa1...b63](https://etherscan.io/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)             |
+| Base      | [0x8004A169...432](https://basescan.org/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)             | [0x8004BAa1...b63](https://basescan.org/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)             |
+| Arbitrum  | [0x8004A169...432](https://arbiscan.io/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)              | [0x8004BAa1...b63](https://arbiscan.io/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)              |
+| Optimism  | [0x8004A169...432](https://explorer.optimism.io/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)     | [0x8004BAa1...b63](https://explorer.optimism.io/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)     |
+| Polygon   | [0x8004A169...432](https://polygonscan.com/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)          | [0x8004BAa1...b63](https://polygonscan.com/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)          |
+| Linea     | [0x8004A169...432](https://lineascan.build/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)          | [0x8004BAa1...b63](https://lineascan.build/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)          |
+| Scroll    | [0x8004A169...432](https://scrollscan.com/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)           | [0x8004BAa1...b63](https://scrollscan.com/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)           |
+| Avalanche | [0x8004A169...432](https://snowtrace.io/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)             | [0x8004BAa1...b63](https://snowtrace.io/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)             |
+| BNB Chain | [0x8004A169...432](https://bscscan.com/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)              | [0x8004BAa1...b63](https://bscscan.com/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)              |
+| Celo      | [0x8004A169...432](https://celoscan.io/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)              | [0x8004BAa1...b63](https://celoscan.io/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)              |
+| Gnosis    | [0x8004A169...432](https://gnosisscan.io/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)            | [0x8004BAa1...b63](https://gnosisscan.io/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)            |
+| Monad     | [0x8004A169...432](https://monadscan.com/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)            | [0x8004BAa1...b63](https://monadscan.com/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)            |
+| Abstract  | [0x8004A169...432](https://explorer.mainnet.abs.xyz/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432) | [0x8004BAa1...b63](https://explorer.mainnet.abs.xyz/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63) |
+| Mantle    | [0x8004A169...432](https://mantlescan.xyz/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)           | [0x8004BAa1...b63](https://mantlescan.xyz/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)           |
+| Soneium   | [0x8004A169...432](https://soneium.blockscout.com/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)   | [0x8004BAa1...b63](https://soneium.blockscout.com/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)   |
+| Taiko     | [0x8004A169...432](https://taikoscan.io/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)             | [0x8004BAa1...b63](https://taikoscan.io/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)             |
 
-The TRC-8004 implementation on TRON is deployed on both mainnet and Shasta testnet with four registries (Identity, Reputation, Validation, Incident). See [m2mregistry.io](https://m2mregistry.io) for details.
+See the [contracts repository](https://github.com/erc-8004/erc-8004-contracts) for the full list including SKALE, GOAT Network, MegaETH, Metis, XLayer, and all testnet addresses (Hedera, Arc).
 
-### 🛠️ SDKs and Libraries
+### SDKs and Libraries
 
 #### JavaScript/TypeScript
 
+- **[Agent0 SDK](https://sdk.ag0.xyz/)** - TypeScript and Python SDK with subgraph queries and an interactive playground; developed by Agent0 Lab
+- **[create-8004-agent](https://www.npmjs.com/package/create-8004-agent)** - CLI scaffolding package (`npx create-8004-agent`) for bootstrapping ERC-8004 agents
+- **[Lucid Agents / Daydreams](https://docs.daydreams.systems/)** - Agent framework with built-in ERC-8004 integration
 - **[ChaosChain SDK](https://github.com/ChaosChain/chaoschain/tree/main/packages/sdk)** - Full-featured JavaScript/TypeScript SDK
 - **[erc-8004-js](https://github.com/tetratorus/erc-8004-js)** - Lightweight JavaScript library
 - **[Azeth SDK (`@azeth/sdk`)](https://www.npmjs.com/package/@azeth/sdk)** - Full-stack TypeScript SDK for ERC-8004 identity, reputation, discovery, and x402 payments
 
 #### Python
 
+- **[Agent0 SDK](https://sdk.ag0.xyz/)** - Python support included alongside TypeScript
 - **[erc-8004-py](https://github.com/tetratorus/erc-8004-py)** - Python implementation
 - **[chaoschain-sdk](https://pypi.org/project/chaoschain-sdk/)** - Available on PyPI
 - **[agentwallet-sdk](https://www.npmjs.com/package/agentwallet-sdk)** - Non-custodial TypeScript SDK for AI agents: ERC-8004 identity, x402 payments, CCTP cross-chain transfers, Uniswap V3 swaps. First ERC-8004 implementation on npm with 158 tests.
 - **[trc8004-m2m](https://github.com/M2M-TRC8004-Registry/trc8004-m2m-sdk)** - TRC-8004 Python SDK for TRON (async, Pydantic models)
 
+### Infrastructure & Data
+
+- **[Agent0 Subgraph](https://github.com/agent0lab/subgraph)** - Multi-chain GraphQL subgraph indexing ERC-8004 registries
+- **[OASF (Open Agent Specification Format)](https://github.com/agntcy/oasf)** - Skill and capability taxonomy for AI agents; used alongside ERC-8004 agent cards
+- **[PayAI](https://payai.network/)** - x402 payment facilitator enabling per-request micropayments for agents on Base and Polygon
+- **[Registry Brokers by HashgraphDAO](https://registry.hashgraphonline.com/)** - Cross-network agent discovery bridging Hedera and EVM registries
+
 ---
 
-## 📋 Smart Contract Interfaces
+## Smart Contract Interfaces
 
-### 🏛️ Identity Registry (ERC-721 Compatible)
+### Identity Registry (ERC-721 Compatible)
+
+Agents are identified globally by:
+
+- `agentRegistry`: `{namespace}:{chainId}:{identityRegistry}` (e.g., `eip155:1:0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`)
+- `agentId`: the ERC-721 `tokenId` assigned incrementally by the registry
 
 ```solidity
-// Register new agent
-function register(string tokenURI, MetadataEntry[] calldata metadata)
-    returns (uint256 agentId)
+// Register a new agent (three overloads)
+function register(string agentURI, MetadataEntry[] calldata metadata) external returns (uint256 agentId)
+function register(string agentURI) external returns (uint256 agentId)
+function register() external returns (uint256 agentId)
 
-// Manage metadata
-function setMetadata(uint256 agentId, string key, bytes value)
-function getMetadata(uint256 agentId, string key) returns (bytes)
+// Update agent URI
+function setAgentURI(uint256 agentId, string calldata newURI) external
+
+// Optional on-chain metadata
+function getMetadata(uint256 agentId, string memory metadataKey) external view returns (bytes memory)
+function setMetadata(uint256 agentId, string memory metadataKey, bytes memory metadataValue) external
+
+// Agent wallet (reserved metadata key, requires EIP-712 or ERC-1271 proof)
+function setAgentWallet(uint256 agentId, address newWallet, uint256 deadline, bytes calldata signature) external
+function getAgentWallet(uint256 agentId) external view returns (address)
+function unsetAgentWallet(uint256 agentId) external
 ```
 
-### ⭐ Reputation Registry
+### Reputation Registry
+
+Feedback is stored as a signed fixed-point value (`int128` + `uint8` decimals), enabling a wide range of metrics (quality scores, uptime percentages, response times, revenues, etc.).
 
 ```solidity
-// Give feedback (requires agent signature)
+// Submit feedback for an agent (caller must not be owner or operator of agentId)
 function giveFeedback(
     uint256 agentId,
-    uint8 score,
-    bytes32 tag1,
-    bytes32 tag2,
-    string fileuri,
-    bytes32 filehash,
-    bytes feedbackAuth
+    int128 value,
+    uint8 valueDecimals,
+    string calldata tag1,
+    string calldata tag2,
+    string calldata endpoint,
+    string calldata feedbackURI,
+    bytes32 feedbackHash
+) external
+
+// Revoke previously given feedback
+function revokeFeedback(uint256 agentId, uint64 feedbackIndex) external
+
+// Append a response to received feedback (anyone may call)
+function appendResponse(
+    uint256 agentId,
+    address clientAddress,
+    uint64 feedbackIndex,
+    string calldata responseURI,
+    bytes32 responseHash
+) external
+
+// Read a specific feedback entry
+function readFeedback(
+    uint256 agentId,
+    address clientAddress,
+    uint64 feedbackIndex
+) external view returns (int128 value, uint8 valueDecimals, string memory tag1, string memory tag2, bool isRevoked)
+
+// Read all feedback for an agent
+function readAllFeedback(
+    uint256 agentId,
+    address[] calldata clientAddresses,
+    string calldata tag1,
+    string calldata tag2,
+    bool includeRevoked
+) external view returns (
+    address[] memory clients,
+    uint64[] memory feedbackIndexes,
+    int128[] memory values,
+    uint8[] memory valueDecimals,
+    string[] memory tag1s,
+    string[] memory tag2s,
+    bool[] memory revokedStatuses
 )
 
-// Query reputation
+// Count responses appended to a feedback entry
+function getResponseCount(
+    uint256 agentId,
+    address clientAddress,
+    uint64 feedbackIndex,
+    address[] calldata responders
+) external view returns (uint64 count)
+
+// Aggregated summary
 function getSummary(
     uint256 agentId,
-    address[] clientAddresses,
-    bytes32 tag1,
-    bytes32 tag2
-) returns (uint64 count, uint8 averageScore)
+    address[] calldata clientAddresses,
+    string calldata tag1,
+    string calldata tag2
+) external view returns (uint64 count, int128 summaryValue, uint8 summaryValueDecimals)
+
+// Enumerate clients and feedback indexes
+function getClients(uint256 agentId) external view returns (address[] memory)
+function getLastIndex(uint256 agentId, address clientAddress) external view returns (uint64)
 ```
 
-### ✅ Validation Registry
+### Validation Registry
 
 ```solidity
-// Request validation
+// Request validation (must be called by the owner or operator of agentId)
 function validationRequest(
     address validatorAddress,
     uint256 agentId,
-    string requestUri,
+    string calldata requestURI,
     bytes32 requestHash
-)
+) external
 
-// Provide validation response
+// Provide validation response (must be called by the validatorAddress from the request)
 function validationResponse(
     bytes32 requestHash,
     uint8 response,
-    string responseUri,
+    string calldata responseURI,
     bytes32 responseHash,
-    bytes32 tag
+    string calldata tag
+) external
+
+// Query a specific validation record
+function getValidationStatus(
+    bytes32 requestHash
+) external view returns (
+    address validatorAddress,
+    uint256 agentId,
+    uint8 response,
+    bytes32 responseHash,
+    string memory tag,
+    uint256 lastUpdate
 )
+
+// Aggregated validation statistics (agentId mandatory; validatorAddresses and tag are optional filters)
+function getSummary(
+    uint256 agentId,
+    address[] calldata validatorAddresses,
+    string calldata tag
+) external view returns (uint64 count, uint8 averageResponse)
+
+// List all validation request hashes for an agent or validator
+function getAgentValidations(uint256 agentId) external view returns (bytes32[] memory requestHashes)
+function getValidatorRequests(address validatorAddress) external view returns (bytes32[] memory requestHashes)
 ```
 
 ---
 
-## 🏛️ Standards & References
+## Standards & References
 
-### 📜 Core Standards
+### Core Standards
 
 - **[CAIP-10](https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-10.md)** - Chain Agnostic Improvement Proposal for account identification
 - **[RFC 8615](https://www.rfc-editor.org/rfc/rfc8615)** - Well-Known URIs specification
 - **[RFC 7071](https://datatracker.ietf.org/doc/html/rfc7071)** - A Media Type for Reputation Interchange (Reputons)
 - **[ERC-721](https://eips.ethereum.org/EIPS/eip-721)** - Non-Fungible Token Standard (base for Identity Registry)
 
-### 🔗 Related Services
+### Related Services
 
 - **[EAS (Ethereum Attestation Service)](https://attest.org/)** - Referenced for on-chain attestations
 
+## Related Standards
 
-## ⛓️ Cross-Chain & Alternative Implementations
+### Ethereum Ecosystem
+
+- **[ERC-8001](https://github.com/ethereum/ERCs/issues/XXX)** - Agent-to-Agent coordination (mentioned in discussions)
+- **[EAS](https://attest.org/)** - Ethereum Attestation Service for on-chain attestations
+
+
+### Cross-Chain and Alternative Implementations
 
 **[Hashgraph Online (HOL)](https://hol.org)** — _Trust engine for the agentic internet_
 
@@ -535,29 +683,27 @@ Universal agentic registry built on Hedera Hashgraph. Provides blockchain-based 
 
 - [Website](https://hol.org) | [Registry](https://hol.org/registry) | [GitHub](https://github.com/hashgraph-online) | [SDK](https://www.npmjs.com/package/@hol-org/standards-sdk)
 
-## 🔗 Related Standards
+**TRON Implementation:** [M2M-TRC8004-Registry](https://github.com/M2M-TRC8004-Registry)
 
-### 🌐 Ethereum Ecosystem
+The TRC-8004 implementation on TRON is deployed on both mainnet and Shasta testnet with four registries (Identity, Reputation, Validation, Incident). See [m2mregistry.io](https://m2mregistry.io) for details.
 
-- **[ERC-8001](https://github.com/ethereum/ERCs/issues/XXX)** - Agent-to-Agent coordination (mentioned in discussions)
-- **[EAS](https://attest.org/)** - Ethereum Attestation Service for on-chain attestations
 
-### 🤝 External Protocols
+### External Protocols
 
 - **[A2A Protocol](https://a2a-protocol.org/)** - Agent-to-Agent Protocol that ERC-8004 extends
 - **[x402 Payment Standard](https://www.x402.org/)** - Referenced for potential payment integration
 
-## 💡 FAQ
+## FAQ
 
 <details>
-<summary><strong>🔍 What is ERC-8004 and how does it relate to the A2A Protocol?</strong></summary>
+<summary><strong>What is ERC-8004 and how does it relate to the A2A Protocol?</strong></summary>
 
-ERC-8004 extends the Agent-to-Agent (A2A) Protocol with a **trust layer** that allows participants to discover, choose, and interact with agents across organizational boundaries without pre-existing trust. It introduces three lightweight, on-chain registries—Identity, Reputation, and Validation—while leaving application-specific logic to off-chain components.
+ERC-8004 extends the Agent-to-Agent (A2A) Protocol with a **trust layer** that allows participants to discover, choose, and interact with agents across organizational boundaries without pre-existing trust. It introduces three lightweight, on-chain registries: Identity, Reputation, and Validation, while leaving application-specific logic to off-chain components.
 
 </details>
 
 <details>
-<summary><strong>🏗️ What are the three core components of ERC-8004?</strong></summary>
+<summary><strong>What are the three core components of ERC-8004?</strong></summary>
 
 The three registries are:
 
@@ -567,7 +713,7 @@ The three registries are:
 </details>
 
 <details>
-<summary><strong>🔐 What trust models does ERC-8004 support?</strong></summary>
+<summary><strong>What trust models does ERC-8004 support?</strong></summary>
 
 ERC-8004 supports three pluggable trust models:
 
@@ -576,32 +722,32 @@ ERC-8004 supports three pluggable trust models:
 - **TEE attestations** for agents running in Trusted Execution Environments (crypto-verifiability)
 </details>
 
-### 📊 Specification Status
+### Specification Status
 
 <details>
-<summary><strong>📋 What is the current status of the ERC-8004 specification?</strong></summary>
+<summary><strong>What is the current status of the ERC-8004 specification?</strong></summary>
 
-ERC-8004 is in **peer review status** with a complete specification available. The protocol includes three operational registries (Identity, Reputation, and Validation) and has strong community support with builders actively developing implementations.
+ERC-8004 is currently in **Draft** status in the EIP process. The final audited contracts for Identity and Reputation registries are deployed on Ethereum mainnet and 20+ networks. The Validation Registry is under active revision with the TEE community.
 
 </details>
 
 <details>
-<summary><strong>✅ What does ERC-8004 v1 include?</strong></summary>
+<summary><strong>What does ERC-8004 v1 include?</strong></summary>
 
 The current specification includes:
 
-- ✅ Complete smart contract interfaces for all three registries
-- ✅ ERC-721 compatible Identity Registry with metadata support
-- ✅ Comprehensive feedback system with on-chain scoring (0-100) and off-chain metadata
-- ✅ Validation framework supporting crypto-economic and crypto-verification models
-- ✅ Full compatibility with A2A Protocol and MCP endpoints
-- ✅ Deployment-ready smart contract specifications
+- Complete smart contract interfaces for all three registries
+- ERC-721 compatible Identity Registry with metadata support
+- Comprehensive feedback system using signed fixed-point values (`int128` + `uint8` decimals) and off-chain metadata
+- Validation framework supporting crypto-economic and crypto-verification models
+- Full compatibility with A2A Protocol and MCP endpoints
+- Deployment-ready smart contract specifications
 </details>
 
-### 🔧 Technical Implementation
+### Technical Implementation
 
 <details>
-<summary><strong>⚡ Why does ERC-8004 prioritize off-chain data storage over on-chain?</strong></summary>
+<summary><strong>Why does ERC-8004 prioritize off-chain data storage over on-chain?</strong></summary>
 
 The protocol deliberately keeps complex data off-chain for several reasons:
 
@@ -612,7 +758,7 @@ The protocol deliberately keeps complex data off-chain for several reasons:
 </details>
 
 <details>
-<summary><strong>🔗 Should validation and reputation data be stored on-chain for smart contract composability?</strong></summary>
+<summary><strong>Should validation and reputation data be stored on-chain for smart contract composability?</strong></summary>
 
 This is an active debate in the community. Arguments for on-chain storage include:
 
@@ -625,7 +771,7 @@ The current specification keeps data off-chain but emits events, though some sug
 </details>
 
 <details>
-<summary><strong>🌐 How does domain validation work in the Identity Registry?</strong></summary>
+<summary><strong>How does domain validation work in the Identity Registry?</strong></summary>
 
 Currently, the ERC doesn't specify how to verify that an agent actually owns the domain they claim. This verification is left to users of the protocol. Future versions might include:
 
@@ -635,26 +781,26 @@ Currently, the ERC doesn't specify how to verify that an agent actually owns the
 </details>
 
 <details>
-<summary><strong>🔗 Why does ERC-8004 require agents to use domains instead of URLs?</strong></summary>
+<summary><strong>Why does ERC-8004 require agents to use domains instead of URLs?</strong></summary>
 
 The current specification requires each agent to have its own domain/subdomain with AgentCard at the well-known location `/.well-known/agent-card.json`. This is stricter than the A2A spec, which allows URLs. Some community members suggest using URLs instead to allow multiple agents per domain.
 
 </details>
 
-### ⭐ Reputation and Trust
+### Reputation and Trust
 
 <details>
-<summary><strong>📊 Should reputation be a single aggregate score or modular?</strong></summary>
+<summary><strong>Should reputation be a single aggregate score or modular?</strong></summary>
 
 The community strongly favors **modular approaches**:
 
-- ❌ **Against single scores**: Creates monopolistic behavior and oversimplifies trust relationships
-- ✅ **For modularity**: Trust is context-dependent and varies between agent pairs
-- 🎯 **Preferred approach**: Index and reference multiple reputation systems, allowing agents to choose relevant metrics
+- **Against single scores**: Creates monopolistic behavior and oversimplifies trust relationships
+- **For modularity**: Trust is context-dependent and varies between agent pairs
+- **Preferred approach**: Index and reference multiple reputation systems, allowing agents to choose relevant metrics
 </details>
 
 <details>
-<summary><strong>🤝 How should reputation providers work together?</strong></summary>
+<summary><strong>How should reputation providers work together?</strong></summary>
 
 Community suggestions include:
 
@@ -665,16 +811,16 @@ Community suggestions include:
 </details>
 
 <details>
-<summary><strong>🔄 Is trust universal between agents?</strong></summary>
+<summary><strong>Is trust universal between agents?</strong></summary>
 
 **No.** Trust is not a universal value but a **vector** from one agent to another. Alice's trust for Bob will differ from Charlie's trust for Bob, and Alice's trust varies by context/domain of interaction. This reinforces the need for modular, context-aware reputation systems.
 
 </details>
 
-### 💰 Payment and Economics
+### Payment and Economics
 
 <details>
-<summary><strong>💳 How does ERC-8004 handle payments between agents?</strong></summary>
+<summary><strong>How does ERC-8004 handle payments between agents?</strong></summary>
 
 ERC-8004 deliberately **doesn't cover payments** to remain unopinionated and avoid coupling trust/discovery with specific payment protocols. However:
 
@@ -684,7 +830,7 @@ ERC-8004 deliberately **doesn't cover payments** to remain unopinionated and avo
 </details>
 
 <details>
-<summary><strong>🔄 What payment mechanisms are envisioned?</strong></summary>
+<summary><strong>What payment mechanisms are envisioned?</strong></summary>
 
 While payments are orthogonal to ERC-8004, the specification provides examples showing how x402 payment proofs can enrich feedback signals:
 
@@ -708,7 +854,7 @@ Other potential mechanisms include:
 </details>
 
 <details>
-<summary><strong>🎯 Should there be incentives for providing feedback or guaranteeing data availability?</strong></summary>
+<summary><strong>Should there be incentives for providing feedback or guaranteeing data availability?</strong></summary>
 
 This is mentioned as a possible future direction, including:
 
@@ -717,48 +863,48 @@ This is mentioned as a possible future direction, including:
 - Crypto-economic mechanisms for validator honesty
 </details>
 
-### ✅ Validation and Verification
+### Validation and Verification
 
 <details>
-<summary><strong>🔍 How do the two validation scenarios work?</strong></summary>
+<summary><strong>How do the two validation scenarios work?</strong></summary>
 
 - **Crypto-economic scenario**: DataHash commits to job re-execution info; AgentValidator can be trusted agents, committees, or stake-secured services
 - **Crypto-verification scenario**: DataHash commits to TEE attestation/zkTLS proof info; AgentValidator is a verifier smart contract checking proofs on-chain
 </details>
 
 <details>
-<summary><strong>🔗 What's the relationship between ERC-8004 and other agent standards?</strong></summary>
+<summary><strong>What's the relationship between ERC-8004 and other agent standards?</strong></summary>
 
 - **ERC-8001**: Focuses on agent-to-agent coordination and consensus (orthogonal to ERC-8004)
 - **EAS**: Referenced for on-chain attestations
 - **RFC 7071 (Reputons)**: Standard for reputation interchange, relevant for reputation systems
 </details>
 
-### 🚀 Implementation and Development
+### Implementation and Development
 
 <details>
-<summary><strong>🏛️ Will there be a single registry per chain or multiple registries?</strong></summary>
+<summary><strong>Will there be a single registry per chain or multiple registries?</strong></summary>
 
 The goal is to have **one singleton Identity Registry per chain** to prevent proliferation of slightly different registries.
 
 </details>
 
 <details>
-<summary><strong>💰 Should registration be free or require deposits?</strong></summary>
+<summary><strong>Should registration be free or require deposits?</strong></summary>
 
 This implementation detail isn't specified in the current ERC but is under discussion for future versions.
 
 </details>
 
 <details>
-<summary><strong>📋 How detailed are the smart contract interfaces?</strong></summary>
+<summary><strong>How detailed are the smart contract interfaces?</strong></summary>
 
 The current ERC provides function names and parameters but lacks detailed Solidity interfaces. Future versions will include more precise type specifications and complete interface definitions.
 
 </details>
 
 <details>
-<summary><strong>🌉 What about cross-chain support?</strong></summary>
+<summary><strong>What about cross-chain support?</strong></summary>
 
 Cross-chain identifiers are mentioned as a possible future direction, along with:
 
@@ -767,10 +913,10 @@ Cross-chain identifiers are mentioned as a possible future direction, along with
 - Integrations with A2A payment extensions
 </details>
 
-### 🌐 Integration and Ecosystem
+### Integration and Ecosystem
 
 <details>
-<summary><strong>🔌 How does ERC-8004 integrate with existing projects?</strong></summary>
+<summary><strong>How does ERC-8004 integrate with existing projects?</strong></summary>
 
 Several projects are already building compatible systems:
 
@@ -780,7 +926,7 @@ Several projects are already building compatible systems:
 </details>
 
 <details>
-<summary><strong>🏗️ What standards does ERC-8004 build upon?</strong></summary>
+<summary><strong>What standards does ERC-8004 build upon?</strong></summary>
 
 Key standards include:
 
@@ -790,20 +936,20 @@ Key standards include:
 - **EAS**: Ethereum Attestation Service patterns
 </details>
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions to this awesome list!
 
-### 📝 What to Contribute
+### What to Contribute
 
-- 🔧 Implementations of ERC-8004
-- 🛠️ Tools and libraries for developers
-- 📚 Documentation and tutorials
-- 🔬 Research papers and academic work
-- 🚀 Community projects using ERC-8004
-- 💬 Discussion summaries and insights
+- Implementations of ERC-8004
+- Tools and libraries for developers
+- Documentation and tutorials
+- Research papers and academic work
+- Community projects using ERC-8004
+- Discussion summaries and insights
 
-### 🔄 How to Contribute
+### How to Contribute
 
 1. Check the [issues](https://github.com/sudeepb02/awesome-erc8004/issues) for ongoing discussions
 2. Fork this repository
@@ -811,20 +957,20 @@ We welcome contributions to this awesome list!
 4. Submit a pull request with a clear description
 5. Follow the [Awesome List Guidelines](https://github.com/sindresorhus/awesome/blob/main/contributing.md)
 
-📖 **See [Contributing Guidelines](CONTRIBUTING.md) for detailed instructions.**
+**See [Contributing Guidelines](CONTRIBUTING.md) for detailed instructions.**
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
-### 👨‍💻 Core Authors & Contributors
+### Core Authors & Contributors
 
 - **Marco De Rossi** [@marco_derossi](https://x.com/marco_derossi) (MetaMask)
 - **Davide Crapis** [@dcrapis](https://x.com/DavideCrapis) (Ethereum Foundation)
 - **Jordan Ellis** (Google)
 - **Erik Reppel** (Coinbase)
 
-### 🏢 Contributing Organizations
+### Contributing Organizations
 
 - **Ethereum Foundation's dAI team** - Core protocol development and research
 - **Consensys** - Implementation and ecosystem development
