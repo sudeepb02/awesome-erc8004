@@ -178,6 +178,10 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 
 ### 🚀 Infrastructure & SDKs
 
+**[UFX Agentic Commerce](https://github.com/ufosearchspace-create/ERC8183)**
+
+- [ERC-8183 Hook & Reputation Middleware](https://github.com/ufosearchspace-create/ERC8183) - First `IACPHook` implementations and ERC-8004 reputation bridge for ERC-8183 (Agentic Commerce Protocol). Includes ReputationHook (auto-writes job outcomes to ReputationRegistry), ReputationGateHook (reputation-based funding gate), SLAHook (deadline enforcement), AI evaluators, and Python SDK. 208 Solidity tests (incl. 9 fuzz). Live on Base Mainnet with [Iamalive Agent #1734](https://basescan.org/address/0x3F41E8699D774Eb738967A6506B3A9E919aA1c8B). MIT licensed.
+
 **[Automata Network](https://www.ata.network/)**
 
 - [Automata DCAP Attestation](https://github.com/automata-network/automata-dcap-attestation) - Solidity library for onchain Intel SGX and TDX attestation verification, supporting RISC Zero and Succinct
@@ -202,7 +206,18 @@ ERC-8004 introduces **three lightweight, on-chain registries** that enable trust
 - [Vistara Agent Arena SDK](https://github.com/vistara-apps/agent-arena-v1)
 - [ERC-8004 Example](https://github.com/vistara-apps/erc-8004-example)
 
-**[Azeth](https://azeth.ai)**
+### 🔄 Commerce & Escrow
+
+**[UFX Agentic Commerce](https://github.com/ufosearchspace-create/ERC8183)** — First `IACPHook` implementations and ERC-8004 reputation bridge for ERC-8183 (Agentic Commerce Protocol). The EIP defines hooks; we built and deployed them.
+
+- [ReputationHook](https://github.com/ufosearchspace-create/ERC8183) - Auto-writes job outcomes to ERC-8004 ReputationRegistry after every completed/rejected job
+- [ReputationGateHook](https://github.com/ufosearchspace-create/ERC8183) - Gates provider funding by ERC-8004 reputation score and job history
+- [SLAHook](https://github.com/ufosearchspace-create/ERC8183) - Enforces submission deadlines after funding
+- [WebScrapingEvaluator + AI Evaluator](https://github.com/ufosearchspace-create/ERC8183) - On-chain attestation for deliverables
+- [Python SDK](https://github.com/ufosearchspace-create/ERC8183) - Async client for contract interaction
+- 208 Solidity tests (incl. 9 fuzz). 5 verified contracts on Base Mainnet. [Iamalive Agent #1734](https://basescan.org/address/0x3F41E8699D774Eb738967A6506B3A9E919aA1c8B). MIT licensed.
+
+**[Azeth](https://azeth.ai)** 
 
 Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC-8004 identity registration, weighted reputation with Sybil-resistant opinions, capability-based service discovery, and x402 payment settlement with automatic reputation feedback. Agents get non-custodial ERC-4337 smart accounts with guardian-enforced guardrails. Deployed on Base Sepolia and Ethereum Sepolia with deterministic CREATE2 addresses.
 
@@ -283,6 +298,9 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 - [Agent Leaderboard](https://mintware.finance/agents) - "Live rankings by Attribution score on Base"
 - [Oracle Manifest](https://mintware.finance/.well-known/agent-reputation-oracle.json) - "RFC 8615 + ERC-8004 #37297"
 
+**[8k4 Protocol](https://8k4protocol.com)**
+
+- [8k4 API](https://api.8k4protocol.com) - Reputation infrastructure for ERC-8004 agents: trust scoring (IGGY-Score), metadata hosting, and cross-chain lookup. Public stats currently show 106,996 indexed agents across Base (33,939), BSC (44,020), and Ethereum (29,037), with x402 pay-per-query support (USDC on Base).
 
 **[Helixa](https://helixa.xyz)**
 
@@ -295,6 +313,11 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 - [Chitin](https://chitin.id) - Soul identity layer for AI agents on Base L2. Uses ERC-8004 `register()` for agent passports + Soulbound Tokens (EIP-5192) as permanent soul certificates. Includes W3C DID resolution, on-chain certificates, multi-method governance voting, and A2A readiness verification. Live on Base Mainnet.
 - [Chitin MCP Server](https://www.npmjs.com/package/chitin-mcp-server) - MCP server for AI assistants to verify agent identities, resolve DIDs, and manage certificates (`npx chitin-mcp-server`)
 - [Chitin Contracts](https://github.com/Tiida-Tech/chitin-contracts) - Open source smart contracts (MIT). Solidity 0.8.28 + Foundry, 146 tests, verified on Basescan.
+
+**[AgentStamp](https://agentstamp.org)**
+
+- [AgentStamp](https://agentstamp.org) - Trust intelligence platform for AI agents with ERC-8004 bridge — identity stamps, reputation scoring (0-100), forensic audit trails, and x402 micropayments. Provides lookup, trust check, and linking endpoints for ERC-8004 registered agents.
+- [AgentStamp GitHub](https://github.com/vinaybhosle/agentstamp) - Open-source Node.js server and SDK with MCP tools, HMAC signature verification, and admin audit endpoints
 
 **[MolTrust](https://moltrust.ch)**
 
@@ -309,6 +332,13 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 - [x402-agent-score](https://www.npmjs.com/package/x402-agent-score) - Hono middleware to gate outbound agent payments by counterparty reputation score
 - [DJD Agent Score GitHub](https://github.com/jacobsd32-cpu/djdagentscore) - Open source scoring engine. TypeScript, Hono 4, SQLite, 298 tests.
 
+**[InsumerAPI](https://insumermodel.com/developers/)** — _On-chain credential verification across 33 blockchains_
+
+- [InsumerAPI](https://insumermodel.com/developers/) - REST API that verifies wallet conditions (token balances, NFT ownership, EAS attestations, Farcaster identity) across 30 EVM chains, Solana, XRPL, and Bitcoin. Returns ECDSA P-256 signed booleans — never raw balances. Used by DJD Agent Score and AsterPay KYA as a verification data source for agent trust scoring. Free tier available.
+- [insumer-verify](https://www.npmjs.com/package/insumer-verify) - Zero-dependency verification library. Auto-detects JWT or raw attestation, verifies ES256 signature via JWKS (`npm i insumer-verify`)
+- [mcp-server-insumer](https://www.npmjs.com/package/mcp-server-insumer) - MCP server with 8 tools for wallet verification, trust profiling, and attestation
+- [JWKS endpoint](https://insumermodel.com/.well-known/jwks.json) - Public key discovery for offline signature verification (ES256, kid `insumer-attest-v1`)
+- [OpenAPI spec](https://insumermodel.com/openapi.yaml) - Full API specification
 
 ### 🎮 Applications & Demos
 
@@ -495,6 +525,15 @@ function validationResponse(
 ### 🔗 Related Services
 
 - **[EAS (Ethereum Attestation Service)](https://attest.org/)** - Referenced for on-chain attestations
+
+
+## ⛓️ Cross-Chain & Alternative Implementations
+
+**[Hashgraph Online (HOL)](https://hol.org)** — _Trust engine for the agentic internet_
+
+Universal agentic registry built on Hedera Hashgraph. Provides blockchain-based identity for AI agents using ERC-8004 standard and HCS-14 Universal Agent IDs (UAIDs). Enables agent discovery, verification, and autonomous commerce via x402 protocol.
+
+- [Website](https://hol.org) | [Registry](https://hol.org/registry) | [GitHub](https://github.com/hashgraph-online) | [SDK](https://www.npmjs.com/package/@hol-org/standards-sdk)
 
 ## 🔗 Related Standards
 
