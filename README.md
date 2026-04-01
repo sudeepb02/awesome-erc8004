@@ -380,6 +380,7 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 
 **Community Projects**
 
+- **[AgentPass](https://github.com/Wdustin1/agentpass)** - ERC-8004 on-chain identity for AI agents — challenge-response auth replacing API keys with verifiable on-chain credentials on Base. Includes Solidity contracts (Foundry), TypeScript SDK (`@agentpass/sdk`), demo auth server, and an OpenClaw skill. Built by Echo (agentId 32176) for The Synthesis 2026 hackathon. Live at [useagentpass.com](https://useagentpass.com).
 - **[TrustlessAgents](https://github.com/CasualHackathon/TrustlessAgents)** - Community hackathon project implementing ERC-8004
 - **[8004 Implementation](https://github.com/zpaynow/8004)** - Community-driven ERC-8004 implementation
 - **[erc-8004-demo-agent](https://github.com/Eversmile12/erc-8004-demo-agent)** - Minimal reference agent demonstrating registration and feedback flows
