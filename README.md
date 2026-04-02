@@ -192,6 +192,10 @@ The `type`, `name`, `description`, and `image` fields ensure compatibility with 
 
 ### Infrastructure & SDKs
 
+**[mcp8004](https://github.com/jordanlyall/mcp8004)**
+
+- Drop-in MCP auth middleware using ERC-8004 onchain agent identity. Agents authenticate to MCP servers by signing a challenge with their wallet; the server verifies against the ERC-8004 Identity Registry on Base and issues a scoped JWT session token. Includes x402 payment fallback for unregistered agents. `npm install mcp8004`. MIT licensed.
+
 **[UFX Agentic Commerce](https://github.com/ufosearchspace-create/ERC8183)**
 
 - [ERC-8183 Hook & Reputation Middleware](https://github.com/ufosearchspace-create/ERC8183) - First `IACPHook` implementations and ERC-8004 reputation bridge for ERC-8183 (Agentic Commerce Protocol). Includes ReputationHook (auto-writes job outcomes to ReputationRegistry), ReputationGateHook (reputation-based funding gate), SLAHook (deadline enforcement), AI evaluators, and Python SDK. 208 Solidity tests (incl. 9 fuzz). Live on Base Mainnet with [Iamalive Agent #1734](https://basescan.org/address/0x3F41E8699D774Eb738967A6506B3A9E919aA1c8B). MIT licensed.
