@@ -1002,3 +1002,7 @@ To the extent possible under law, the contributors have waived all copyright and
 <p><em>Made with ❤️ by the ERC-8004 community</em></p>
 
 </div>
+
+## Security & Auditing Tools
+
+- **[MASSAT Framework](https://github.com/craigmbrown/massat-framework)** - Open-source security audit toolkit for multi-agent AI systems with ERC-8004 passport verification. Covers OWASP ASI01-ASI10 threat categories. Validates agent identity, delegation chains, and trust tiers. Free tier + hosted API by [BlindOracle](https://craigmbrown.com/blindoracle/).
