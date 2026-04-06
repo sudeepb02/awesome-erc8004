@@ -411,6 +411,7 @@ Tools for browsing and querying on-chain ERC-8004 registries.
 - **[agentscan.info](https://agentscan.info)** - On-chain agent explorer with registry lookup
 - **[8004agents.ai](https://8004agents.ai)** - Agent discovery interface
 - **[trust8004.xyz](https://www.trust8004.xyz)** - Agent discovery and management tool
+- **[agenteconomy.to](https://agenteconomy.to)** - Real-time dashboard tracking ERC-8004 agent registry events on Base alongside x402, ERC-8183, and MPP protocols. Aggregated metrics, daily charts, and chain breakdowns refreshed every 6 hours
 
 ## Research & Papers
 
