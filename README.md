@@ -296,6 +296,23 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 
 ### Identity & Trust
 
+**[RNWY](https://rnwy.com)**
+
+Trust intelligence and reputation scoring for ERC-8004 agents. 150,000+ agents indexed across 12 EVM chains and Solana. Dual-score architecture (Signal Depth + Risk Intensity), sybil detection with wallet age analysis, ownership continuity tracking, and 4.5M+ indexed commerce jobs from Olas and Virtuals ACP. Live on-chain oracle on Base mainnet. Soulbound identity tokens (ERC-5192) on Base. Published scoring methodology. Multi-attestation ecosystem participant (behavioral_trust issuer). Free public API.
+
+- [RNWY Explorer](https://rnwy.com/explorer) - Browse and search all indexed ERC-8004 agents with trust profiles
+- [RNWY API](https://rnwy.com/api) - Public REST API for trust scores, agent data, and wallet intelligence
+- [RNWY SDK](https://www.npmjs.com/package/rnwy-sdk) - TypeScript SDK (`rnwy-sdk` on npm)
+- [Sybil X-Ray Scanner](https://rnwy.com/scanner) - Sock puppet detection, reviewer clustering, and wallet age analysis for any agent
+- [Wallet Intelligence](https://rnwy.com/wallets) - Wallet scoring, tenure analysis, and activity profiling across 121K+ scored wallets
+- [Risk Intelligence](https://rnwy.com/risk-intelligence) - Sybil detection, wallet scoring, and fraud pattern visualization
+- [Olas Commerce](https://rnwy.com/commerce/olas) - On-chain job data from Olas (~1.5M jobs across Gnosis, Base, Polygon)
+- [Virtuals Commerce](https://rnwy.com/commerce/virtuals) - On-chain job data from Virtuals ACP V1+V2 (3M+ agent-to-agent jobs)
+- [On-chain Oracle](https://basescan.org/address/0xD5fdccD492bB5568bC7aeB1f1E888e0BbA6276f4) - Base mainnet oracle seeded with 138K+ agents, runs nightly delta syncs (150K+ currently indexed)
+- [ERC-8183 Hook Contract (PR #9)](https://github.com/erc-8183/hook-contracts) - TrustGateHook for gating agentic commerce by reputation
+- [MCP Server](https://rnwy.com/mcp) - Model Context Protocol server for AI agent integration
+- [GitHub](https://github.com/rnwy)
+
 ### Agent Services (x402 + ERC-8004)
 
 **[xbird](https://github.com/checkra1neth/xbird-skill)**
