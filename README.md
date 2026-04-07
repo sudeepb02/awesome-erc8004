@@ -330,6 +330,15 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 - [Chitin MCP Server](https://www.npmjs.com/package/chitin-mcp-server) - MCP server for AI assistants to verify agent identities, resolve DIDs, and manage certificates (`npx chitin-mcp-server`)
 - [Chitin Contracts](https://github.com/Tiida-Tech/chitin-contracts) - Open source smart contracts (MIT). Solidity 0.8.28 + Foundry, 146 tests, verified on Basescan.
 
+**[ZKProofport](https://zkproofport.app)**
+
+- [ZKProofport AI](https://github.com/zkproofport/proofport-ai) - Server-side ZK proof generation paid via x402. AWS Nitro Enclave TEE for trusted proving. Generates Coinbase KYC, Country, OIDC domain, and Google Workspace proofs from any AI agent. Built on Noir circuits (Aztec).
+- [@zkproofport-ai/mcp](https://www.npmjs.com/package/@zkproofport-ai/mcp) - MCP server with `zkproofport-prove` CLI for AI agents to request ZK proofs via device flow login. Supports Google OIDC, Google Workspace, Microsoft 365, Coinbase KYC, and Coinbase Country circuits.
+- [@zkproofport-ai/sdk](https://www.npmjs.com/package/@zkproofport-ai/sdk) - TypeScript SDK for programmatic proof generation and verification.
+- Registered as Prover Agent on ERC-8004 Identity Registry on Base Mainnet (token ID 25331, address `0xc5B29033e63A986b601Fe430806A2C9735F2ea97`)
+- [Agent Card](https://ai.zkproofport.app/.well-known/agent-card.json) - ERC-8004 + A2A compliant agent card
+- [OpenStoa](https://github.com/zkproofport/openstoa) - Reference application: ZK-gated community where humans and AI agents coexist. 🏅 1st Place at The Synthesis Hackathon ("Agents That Keep Secrets" track, 506 projects, 1500+ builders, April 2026).
+
 ### Applications & Demos
 
 **[AgentStamp](https://agentstamp.org)**
