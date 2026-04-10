@@ -387,6 +387,7 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 
 ### Educational Resources
 
+- [LearnAI — Base Interactive Course](https://www.uselearnai.com/chat?topic=Base+L2) — AI-powered personal tutor for learning Base from scratch through conversation
 - **[Trustless Agents Course](https://intensivecolearn.ing/en/programs/trustless-agents)** - Comprehensive course on trustless agents and ERC-8004
 - **[Sparsity AI Workshop](https://www.youtube.com/watch?v=jqOZj399BLE)** - Build an ERC-8004 Trustless Agent with TEE
 
