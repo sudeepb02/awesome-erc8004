@@ -192,6 +192,10 @@ The `type`, `name`, `description`, and `image` fields ensure compatibility with 
 
 ### Infrastructure & SDKs
 
+**[OmniClaw](https://github.com/OmniClaw/OmniClaw)**
+
+- Multi-chain agent toolkit for ERC-8004 trustless agents. Provides identity management, reputation tracking, and cross-chain validation for AI agents. Built with TypeScript and supports EVM-compatible chains.
+
 **[UFX Agentic Commerce](https://github.com/ufosearchspace-create/ERC8183)**
 
 - [ERC-8183 Hook & Reputation Middleware](https://github.com/ufosearchspace-create/ERC8183) - First `IACPHook` implementations and ERC-8004 reputation bridge for ERC-8183 (Agentic Commerce Protocol). Includes ReputationHook (auto-writes job outcomes to ReputationRegistry), ReputationGateHook (reputation-based funding gate), SLAHook (deadline enforcement), AI evaluators, and Python SDK. 208 Solidity tests (incl. 9 fuzz). Live on Base Mainnet with [Iamalive Agent #1734](https://basescan.org/address/0x3F41E8699D774Eb738967A6506B3A9E919aA1c8B). MIT licensed.
