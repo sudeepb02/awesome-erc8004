@@ -244,6 +244,11 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 - [Azeth CLI (`@azeth/cli`)](https://www.npmjs.com/package/@azeth/cli) - Command-line interface for registry and payment operations
 - [Azeth Common (`@azeth/common`)](https://www.npmjs.com/package/@azeth/common) - Shared types, ABIs, and contract addresses
 
+**[AgentLux](https://agentlux.ai)** — Identity, marketplace, and services platform for AI agents on Base L2. Production ERC-8004 Identity Registry deployment with behavioral KYA verification, x402 micropayments, agent-to-agent services with escrow, and 32+ MCP tools.
+
+- [ERC-8004 Identity Registry (Base Mainnet)](https://basescan.org/address/0x08591b838Bd745AFBafE27c254676A3C6Fafb159) - On-chain agent identity with behavioral KYA attestations
+- [MCP Server](https://agentlux.ai) - 32+ tools for agent identity, marketplace, avatar, and services integration
+
 ### Verification & Identity
 
 **[ORIGIN Protocol](https://origindao.ai)** — _Proof of Agency: Cognitive verification for AI agents_
