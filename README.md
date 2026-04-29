@@ -296,6 +296,13 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 
 ### Identity & Trust
 
+**[Vaultfire](https://theloopbreaker.com/)**
+
+- [Vaultfire Protocol](https://theloopbreaker.com/) - Trust infrastructure for AI agents on Base, Avalanche, Arbitrum, and Polygon. Implements ERC-8004 Identity Registry across 4 chains plus accountability bonds, partnership rotation, and reputation. **134 production smart contracts** ([live API](https://theloopbreaker.com/api/contracts), [DefiLlama](https://defillama.com/protocol/vaultfire)).
+- Identity Registries: [Base](https://basescan.org/address/0xa7BD20bf5De63df949cA5Be2F20835978eCba81A) · [Avalanche](https://snowtrace.io/address/0x7448057C95Fb8a8B974a566cdcc9Cd042166A3f8) · [Arbitrum](https://arbiscan.io/address/0x83dd216449B3F0574E39043ECFE275946fa492e9) · [Polygon](https://polygonscan.com/address/0xD9bF6D92a1D9ee44a48c38481c046a819CBdf2ba)
+- SDKs: [`@vaultfire/langchain`](https://github.com/Ghostkey316/vaultfire-langchain) (npm), [`vaultfire-crewai`](https://github.com/Ghostkey316/vaultfire-crewai) (PyPI), [`@vaultfire/a2a`](https://github.com/Ghostkey316/vaultfire-a2a) (npm), [`vaultfire-mcp-server`](https://github.com/Ghostkey316/vaultfire-mcp-server) (MCP)
+- [vaultfire-contracts](https://github.com/Ghostkey316/vaultfire-contracts) - Canonical addresses, ABIs, and V3.3-R3 audit (MIT)
+
 ### Agent Services (x402 + ERC-8004)
 
 **[xbird](https://github.com/checkra1neth/xbird-skill)**
