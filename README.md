@@ -221,6 +221,12 @@ The `type`, `name`, `description`, and `image` fields ensure compatibility with 
 - [ERC-8004 Example](https://github.com/vistara-apps/erc-8004-example)
 - **[Verity Protocol](https://verity.tenpound.xyz)** — On-chain reliability scoring for ERC-8004 agents. Indexes `NewFeedback` events from the `ReputationRegistry`, computes Brier Skill Scores across Economic, Solver, and Governance verticals, submits reputation back via `giveFeedback` after each scoring cycle, and anchors every score as an EAS attestation on Base. SDK: [`@veritynpm/sdk`](https://www.npmjs.com/package/@veritynpm/sdk).
 
+**[Tenzro Network](https://tenzro.network)**
+
+- [tenzro-network](https://github.com/tenzro/tenzro-network) - L1 with three ERC-8004 registries exposed as native EVM precompiles: `IDENTITY 0x101a`, `REPUTATION 0x101b`, `VALIDATION 0x101c`. Selectors (`registerAgent`, `submitFeedback`, `requestValidation`, `submitValidation`) are byte-identical to the Ethereum reference, so the same calldata targets either deployment.
+- [tenzro-identity::erc8004 adapter](https://github.com/tenzro/tenzro-network/blob/main/crates/tenzro-identity/src/erc8004.rs) - Rust ABI encoders + client. Mirrors TDIP machine registrations (`did:tenzro:machine:*`) onto the Ethereum contracts; `agentId = keccak256(utf8(did_string))` computes identically on both sides.
+- [Tenzro MCP + A2A](https://mcp.tenzro.network/mcp) - the three registries surfaced to MCP clients (Claude Desktop, Cursor) and A2A consumers without writing Solidity. Live on Tenzro testnet `https://rpc.tenzro.network` (chain id 1337). Apache-2.0.
+
 ### Collaboration Frameworks
 
 ### Commerce & Escrow
