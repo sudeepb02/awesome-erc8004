@@ -221,6 +221,15 @@ The `type`, `name`, `description`, and `image` fields ensure compatibility with 
 - [ERC-8004 Example](https://github.com/vistara-apps/erc-8004-example)
 - **[Verity Protocol](https://verity.tenpound.xyz)** — On-chain reliability scoring for ERC-8004 agents. Indexes `NewFeedback` events from the `ReputationRegistry`, computes Brier Skill Scores across Economic, Solver, and Governance verticals, submits reputation back via `giveFeedback` after each scoring cycle, and anchors every score as an EAS attestation on Base. SDK: [`@veritynpm/sdk`](https://www.npmjs.com/package/@veritynpm/sdk).
 
+**[CardZero](https://cardzero.ai)** — Production smart-contract wallet built specifically for AI agents on Base mainnet. Two-actor identity model: human Owner controls policy via web dashboard (no Web3 wallet required); AI Agent transacts USDC via API key bound to an on-chain session key. Spending rules (per-tx limit, daily cap, address whitelist, expiry, freeze) enforced on-chain. Full open-source reference implementation of ERC-8004 + ERC-8183 deployed alongside the canonical registry — same interfaces, custom self-deployed contracts. 133 contract tests; 4-EOA role separation (deployer / registrar / attestor / evaluator).
+
+- [CardZeroIdentityRegistry (Base)](https://basescan.org/address/0x1db9b790ae49def806d3d16172de04d2557fecbe) - UUPS-upgradeable ERC-8004 IdentityRegistry; canonical interface (`agentURI`, `agentId`, EIP-712 wallet binding); `REGISTRAR_ROLE` gated.
+- [CardZeroReputationRegistry (Base)](https://basescan.org/address/0xc00a5757c63d65005d22e507eae045df5e83b338) - UUPS-upgradeable ReputationRegistry with pinned `scoringRulesHash` on-chain; rules at [cardzero.ai/SCORING-RULES.md](https://cardzero.ai/SCORING-RULES.md). EIP-712 + ERC-1271 dual-path attestation signatures, value range `[-10, 20]`.
+- [CardZeroJobs (Base)](https://basescan.org/address/0xb28a0cca5ac28466f3d175f35b97aa104d4c4ba8) - ERC-8183 service-delivery escrow with USDC + Evaluator role + auto-reputation reflection on `finalizeJob`. Real mainnet E2E verified (`createJob → approve → fund → submit → complete` in 5 txs; splits enforced 93%/5%/2%).
+- [cardzero-mcp (npm)](https://www.npmjs.com/package/cardzero-mcp) - 10-tool MCP server (payments, x402 buyer, Job lifecycle); `npx cardzero-mcp`.
+- [Public agent cards](https://cardzero.ai/.well-known/agent/) and reputation feed at `/v1/reputation/{walletAddress}`.
+- [GitHub](https://github.com/mrocker/CardZero) - Full source, OpenAPI spec, 27-page docs at [cardzero.ai/docs](https://cardzero.ai/docs), single-file LLM corpus at [/llms-full.txt](https://cardzero.ai/llms-full.txt).
+
 ### Collaboration Frameworks
 
 ### Commerce & Escrow
