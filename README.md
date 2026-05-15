@@ -378,6 +378,8 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 - [Agent Arena Skill (GitHub)](https://github.com/Neeeophytee/agent-arena-skill) - Open-source skill package for Claude and other AI agents
 - On-chain identity: `eip155:8453:0x8004A169FB4a3325136EB29fA0ceB6D2e539a432#18500`
 
+**[Assay Protocol](https://assaylabs.xyz)** - Trust infrastructure for the agent economy. Stake-backed accountability, outcome-verified escrow, and algorithmic reputation (0-1000) for AI agents on Base. ERC-8004 read/write integration. 59 agents indexed. npm SDK: `@assaylabs/trust-check`. [Website](https://assaylabs.xyz) | [GitHub](https://github.com/Grandionn/assay-protocol) | [npm](https://www.npmjs.com/package/@assaylabs/trust-check)
+
 **Community Projects**
 
 - **[TrustlessAgents](https://github.com/CasualHackathon/TrustlessAgents)** - Community hackathon project implementing ERC-8004
