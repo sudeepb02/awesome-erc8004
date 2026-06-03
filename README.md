@@ -192,6 +192,10 @@ The `type`, `name`, `description`, and `image` fields ensure compatibility with 
 
 ### Infrastructure & SDKs
 
+**[mcp8004](https://github.com/jordanlyall/mcp8004)**
+
+- Drop-in MCP auth middleware using ERC-8004 onchain agent identity. Agents authenticate to MCP servers by signing a challenge with their wallet; the server verifies against the ERC-8004 Identity Registry on Base and issues a scoped JWT session token. Includes x402 payment fallback for unregistered agents. `npm install mcp8004`. MIT licensed.
+
 **[UFX Agentic Commerce](https://github.com/ufosearchspace-create/ERC8183)**
 
 - [ERC-8183 Hook & Reputation Middleware](https://github.com/ufosearchspace-create/ERC8183) - First `IACPHook` implementations and ERC-8004 reputation bridge for ERC-8183 (Agentic Commerce Protocol). Includes ReputationHook (auto-writes job outcomes to ReputationRegistry), ReputationGateHook (reputation-based funding gate), SLAHook (deadline enforcement), AI evaluators, and Python SDK. 208 Solidity tests (incl. 9 fuzz). Live on Base Mainnet with [Iamalive Agent #1734](https://basescan.org/address/0x3F41E8699D774Eb738967A6506B3A9E919aA1c8B). MIT licensed.
@@ -296,6 +300,8 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 
 ### Identity & Trust
 
+**[Agent Veil Protocol](https://agentveil.dev)** — Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with Sybil detection, collusion resistance, and signed attestations. Python SDK, MCP server, CrewAI/LangGraph/AutoGen integrations. [SDK](https://pypi.org/project/agentveil/) · [GitHub](https://github.com/creatorrmode-lead/avp-sdk) · [Bridge](https://agentveil.dev/v1/bridge/erc8004/{did}/attestation)
+
 ### Agent Services (x402 + ERC-8004)
 
 **[xbird](https://github.com/checkra1neth/xbird-skill)**
@@ -338,6 +344,13 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 - Registered as Prover Agent on ERC-8004 Identity Registry on Base Mainnet (token ID 25331, address `0xc5B29033e63A986b601Fe430806A2C9735F2ea97`)
 - [Agent Card](https://ai.zkproofport.app/.well-known/agent-card.json) - ERC-8004 + A2A compliant agent card
 - [OpenStoa](https://github.com/zkproofport/openstoa) - Reference application: ZK-gated community where humans and AI agents coexist. 🏅 1st Place at The Synthesis Hackathon ("Agents That Keep Secrets" track, 506 projects, 1500+ builders, April 2026).
+
+**[Agent Laplace](https://github.com/laplace0x)**
+
+- Autonomous AI crypto intelligence agent registered on ERC-8004 across Ethereum (#31767), BNB Chain (#54526), Base (#38182), and Solana mainnet. Reviews and rates other ERC-8004 agents across 7 dimensions (identity, endpoints, activity, capability, security, economics, trust) — an agent reviewing agents. Publishes transparent analysis including multi-chain registration experience reports. Building toward an x402-powered agent review API.
+- [Agent Review API (Cloudflare Worker)](https://laplace-agent-review.laplace0x.workers.dev) - Agent trust assessment service
+- [Multi-Chain Registration Report (GitHub Issue #72)](https://github.com/erc-8004/erc-8004-contracts/issues/72) - Detailed experience report from registering on 4 chains with ecosystem review data
+- [@agentLaplace on X](https://x.com/agentLaplace) - Crypto intelligence, agent economy coverage, and ERC-8004 ecosystem analysis
 
 ### Applications & Demos
 
@@ -389,6 +402,7 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 
 **Community Projects**
 
+- **[AgentPass](https://github.com/Wdustin1/agentpass)** - ERC-8004 on-chain identity for AI agents — challenge-response auth replacing API keys with verifiable on-chain credentials on Base. Includes Solidity contracts (Foundry), TypeScript SDK (`@agentpass/sdk`), demo auth server, and an OpenClaw skill. Built by Echo (agentId 32176) for The Synthesis 2026 hackathon. Live at [useagentpass.com](https://useagentpass.com).
 - **[TrustlessAgents](https://github.com/CasualHackathon/TrustlessAgents)** - Community hackathon project implementing ERC-8004
 - **[8004 Implementation](https://github.com/zpaynow/8004)** - Community-driven ERC-8004 implementation
 - **[erc-8004-demo-agent](https://github.com/Eversmile12/erc-8004-demo-agent)** - Minimal reference agent demonstrating registration and feedback flows
@@ -420,6 +434,7 @@ Tools for browsing and querying on-chain ERC-8004 registries.
 - **[agentscan.info](https://agentscan.info)** - On-chain agent explorer with registry lookup
 - **[8004agents.ai](https://8004agents.ai)** - Agent discovery interface
 - **[trust8004.xyz](https://www.trust8004.xyz)** - Agent discovery and management tool
+- **[agenteconomy.to](https://agenteconomy.to)** - Real-time dashboard tracking ERC-8004 agent registry events on Base alongside x402, ERC-8183, and MPP protocols. Aggregated metrics, daily charts, and chain breakdowns refreshed every 6 hours
 
 ## Research & Papers
 
@@ -1011,3 +1026,7 @@ To the extent possible under law, the contributors have waived all copyright and
 <p><em>Made with ❤️ by the ERC-8004 community</em></p>
 
 </div>
+
+## Security & Auditing Tools
+
+- **[MASSAT Framework](https://github.com/craigmbrown/massat-framework)** - Open-source security audit toolkit for multi-agent AI systems with ERC-8004 passport verification. Covers OWASP ASI01-ASI10 threat categories. Validates agent identity, delegation chains, and trust tiers. Free tier + hosted API by [BlindOracle](https://craigmbrown.com/blindoracle/).
