@@ -296,6 +296,8 @@ Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC
 
 ### Identity & Trust
 
+**[Agent Veil Protocol](https://agentveil.dev)** — Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with Sybil detection, collusion resistance, and signed attestations. Python SDK, MCP server, CrewAI/LangGraph/AutoGen integrations. [SDK](https://pypi.org/project/agentveil/) · [GitHub](https://github.com/creatorrmode-lead/avp-sdk) · [Bridge](https://agentveil.dev/v1/bridge/erc8004/{did}/attestation)
+
 ### Agent Services (x402 + ERC-8004)
 
 **[xbird](https://github.com/checkra1neth/xbird-skill)**
