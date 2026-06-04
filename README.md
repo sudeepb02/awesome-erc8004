@@ -192,6 +192,10 @@ The `type`, `name`, `description`, and `image` fields ensure compatibility with 
 
 ### Infrastructure & SDKs
 
+**[OmniClaw](https://github.com/OmniClaw/OmniClaw)**
+
+Multi-chain agent toolkit for ERC-8004 trustless agents. Provides identity management, reputation tracking, and cross-chain validation for AI agents. Built with TypeScript and supports EVM-compatible chains.
+
 **[mcp8004](https://github.com/jordanlyall/mcp8004)**
 
 - Drop-in MCP auth middleware using ERC-8004 onchain agent identity. Agents authenticate to MCP servers by signing a challenge with their wallet; the server verifies against the ERC-8004 Identity Registry on Base and issues a scoped JWT session token. Includes x402 payment fallback for unregistered agents. `npm install mcp8004`. MIT licensed.
