@@ -86,6 +86,14 @@ Place resources in the most appropriate section:
 - **Research & Papers**: Academic and research content
 - **Development Resources**: Standards, references, and development aids
 
+#### Alphabetical Ordering
+
+Project and tool lists are kept in alphabetical order by name so that entries are easy to find. When adding an entry, insert it at the correct alphabetical position rather than appending it to the end of the list.
+
+- Within each category, order entries alphabetically by project name (case-insensitive; entries beginning with a number sort first).
+- The category subsections themselves are also kept in alphabetical order by their heading.
+- This applies to Builder Projects (and each of its subsections), Explorer & Scanner Tools, SDKs & Libraries, and Cross-Chain Implementations.
+
 ### 5. Quality Standards
 
 #### All Resources Must:
