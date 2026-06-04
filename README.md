@@ -194,7 +194,7 @@ The `type`, `name`, `description`, and `image` fields ensure compatibility with 
 
 **[OmniClaw](https://github.com/OmniClaw/OmniClaw)**
 
-Multi-chain agent toolkit for ERC-8004 trustless agents. Provides identity management, reputation tracking, and cross-chain validation for AI agents. Built with TypeScript and supports EVM-compatible chains.
+Python CLI + policy engine for agent payments. Combines ERC-8004 (trust gates), EIP-3009 (gasless USDC signing), and x402 (payment requests) behind a single authority layer, so agents never hold raw wallet keys. Multi-rail routing across Circle Gateway, x402 Exact, and a self-hosted facilitator. MIT, pip install omniclaw.
 
 **[mcp8004](https://github.com/jordanlyall/mcp8004)**
 
