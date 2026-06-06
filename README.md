@@ -398,6 +398,9 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 - [Agent Review API (Cloudflare Worker)](https://laplace-agent-review.laplace0x.workers.dev) - Agent trust assessment service
 - [Multi-Chain Registration Report (GitHub Issue #72)](https://github.com/erc-8004/erc-8004-contracts/issues/72) - Detailed experience report from registering on 4 chains with ecosystem review data
 - [@agentLaplace on X](https://x.com/agentLaplace) - Crypto intelligence, agent economy coverage, and ERC-8004 ecosystem analysis
+- [MainStreet](https://avisradar-production.up.railway.app/mainstreet.html) - Onchain reputation oracle for agent-to-agent payments on Base. Returns a SAFE/CAUTION/BLOCK verdict + 0–100 score for any wallet, agent, or token deployer as an EIP-712-signed attestation, verifiable against the MainStreetVerifier contract (`0x7397adb9713934c36d22aa54b4dbbcd70263592b`). Folds ERC-8004 ReputationRegistry feedback into the score. Free 100 checks/day; paid re-score/audit via x402 (USDC on Base).
+- [MainStreet MCP Server](https://avisradar-production.up.railway.app/mcp) - 17 MCP tools (`mainstreet_score`, `mainstreet_vet`, `mainstreet_attestation`, ...): `claude mcp add --transport http mainstreet https://avisradar-production.up.railway.app/mcp`
+- [@raskhaaa/mainstreet-oracle](https://www.npmjs.com/package/@raskhaaa/mainstreet-oracle) - SDK with `requireMinScore()` to gate an x402 payment on a signed score before USDC moves.
 
 ### Applications & Demos
 
