@@ -243,6 +243,10 @@ Python CLI + policy engine for agent payments. Combines ERC-8004 (trust gates), 
 - [Examples (JS/Python/Shell)](https://github.com/douglasborthwick-crypto/agenttalk/tree/main/examples) - Bilateral and multi-party session flows
 - [Hosted API](https://skyemeta.com/agenttalk/) - 10 calls per wallet, no signup required
 
+**[Cairn](https://github.com/echo-toolkit/cairn)** — _Append-only shared-state coordination layer for multi-agent systems, with ERC-8004 verifiable coordination receipts_
+
+- [Cairn](https://github.com/echo-toolkit/cairn) - Open-source (AGPLv3) Python library where multiple agents coordinate through a passive **append-only blackboard** + minimal per-agent context instead of conversation — so agents stop silently overwriting each other’s shared state (auditable, debuggable; ~half the tokens in a measured A/B). The shared-state / coordination layer A2A and MCP leave to you. Optional on-chain layer (live on Celo mainnet): ERC-8004 agent identity + verifiable coordination **receipts** (one per run) + agent payment. Framework-agnostic (LangChain/LangGraph/CrewAI adapters). `pip install cairn-coordination`.
+
 ### Commerce & Escrow
 
 **[UFX Agentic Commerce](https://github.com/ufosearchspace-create/ERC8183)** — First `IACPHook` implementations and ERC-8004 reputation bridge for ERC-8183 (Agentic Commerce Protocol). The EIP defines hooks; we built and deployed them.
