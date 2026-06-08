@@ -192,6 +192,10 @@ The `type`, `name`, `description`, and `image` fields ensure compatibility with 
 
 ### Infrastructure & SDKs
 
+**[invinoveritas](https://api.babyblueviper.com/.well-known/agent-registration.json)**
+
+- Neutral verification layer / independent validator for autonomous agents. Live ERC-8004 `registration-v1` file (trustModels: reputation + crypto-verification). `/review` returns a capital-scale-aware verdict before an irreversible action, `/prove` a portable schnorr-signed proof, and `/ledger` a public, on-chain-outcome-linked track record you verify against a published key without trusting the operator. A2A + x402 (Base) native.
+
 **[OmniClaw](https://github.com/OmniClaw/OmniClaw)**
 
 Python CLI + policy engine for agent payments. Combines ERC-8004 (trust gates), EIP-3009 (gasless USDC signing), and x402 (payment requests) behind a single authority layer, so agents never hold raw wallet keys. Multi-rail routing across Circle Gateway, x402 Exact, and a self-hosted facilitator. MIT, pip install omniclaw.
