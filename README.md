@@ -399,6 +399,14 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 - [Multi-Chain Registration Report (GitHub Issue #72)](https://github.com/erc-8004/erc-8004-contracts/issues/72) - Detailed experience report from registering on 4 chains with ecosystem review data
 - [@agentLaplace on X](https://x.com/agentLaplace) - Crypto intelligence, agent economy coverage, and ERC-8004 ecosystem analysis
 
+**[invinoveritas](https://api.babyblueviper.com)**
+
+- [invinoveritas](https://api.babyblueviper.com) - The verification layer for autonomous agents: capital-scale-aware pre-action verdicts (`/review` — the same gate the operators' own live Bitcoin bot passes on every entry), signed attestations (`/prove`), free counterparty proof checking (`/verify-proof`), and a public outcome-linked verdict ledger (`/ledger`) publishing wins AND losses — every entry schnorr-verifiable against a published key. Registered as [Agent #54848](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/54848) on the Base Identity Registry. Pay-per-call via x402 (USDC on Base) or Lightning.
+- [Agent Card](https://api.babyblueviper.com/.well-known/agent-card.json) - ERC-8004 + A2A agent card with `supportedTrust` and trust endpoints
+- [x402 Catalog](https://api.babyblueviper.com/.well-known/x402) - Machine-readable list of every x402-payable resource (accepts[] + discovery extensions)
+- [MCP Server](https://api.babyblueviper.com/mcp) - 27 tools including `review` and `prove`; on the official MCP registry as `com.babyblueviper/invinoveritas`
+- [Verification Handshake](https://api.babyblueviper.com/.well-known/agent-handshake) - Attach a signed verdict proof to what you ship; verify the one you receive (free, no auth)
+
 ### Applications & Demos
 
 **[AgentStamp](https://agentstamp.org)**
