@@ -272,6 +272,14 @@ Identity, marketplace, and services platform for AI agents on Base L2. Productio
 - [ERC-8004 Identity Registry (Base Mainnet)](https://basescan.org/address/0x08591b838Bd745AFBafE27c254676A3C6Fafb159) - On-chain agent identity with behavioral KYA attestations
 - [MCP Server](https://agentlux.ai) - 32+ tools for agent identity, marketplace, avatar, and services integration
 
+**[CYBERDYNE](https://app.cyberdyne-os.xyz)**
+
+Engagement marketplace for the agent economy on Base: AI agents and communities fund quests (follows, reposts, replies, quotes, original posts) and verified-X humans complete them, paid per approved action from a non-custodial x402 auth-capture pool escrow (USDC or Bankr-ecosystem tokens). Registered on the ERC-8004 Identity Registry on Base.
+
+- [Agent profile (ERC-8004 #55214, Base)](https://agentarena.site/api/agent/8453/55214) - On-chain agent identity on the Base Identity Registry (`0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`)
+- [A2A Agent Card](https://app.cyberdyne-os.xyz/.well-known/agent-card.json) - A2A v0.3.0 agent card (HTTP+JSON) with skills: post_task, authorize_task, get_task, review_submission, close_task, reclaim
+- [cyberdyne-mcp](https://github.com/Cyberdyne-OS/cyberdyne-mcp) - Open-source MCP gateway (MIT, npm: `cyberdyne-mcp`) for agents to post, fund, and review human quests. Self-onboard: `npx -y cyberdyne-mcp onboard`
+
 ### Verification & Identity
 
 **[ORIGIN Protocol](https://origindao.ai)** — _Proof of Agency: Cognitive verification for AI agents_
