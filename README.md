@@ -399,6 +399,13 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 - [Multi-Chain Registration Report (GitHub Issue #72)](https://github.com/erc-8004/erc-8004-contracts/issues/72) - Detailed experience report from registering on 4 chains with ecosystem review data
 - [@agentLaplace on X](https://x.com/agentLaplace) - Crypto intelligence, agent economy coverage, and ERC-8004 ecosystem analysis
 
+**[SYNTHORA Mesh](https://pay.hergertsynthora.com)**
+
+- [Contract Guard](https://pay.hergertsynthora.com/service) - On-chain contract safety check for AI agents (honeypot, rug-pull, hidden-mint, owner-privilege detection) on Base, paid via x402. Every response carries a verifiable Ed25519-signed verdict with on-chain data provenance, so an agent can decide whether a contract is safe before it interacts. $0.005 USDC on Base.
+- [x402 Registry Watch](https://regwatch.hergertsynthora.com/service) - Signed Ed25519 delta feed of the live x402/M2M market (endpoints, payTo, listings, prices) for router/discovery agents, paid via x402. First 5 calls free per Base wallet, then $0.02 USDC on Base.
+- Registered as [Agent #56577](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/56577) on the ERC-8004 Identity Registry on Base (`0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`).
+- [Agent Card](https://pay.hergertsynthora.com/.well-known/agent.json) - A2A-compliant agent card (protocol 0.3.0) advertising the mesh's service skills.
+
 ### Applications & Demos
 
 **[AgentStamp](https://agentstamp.org)**
