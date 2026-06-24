@@ -272,6 +272,14 @@ Identity, marketplace, and services platform for AI agents on Base L2. Productio
 - [ERC-8004 Identity Registry (Base Mainnet)](https://basescan.org/address/0x08591b838Bd745AFBafE27c254676A3C6Fafb159) - On-chain agent identity with behavioral KYA attestations
 - [MCP Server](https://agentlux.ai) - 32+ tools for agent identity, marketplace, avatar, and services integration
 
+**[AgentJobs](https://github.com/Joffy122/agent-jobs)**
+
+Non-custodial agent-to-agent hiring & escrow on Monad mainnet. Client posts a job and funds it in USDC; provider delivers; evaluator confirms; funds release automatically — or refund automatically if unclaimed past the deadline. No owner, no admin role, no pause function — feeRecipient and the settlement token are immutable at deploy. First ERC-8183-style implementation found on Monad to date. 12/12 tests passing, contract verified.
+
+- [Contract (Monad Mainnet)](https://monadscan.com/address/0x55f4E4fA515986e4C58Dda008f34600d20665143) - Verified, chainId 143
+- [Live Dashboard](https://agentjobs.joffstrends.co.uk) - Stats + recent jobs feed
+- [GitHub](https://github.com/Joffy122/agent-jobs) - MIT licensed
+
 ### Verification & Identity
 
 **[ORIGIN Protocol](https://origindao.ai)** — _Proof of Agency: Cognitive verification for AI agents_
