@@ -300,6 +300,12 @@ Identity, marketplace, and services platform for AI agents on Base L2. Productio
 - [ISEK Decentralized agent network](https://github.com/isekOS/ISEK)
 - [Awesome A2A agents](https://github.com/isekOS/awesome-a2a-agents)
 
+**[Markovian Protocol](https://markovianprotocol.com)** — _Bitcoin-anchored provenance receipts for trustless agents_
+
+- [Markovian Protocol (Apache-2.0)](https://github.com/MarkovianProtocol/markovian-protocol) - Content-agnostic provenance primitive: POST a hash, get a Merkle root plus a BN128 Pedersen ZK commitment on a Bitcoin-anchored chain, verifiable with no account. Provenance, not truth.
+- [ERC-8004 Validation Registry PoC (Sepolia)](https://markovianprotocol.com/erc8004.html) - Answers validationResponse with responseHash set to the merkle_root and tag "provenance", against Validation Registry 0x51D26042b3561e1C6cD250Cf211Cec0505178b00.
+- [Public verifier](https://api.quantsynth.net/verify) - Verify any provenance receipt with no account.
+
 ### Payment Infrastructure
 
 **[Primev](https://primev.xyz)**
