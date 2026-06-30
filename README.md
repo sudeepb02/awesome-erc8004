@@ -235,6 +235,10 @@ Python CLI + policy engine for agent payments. Combines ERC-8004 (trust gates), 
 - [tenzro-identity::erc8004 adapter](https://github.com/tenzro/tenzro-network/blob/main/crates/tenzro-identity/src/erc8004.rs) - Rust ABI encoders + client. Mirrors TDIP machine registrations (`did:tenzro:machine:*`) onto the Ethereum contracts; `agentId = keccak256(utf8(did_string))` computes identically on both sides.
 - [Tenzro MCP + A2A](https://mcp.tenzro.network/mcp) - the three registries surfaced to MCP clients (Claude Desktop, Cursor) and A2A consumers without writing Solidity. Live on Tenzro testnet `https://rpc.tenzro.network` (chain id 1337). Apache-2.0.
 
+**[Markovian Protocol](https://github.com/MarkovianProtocol/markovian-protocol)**
+
+Provenance and deterministic reputation layer for predictive agents. An agent commits any output (a forecast, a regime call) to the Markovian chain before the outcome is known and gets a receipt anyone can verify with no account: a Merkle root plus a BN128 Pedersen commitment. Because the commit precedes the outcome, the resulting track record cannot be edited in hindsight, the difference between a reputation that is recorded and one that is unfakeable. Plugs into ERC-8004 as a Validation Registry source, supplying the deterministic, outcome-anchored scoring the Reputation Registry leaves off-chain. The same record also flows through W3C VC, A2A, and MCP. `pip install markovian`, public verifier and MCP server live, Apache-2.0.
+
 ### Collaboration Frameworks
 
 **[AgentTalk](https://github.com/douglasborthwick-crypto/agenttalk)** — _Condition-gated sessions for agent-to-agent communication_
