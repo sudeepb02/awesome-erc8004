@@ -351,6 +351,18 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 
 ### Agent Services (x402 + ERC-8004)
 
+**[CompraBTC](https://comprabtc.vercel.app)**
+
+- Non-custodial Bitcoin DCA agent on Celo: users (or agent treasuries) approve USDT once and the agent buys WBTC on schedule, straight back to the owner's wallet. Keeper pays its own execution API via x402; execution endpoint is permissionless for any x402 client.
+- Registered as Agent #9665 on the Celo Identity Registry (`0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`) with full registration-v1 metadata (OASF skills, agentWallet, circular domain verification via `/.well-known/agent-registration.json`)
+- [MCP Server](https://www.npmjs.com/package/comprabtc-mcp) - treasury DCA tools (create/renew/cancel plan, portfolio) · [Metadata](https://comprabtc.vercel.app/metadata.json) · [Code](https://github.com/csacanam/comprabtc)
+
+**[HashProof](https://hashproof.dev)**
+
+- Verifiable credentials API: agents issue diplomas/certificates for $0.10 USDC via x402 (Base or Celo) — registered on-chain on Celo, pinned to IPFS, verifiable by QR against three independent sources.
+- Registered as Agent #9669 on the Celo Identity Registry with registration-v1 metadata and circular domain verification
+- [MCP Server](https://www.npmjs.com/package/hashproof-mcp) - issue/preview/verify tools · [Agent skill](https://hashproof.dev/skill.md) · [Metadata](https://hashproof.dev/metadata.json) · [Code](https://github.com/csacanam/hashproof)
+
 **[xbird](https://github.com/checkra1neth/xbird-skill)**
 
 - [xbird MCP Server](https://www.npmjs.com/package/xbird-mcp) - Twitter/X API with 30 tools (read, search, post, engage, media upload) using x402 micropayments on Base
