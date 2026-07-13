@@ -192,6 +192,10 @@ The `type`, `name`, `description`, and `image` fields ensure compatibility with 
 
 ### Infrastructure & SDKs
 
+**[agent-reputation-sdk](https://github.com/hanjoonchoe/agent-reputation-sdk)**
+
+ERC-8004 extensions for each ecosystem's canonical Ethereum SDK — viem actions (TypeScript), a web3.py external module (Python), and an alloy provider trait (Rust): typed registry reads plus a policy-driven reputation calculator (Beta Reputation System, Jøsang & Ismail 2002). No built-in score by design — results are expectation ± uncertainty with witness statistics, caveats, and the echoed policy, and shared golden test vectors (raw Base mainnet snapshots) keep all three implementations numerically identical. `npm install agent-reputation` · `pip install web3-agent-reputation` · `cargo add alloy-agent-reputation`. MIT licensed.
+
 **[OmniClaw](https://github.com/OmniClaw/OmniClaw)**
 
 Python CLI + policy engine for agent payments. Combines ERC-8004 (trust gates), EIP-3009 (gasless USDC signing), and x402 (payment requests) behind a single authority layer, so agents never hold raw wallet keys. Multi-rail routing across Circle Gateway, x402 Exact, and a self-hosted facilitator. MIT, pip install omniclaw.
