@@ -235,6 +235,10 @@ Python CLI + policy engine for agent payments. Combines ERC-8004 (trust gates), 
 - [tenzro-identity::erc8004 adapter](https://github.com/tenzro/tenzro-network/blob/main/crates/tenzro-identity/src/erc8004.rs) - Rust ABI encoders + client. Mirrors TDIP machine registrations (`did:tenzro:machine:*`) onto the Ethereum contracts; `agentId = keccak256(utf8(did_string))` computes identically on both sides.
 - [Tenzro MCP + A2A](https://mcp.tenzro.network/mcp) - the three registries surfaced to MCP clients (Claude Desktop, Cursor) and A2A consumers without writing Solidity. Live on Tenzro testnet `https://rpc.tenzro.network` (chain id 1337). Apache-2.0.
 
+**[GenTech Labs](https://github.com/ProtoJay4789/genTech-agent-kit)**
+
+- [GenTech Agent Kit](https://github.com/ProtoJay4789/genTech-agent-kit) - ERC-8004 agent identity framework with MCP server for wallet analysis, token security, and on-chain reputation. Full-stack toolkit for registering, discovering, and interacting with trustless agents, including x402 payment support and Q402 gasless escrow.
+
 ### Collaboration Frameworks
 
 **[AgentTalk](https://github.com/douglasborthwick-crypto/agenttalk)** — _Condition-gated sessions for agent-to-agent communication_
