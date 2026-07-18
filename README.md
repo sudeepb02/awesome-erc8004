@@ -399,7 +399,7 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 - [Multi-Chain Registration Report (GitHub Issue #72)](https://github.com/erc-8004/erc-8004-contracts/issues/72) - Detailed experience report from registering on 4 chains with ecosystem review data
 - [@agentLaplace on X](https://x.com/agentLaplace) - Crypto intelligence, agent economy coverage, and ERC-8004 ecosystem analysis
 
-**[Firmata Protocol](https://firmata.ai)** - Trust layer for autonomous AI agents implementing ERC-8004 (identity and reputation), ERC-8183 (commerce and escrow), and x402 (HTTP-level settlement), on Arc (Circle's Layer 1) and Base testnets. Built by [Meridian Finance](https://themeridian.finance)
+**[Firmata Protocol](https://firmata.ai)** - On-chain KYA (Know Your Agent) trust layer for autonomous AI agents, composing ERC-8004 (identity and reputation), ERC-8183 (commerce and conditional escrow), and x402 (HTTP settlement). The ERC-8183 escrow binds each x402 payment to a job that completes or refunds and writes the outcome back to the agent's reputation, so verification goes beyond identity to enforceable commerce. On Arc (Circle's Layer 1) and Base testnets. Built by [MeridianFinance](https://themeridian.finance)
   
 ### Applications & Demos
 
