@@ -235,6 +235,8 @@ Python CLI + policy engine for agent payments. Combines ERC-8004 (trust gates), 
 - [tenzro-identity::erc8004 adapter](https://github.com/tenzro/tenzro-network/blob/main/crates/tenzro-identity/src/erc8004.rs) - Rust ABI encoders + client. Mirrors TDIP machine registrations (`did:tenzro:machine:*`) onto the Ethereum contracts; `agentId = keccak256(utf8(did_string))` computes identically on both sides.
 - [Tenzro MCP + A2A](https://mcp.tenzro.network/mcp) - the three registries surfaced to MCP clients (Claude Desktop, Cursor) and A2A consumers without writing Solidity. Live on Tenzro testnet `https://rpc.tenzro.network` (chain id 1337). Apache-2.0.
 
+**[AetherIntel](https://github.com/markoskarllos-netizen/aetherintel-marketplace)** — Live ERC-8004 agent reputation auditor across 10 EVM chains, paid via x402 (no account needed). Free MCP tools (OFAC sanctions screening on 19,210 real Treasury SDN entries, text summarization) plus paid endpoints for full reputation audit, generic wallet due-diligence, and adversarial code verification with real execution.
+
 ### Collaboration Frameworks
 
 **[AgentTalk](https://github.com/douglasborthwick-crypto/agenttalk)** — _Condition-gated sessions for agent-to-agent communication_
