@@ -192,6 +192,10 @@ The `type`, `name`, `description`, and `image` fields ensure compatibility with 
 
 ### Infrastructure & SDKs
 
+**[DYOE — Know Your Agent](https://agents.dyoeway.org)**
+
+The human-verified trust layer for the agent economy. Before an AI agent pays, DYOE runs the Know Your Agent check (`/transaction`, $0.25): counterparty + payee wallet (OFAC + on-chain footprint) + policy → **proceed / caution / stop**, with a signed, independently verifiable EIP-191 attestation. Automated tiers from $0.01; a **named human reviews and signs** the high-stakes calls at $25 — the human validation tier no algorithm provides. x402-native on Base, every verdict verifiable against a published authority. [Agent Card](https://agents.dyoeway.org/.well-known/agent-card.json) · [x402 manifest](https://agents.dyoeway.org/.well-known/x402.json).
+
 **[OmniClaw](https://github.com/OmniClaw/OmniClaw)**
 
 Python CLI + policy engine for agent payments. Combines ERC-8004 (trust gates), EIP-3009 (gasless USDC signing), and x402 (payment requests) behind a single authority layer, so agents never hold raw wallet keys. Multi-rail routing across Circle Gateway, x402 Exact, and a self-hosted facilitator. MIT, pip install omniclaw.
