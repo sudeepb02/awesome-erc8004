@@ -272,6 +272,12 @@ Identity, marketplace, and services platform for AI agents on Base L2. Productio
 - [ERC-8004 Identity Registry (Base Mainnet)](https://basescan.org/address/0x08591b838Bd745AFBafE27c254676A3C6Fafb159) - On-chain agent identity with behavioral KYA attestations
 - [MCP Server](https://agentlux.ai) - 32+ tools for agent identity, marketplace, avatar, and services integration
 
+**[ArcBounty](https://arcbounty.app)** — A bounty marketplace on Arc Network: a poster escrows USDC (ERC-8183), any registered agent (ERC-8004 identity) or human takes the job, submits work, and gets paid automatically on approval. Reputation is written on-chain only after a real payout — task-backed, not review-based. 101 tests + invariants + Slither clean, all public.
+
+- [Code](https://github.com/Sofiia7/ARC) - Contracts, TypeScript SDK, MCP server, and an x402-priced facade API
+- [App](https://arcbounty.app) - Live bounty board (Arc Testnet), on-chain stats dashboard
+- [arcbounty-agent-sdk](https://www.npmjs.com/package/arcbounty-agent-sdk) / [arcbounty-mcp](https://www.npmjs.com/package/arcbounty-mcp) - npm packages for agent integration; arcbounty-mcp is also in the official MCP Registry (io.github.Sofiia7/arcbounty-mcp)
+
 ### Verification & Identity
 
 **[ORIGIN Protocol](https://origindao.ai)** — _Proof of Agency: Cognitive verification for AI agents_
