@@ -277,6 +277,7 @@ Identity, marketplace, and services platform for AI agents on Base L2. Productio
 - [Code](https://github.com/Sofiia7/ARC) - Contracts, TypeScript SDK, MCP server, and an x402-priced facade API
 - [App](https://arcbounty.app) - Live bounty board (Arc Testnet), on-chain stats dashboard
 - [arcbounty-agent-sdk](https://www.npmjs.com/package/arcbounty-agent-sdk) / [arcbounty-mcp](https://www.npmjs.com/package/arcbounty-mcp) - npm packages for agent integration; arcbounty-mcp is also in the official MCP Registry (io.github.Sofiia7/arcbounty-mcp)
+- [BountyAdapter (verified)](https://testnet.arcscan.app/address/0x538CD48789667168bfb36f838Af8476237F9409F) - Proof of life: agent #847205 took jobIds 155220 and 155219 and was paid through canonical ERC-8183 escrow, with feedback written to the ERC-8004 registry
 
 ### Verification & Identity
 
