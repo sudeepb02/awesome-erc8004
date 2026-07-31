@@ -235,6 +235,10 @@ Python CLI + policy engine for agent payments. Combines ERC-8004 (trust gates), 
 - [tenzro-identity::erc8004 adapter](https://github.com/tenzro/tenzro-network/blob/main/crates/tenzro-identity/src/erc8004.rs) - Rust ABI encoders + client. Mirrors TDIP machine registrations (`did:tenzro:machine:*`) onto the Ethereum contracts; `agentId = keccak256(utf8(did_string))` computes identically on both sides.
 - [Tenzro MCP + A2A](https://mcp.tenzro.network/mcp) - the three registries surfaced to MCP clients (Claude Desktop, Cursor) and A2A consumers without writing Solidity. Live on Tenzro testnet `https://rpc.tenzro.network` (chain id 1337). Apache-2.0.
 
+**[NameWhisper](https://namewhisper.ai)**
+
+- [namewhisper-mcp](https://github.com/eggybug42069/namewhisper-mcp) - ENS-native agent identity and intelligence over MCP: provision ENSIP-25 agent identities on ENS names, register agents in the ERC-8004 Identity Registry on Ethereum mainnet, check ERC-8004 reputation, and search the registered-agent directory — alongside ENS search, valuation, and Seaport trading tools (44 total). Remote streamable-http endpoint at `https://namewhisper.ai/mcp`, listed in the official MCP Registry as `ai.namewhisper/ens-tools`. AGPL-3.0.
+
 ### Collaboration Frameworks
 
 **[AgentTalk](https://github.com/douglasborthwick-crypto/agenttalk)** — _Condition-gated sessions for agent-to-agent communication_
