@@ -370,6 +370,14 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 **[8k4 Protocol](https://8k4protocol.com)**
 
 - [8k4 API](https://api.8k4protocol.com) - Reputation infrastructure for ERC-8004 agents: trust scoring (IGGY-Score), metadata hosting, and cross-chain lookup. Public stats currently show 106,996 indexed agents across Base (33,939), BSC (44,020), and Ethereum (29,037), with x402 pay-per-query support (USDC on Base).
+  
+**[SENTINEL](https://sentinel-agent.dev)** — Agent-to-agent transaction safety oracle. Behavioral trust + risk scoring (0-100) for x402 payment counterparties on Base, with an append-only, hash-anchored Default Registry of verified incidents. Signed ES256 attestations verifiable offline via JWKS; scores published on-chain for smart-contract composability. Reference implementation of the x402 trust-provider extension ([issue #2299](https://github.com/x402-foundation/x402/issues/2299)).
+
+- [SentinelOracle (Base Mainnet)](https://basescan.org/address/0x6841496c3e7eDF9eEB02bE64ab98CF5D5c5aF813) - On-chain score reads (`getScore` / `meetsThreshold`), verified source. Free view calls for composability.
+- [sentinel-trust-provider (npm)](https://www.npmjs.com/package/sentinel-trust-provider) - `onBeforeSettle` middleware to gate x402 settlements by counterparty score (`npm i sentinel-trust-provider`)
+- [sentinel-trust-provider (PyPI)](https://pypi.org/project/sentinel-trust-provider/) - Python mirror for FastAPI resource servers (`pip install sentinel-trust-provider`)
+- [JWKS endpoint](https://sentinel-agent.dev/.well-known/jwks.json) - Public key for offline attestation verification (ES256, kid `sentinel-2026-01`)
+- [Default Registry](https://sentinel-agent.dev/defaults) - Public append-only incident registry with signed entries
 
 **[Helixa](https://helixa.xyz)**
 
