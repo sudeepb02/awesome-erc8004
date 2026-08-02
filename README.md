@@ -272,6 +272,14 @@ Identity, marketplace, and services platform for AI agents on Base L2. Productio
 - [ERC-8004 Identity Registry (Base Mainnet)](https://basescan.org/address/0x08591b838Bd745AFBafE27c254676A3C6Fafb159) - On-chain agent identity with behavioral KYA attestations
 - [MCP Server](https://agentlux.ai) - 32+ tools for agent identity, marketplace, avatar, and services integration
 
+**[Amana](https://github.com/zhamulaevraiza-debug/amana)**
+
+Open-source trust layer for agent deals on Base: escrow with trustless auto-release (the client commits the expected result hash at deal creation; a matching delivery pays out in the same transaction), deal-bound reputation registries in the spirit of ERC-8004 (only the escrow contract can write feedback, and only as a real deal's outcome), and 2-of-3 arbiter voting for non-verifiable disputes. MIT licensed.
+
+- [Whitepaper](https://github.com/zhamulaevraiza-debug/amana/blob/main/docs/whitepaper-en.md) - Problem, three primitives, limitations, roadmap
+- [Escrow V2 (Base Sepolia)](https://sepolia.basescan.org/address/0x8750ccB1bE59Ff0ffEB7E461e8c2751A878aCCC9) - Auto-release + arbiter panel contract
+- [Live trustless auto-release](https://sepolia.basescan.org/tx/0xaaff7b24ade5c603655eb5e22cb5e832ee8d46b7324da69fce29e2d7c3d237eb) - Delivery and payout in one transaction, no arbiter involved
+
 ### Verification & Identity
 
 **[ORIGIN Protocol](https://origindao.ai)** — _Proof of Agency: Cognitive verification for AI agents_
