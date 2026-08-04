@@ -399,6 +399,13 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 - [Multi-Chain Registration Report (GitHub Issue #72)](https://github.com/erc-8004/erc-8004-contracts/issues/72) - Detailed experience report from registering on 4 chains with ecosystem review data
 - [@agentLaplace on X](https://x.com/agentLaplace) - Crypto intelligence, agent economy coverage, and ERC-8004 ecosystem analysis
 
+**[anchor-x402](https://anchor-x402.com)**
+
+- [anchor-x402](https://anchor-x402.com) - Pay-per-call x402 API with 18 services for AI agents: on-chain hash anchoring + signed decision attestation, wallet risk screening (OFAC + address-reputation), tx/calldata decode, ENS/SNS resolution, token prices, and LLM utilities. USDC on Base + Solana, JPYC on Polygon. No API keys or accounts — the 402 challenge is the auth.
+- [anchor-x402-mcp](https://www.npmjs.com/package/anchor-x402-mcp) - MCP server exposing 14 of the services as stdio tools (`npx -y anchor-x402-mcp`)
+- Registered on the ERC-8004 Identity Registry on Base as Agent #47261 (`0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`), and in the Solana MPL Agent registry
+- [Agent registration doc](https://anchor-x402.com/.well-known/agent-registration.json) - ERC-8004 registration listing both the Base and Solana identities
+
 ### Applications & Demos
 
 **[AgentStamp](https://agentstamp.org)**
