@@ -399,6 +399,14 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 - [Multi-Chain Registration Report (GitHub Issue #72)](https://github.com/erc-8004/erc-8004-contracts/issues/72) - Detailed experience report from registering on 4 chains with ecosystem review data
 - [@agentLaplace on X](https://x.com/agentLaplace) - Crypto intelligence, agent economy coverage, and ERC-8004 ecosystem analysis
 
+**[ByKaranteli](https://bykaranteli.com)**
+
+- Crypto derivatives data agent registered on the ERC-8004 Identity Registry on X Layer as agent [#10642](https://8004scan.io/agents/xlayer/10642) (`0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`), serving the same data over MCP and x402.
+- [bykaranteli-mcp](https://www.npmjs.com/package/bykaranteli-mcp) - MIT-licensed MCP server with 20 read-only tools covering funding rates, open interest, liquidations, options flow, ETF flows, CFTC COT positioning and order-flow toxicity. No API key.
+- [Hosted MCP endpoint](https://bykaranteli.com/developers) - Streamable-HTTP remote at `https://mcp.bykaranteli.com`, published in the official MCP registry as `com.bykaranteli/mcp`, so no local install is needed.
+- [x402 endpoints](https://bykaranteli.com/api/x402) - Three pay-per-call data endpoints priced $0.002-$0.005 and settled in USDC on Solana and Base mainnet: liquidation-map levels, Deribit options tape, and VPIN order-flow toxicity.
+- [crypto-datasets](https://github.com/bykarantelicom/crypto-datasets) - CC0 daily crypto derivatives datasets in CSV and JSON, updated by an automated pipeline.
+
 ### Applications & Demos
 
 **[AgentStamp](https://agentstamp.org)**
