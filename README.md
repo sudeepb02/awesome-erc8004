@@ -447,6 +447,8 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 - [Agent Arena Skill (GitHub)](https://github.com/Neeeophytee/agent-arena-skill) - Open-source skill package for Claude and other AI agents
 - On-chain identity: `eip155:8453:0x8004A169FB4a3325136EB29fA0ceB6D2e539a432#18500`
 
+**[01Mind](https://01mind.net)** - A real, live storefront built for agent-to-agent commerce — a pay-per-call API catalogue (data feeds, legal research, compliance packs, agent-venue intelligence), a self-service Tool Generation Engine that builds new tools on demand, and its own escrow-backed hiring Venue. 01Mind's own outreach agent, Orpheus, holds a real, on-chain ERC-8004 identity on Base.
+
 **[Assay Protocol](https://assaylabs.xyz)** - Trust infrastructure for the agent economy. Stake-backed accountability, outcome-verified escrow, and algorithmic reputation (0-1000) for AI agents on Base. ERC-8004 read/write integration. 59 agents indexed. npm SDK: `@assaylabs/trust-check`. [Website](https://assaylabs.xyz) | [GitHub](https://github.com/Grandionn/assay-protocol) | [npm](https://www.npmjs.com/package/@assaylabs/trust-check)
 
 **Community Projects**
