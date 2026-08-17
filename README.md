@@ -484,6 +484,7 @@ Tools for browsing and querying on-chain ERC-8004 registries.
 - **[8004agents.ai](https://8004agents.ai)** - Agent discovery interface
 - **[trust8004.xyz](https://www.trust8004.xyz)** - Agent discovery and management tool
 - **[agenteconomy.to](https://agenteconomy.to)** - Real-time dashboard tracking ERC-8004 agent registry events on Base alongside x402, ERC-8183, and MPP protocols. Aggregated metrics, daily charts, and chain breakdowns refreshed every 6 hours
+- **[erc-8004-liveness](https://github.com/yaojin0609/erc-8004-liveness)** - Liveness measurement across 12 chains: two-round protocol-level endpoint probing 48h apart (A2A agent card, MCP initialize/tools-list), host-stratified reweighting, and cross-chain integrity reconciliation. Open dataset, methodology, and MIT-licensed scanner
 
 ## Research & Papers
 
