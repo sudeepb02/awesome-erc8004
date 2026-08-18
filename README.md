@@ -399,6 +399,13 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 - [Multi-Chain Registration Report (GitHub Issue #72)](https://github.com/erc-8004/erc-8004-contracts/issues/72) - Detailed experience report from registering on 4 chains with ecosystem review data
 - [@agentLaplace on X](https://x.com/agentLaplace) - Crypto intelligence, agent economy coverage, and ERC-8004 ecosystem analysis
 
+**[FractalAI Agent Passport](https://fractalai.net.co)**
+
+- [agent-passport-mcp](https://www.npmjs.com/package/@fractalai/agent-passport-mcp) - 7 auto-payable MCP tools over x402 (USDC on Base); every paid response carries an ML-DSA-65 / Dilithium-3 (NIST FIPS-204) signature verifiable offline
+- [x402 catalog](https://fractalai.net.co/.well-known/x402.json) - 7 post-quantum proof endpoints (sign, verify-agent/KYA, notarize-decision, provenance, CBOM); OpenAPI at /openapi.json
+- Post-quantum agent identity + reputation (VAID-1 / FRC-55): verify-agent (Know-Your-Agent) issues PQC-signed attestations with on-chain revocation (operator + credential CRL). Real x402 settle proof: [tx](https://basescan.org/tx/0x0c8785792b6f838a793f2704b1e01a7eabcfb43f181694b12875c437e68fed5f)
+
+
 ### Applications & Demos
 
 **[AgentStamp](https://agentstamp.org)**
