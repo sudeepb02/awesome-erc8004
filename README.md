@@ -476,6 +476,13 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 - [MainStreet MCP Server](https://avisradar-production.up.railway.app/mcp) - 17 MCP tools (`mainstreet_score`, `mainstreet_vet`, `mainstreet_attestation`, ...): `claude mcp add --transport http mainstreet https://avisradar-production.up.railway.app/mcp`
 - [@raskhaaa/mainstreet-oracle](https://www.npmjs.com/package/@raskhaaa/mainstreet-oracle) - SDK with `requireMinScore()` to gate an x402 payment on a signed score before USDC moves.
 
+**[anchor-x402](https://anchor-x402.com)**
+
+- [anchor-x402](https://anchor-x402.com) - Pay-per-call x402 API with 18 services for AI agents: on-chain hash anchoring + signed decision attestation, wallet risk screening (OFAC + address-reputation), tx/calldata decode, ENS/SNS resolution, token prices, and LLM utilities. USDC on Base + Solana, JPYC on Polygon. No API keys or accounts — the 402 challenge is the auth.
+- [anchor-x402-mcp](https://www.npmjs.com/package/anchor-x402-mcp) - MCP server exposing 14 of the services as stdio tools (`npx -y anchor-x402-mcp`)
+- Registered on the ERC-8004 Identity Registry on Base as Agent #47261 (`0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`), and in the Solana MPL Agent registry
+- [Agent registration doc](https://anchor-x402.com/.well-known/agent-registration.json) - ERC-8004 registration listing both the Base and Solana identities
+
 **[2s](https://2s.io)**
 
 - [2s API](https://2s.io) - The everything API for AI agents: 570+ pay-per-call endpoints across public records, finance, crypto, legal, health, geo, security, and EDI. Settled in USDC via x402 on Base + Solana — no signup, no API keys.
