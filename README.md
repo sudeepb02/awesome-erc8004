@@ -440,8 +440,14 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 - [MainStreet MCP Server](https://avisradar-production.up.railway.app/mcp) - 17 MCP tools (`mainstreet_score`, `mainstreet_vet`, `mainstreet_attestation`, ...): `claude mcp add --transport http mainstreet https://avisradar-production.up.railway.app/mcp`
 - [@raskhaaa/mainstreet-oracle](https://www.npmjs.com/package/@raskhaaa/mainstreet-oracle) - SDK with `requireMinScore()` to gate an x402 payment on a signed score before USDC moves.
 
-**[invinoveritas](https://api.babyblueviper.com)**
+**[2s](https://2s.io)**
 
+- [2s API](https://2s.io) - The everything API for AI agents: 570+ pay-per-call endpoints across public records, finance, crypto, legal, health, geo, security, and EDI. Settled in USDC via x402 on Base + Solana — no signup, no API keys.
+- [@2sio/mcp](https://www.npmjs.com/package/@2sio/mcp) - Hosted + stdio MCP server exposing every endpoint as an agent tool (`npx -y @2sio/mcp`); also live at `https://2s.io/mcp`.
+- [Agent Card](https://2s.io/.well-known/agent-card.json) - ERC-8004 + A2A compliant agent card with a live `/a2a` JSON-RPC transport.
+- Registered on ERC-8004 Identity Registry on Base (`0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`, agent #57911)
+
+**[invinoveritas](https://api.babyblueviper.com)**
 - [invinoveritas](https://api.babyblueviper.com) - The verification layer for autonomous agents: capital-scale-aware pre-action verdicts (`/review` — the same gate our own trading has been governed through), signed attestations (`/prove`), free counterparty proof checking (`/verify-proof`), and a public outcome-linked verdict ledger (`/ledger`) publishing wins AND losses — every entry schnorr-verifiable against a published key. Registered as [Agent #54848](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/54848) on the Base Identity Registry. Pay-per-call via x402 (USDC on Base) or Lightning.
 - [Agent Card](https://api.babyblueviper.com/.well-known/agent-card.json) - ERC-8004 + A2A agent card with `supportedTrust` and trust endpoints
 - [x402 Catalog](https://api.babyblueviper.com/.well-known/x402) - Machine-readable list of every x402-payable resource (accepts[] + discovery extensions)
