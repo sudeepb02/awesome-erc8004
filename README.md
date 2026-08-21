@@ -229,6 +229,8 @@ Python CLI + policy engine for agent payments. Combines ERC-8004 (trust gates), 
 - [ERC-8004 Example](https://github.com/vistara-apps/erc-8004-example)
 - **[Verity Protocol](https://verity.tenpound.xyz)** — On-chain reliability scoring for ERC-8004 agents. Indexes `NewFeedback` events from the `ReputationRegistry`, computes Brier Skill Scores across Economic, Solver, and Governance verticals, submits reputation back via `giveFeedback` after each scoring cycle, and anchors every score as an EAS attestation on Base. SDK: [`@veritynpm/sdk`](https://www.npmjs.com/package/@veritynpm/sdk).
 
+**[MainStreet Trust Oracle](https://avisradar.app/mainstreet.html)** — Reputation oracle for Base wallets and AI agents. Returns SAFE / CAUTION / BLOCK + 0-100 score + EIP-712 signed attestation in <100ms, callable by any agent before routing USDC. Registered as ERC-8004 agentId 53953 on Base. Onchain verifier at `0x7397adb9713934c36d22aa54b4dbbcd70263592b` (Base), `requireMinScore()` callable from any contract for ~$0.00003 gas. Free 1000 reads/day, paid `/check` via x402 ($0.005 instant / $0.025 full) or pre-paid credit bundles. Indexed on CDP x402 Bazaar. MCP: `https://avisradar.app/mcp`. npm: [`@raskhaaa/mainstreet-oracle`](https://www.npmjs.com/package/@raskhaaa/mainstreet-oracle). MIT.
+
 **[Tenzro Network](https://tenzro.network)**
 
 - [tenzro-network](https://github.com/tenzro/tenzro-network) - L1 with three ERC-8004 registries exposed as native EVM precompiles: `IDENTITY 0x101a`, `REPUTATION 0x101b`, `VALIDATION 0x101c`. Selectors (`registerAgent`, `submitFeedback`, `requestValidation`, `submitValidation`) are byte-identical to the Ethereum reference, so the same calldata targets either deployment.
