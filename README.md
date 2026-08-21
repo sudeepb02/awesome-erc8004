@@ -485,6 +485,13 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 
 **[2s](https://2s.io)**
 
+**[FractalAI Agent Passport](https://fractalai.net.co)**
+
+- [agent-passport-mcp](https://www.npmjs.com/package/@fractalai/agent-passport-mcp) - 7 auto-payable MCP tools over x402 (USDC on Base); every paid response carries an ML-DSA-65 / Dilithium-3 (NIST FIPS-204) signature verifiable offline
+- [x402 catalog](https://fractalai.net.co/.well-known/x402.json) - 7 post-quantum proof endpoints (sign, verify-agent/KYA, notarize-decision, provenance, CBOM); OpenAPI at /openapi.json
+- Post-quantum agent identity + reputation (VAID-1 / FRC-55): verify-agent (Know-Your-Agent) issues PQC-signed attestations with on-chain revocation (operator + credential CRL). Real x402 settle proof: [tx](https://basescan.org/tx/0x0c8785792b6f838a793f2704b1e01a7eabcfb43f181694b12875c437e68fed5f)
+
+
 - [2s API](https://2s.io) - The everything API for AI agents: 570+ pay-per-call endpoints across public records, finance, crypto, legal, health, geo, security, and EDI. Settled in USDC via x402 on Base + Solana — no signup, no API keys.
 - [@2sio/mcp](https://www.npmjs.com/package/@2sio/mcp) - Hosted + stdio MCP server exposing every endpoint as an agent tool (`npx -y @2sio/mcp`); also live at `https://2s.io/mcp`.
 - [Agent Card](https://2s.io/.well-known/agent-card.json) - ERC-8004 + A2A compliant agent card with a live `/a2a` JSON-RPC transport.
