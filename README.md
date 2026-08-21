@@ -192,6 +192,14 @@ The `type`, `name`, `description`, and `image` fields ensure compatibility with 
 
 ### Infrastructure & SDKs
 
+**[DYOE — Know Your Agent](https://agents.dyoeway.org)**
+
+The human-verified trust layer for the agent economy. Before an AI agent pays, DYOE runs the Know Your Agent check (`/transaction`, $0.25): counterparty + payee wallet (OFAC + on-chain footprint) + policy → **proceed / caution / stop**, with a signed, independently verifiable EIP-191 attestation. Automated tiers from $0.01; a **named human reviews and signs** the high-stakes calls at $25 — the human validation tier no algorithm provides. x402-native on Base, every verdict verifiable against a published authority. [Agent Card](https://agents.dyoeway.org/.well-known/agent-card.json) · [x402 manifest](https://agents.dyoeway.org/.well-known/x402.json).
+
+**[agent-reputation-sdk](https://github.com/hanjoonchoe/agent-reputation-sdk)**
+
+ERC-8004 extensions for each ecosystem's canonical Ethereum SDK — viem actions (TypeScript), a web3.py external module (Python), and an alloy provider trait (Rust): typed registry reads plus a policy-driven reputation calculator (Beta Reputation System, Jøsang & Ismail 2002). No built-in score by design — results are expectation ± uncertainty with witness statistics, caveats, and the echoed policy, and shared golden test vectors (raw Base mainnet snapshots) keep all three implementations numerically identical. `npm install agent-reputation` · `pip install web3-agent-reputation` · `cargo add alloy-agent-reputation`. MIT licensed.
+
 **[OmniClaw](https://github.com/OmniClaw/OmniClaw)**
 
 Python CLI + policy engine for agent payments. Combines ERC-8004 (trust gates), EIP-3009 (gasless USDC signing), and x402 (payment requests) behind a single authority layer, so agents never hold raw wallet keys. Multi-rail routing across Circle Gateway, x402 Exact, and a self-hosted facilitator. MIT, pip install omniclaw.
@@ -229,6 +237,8 @@ Python CLI + policy engine for agent payments. Combines ERC-8004 (trust gates), 
 - [ERC-8004 Example](https://github.com/vistara-apps/erc-8004-example)
 - **[Verity Protocol](https://verity.tenpound.xyz)** — On-chain reliability scoring for ERC-8004 agents. Indexes `NewFeedback` events from the `ReputationRegistry`, computes Brier Skill Scores across Economic, Solver, and Governance verticals, submits reputation back via `giveFeedback` after each scoring cycle, and anchors every score as an EAS attestation on Base. SDK: [`@veritynpm/sdk`](https://www.npmjs.com/package/@veritynpm/sdk).
 
+**[MainStreet Trust Oracle](https://avisradar.app/mainstreet.html)** — Reputation oracle for Base wallets and AI agents. Returns SAFE / CAUTION / BLOCK + 0-100 score + EIP-712 signed attestation in <100ms, callable by any agent before routing USDC. Registered as ERC-8004 agentId 53953 on Base. Onchain verifier at `0x7397adb9713934c36d22aa54b4dbbcd70263592b` (Base), `requireMinScore()` callable from any contract for ~$0.00003 gas. Free 1000 reads/day, paid `/check` via x402 ($0.005 instant / $0.025 full) or pre-paid credit bundles. Indexed on CDP x402 Bazaar. MCP: `https://avisradar.app/mcp`. npm: [`@raskhaaa/mainstreet-oracle`](https://www.npmjs.com/package/@raskhaaa/mainstreet-oracle). MIT.
+
 **[Tenzro Network](https://tenzro.network)**
 
 - [tenzro-network](https://github.com/tenzro/tenzro-network) - L1 with three ERC-8004 registries exposed as native EVM precompiles: `IDENTITY 0x101a`, `REPUTATION 0x101b`, `VALIDATION 0x101c`. Selectors (`registerAgent`, `submitFeedback`, `requestValidation`, `submitValidation`) are byte-identical to the Ethereum reference, so the same calldata targets either deployment.
@@ -239,9 +249,13 @@ Python CLI + policy engine for agent payments. Combines ERC-8004 (trust gates), 
 
 **[AgentTalk](https://github.com/douglasborthwick-crypto/agenttalk)** — _Condition-gated sessions for agent-to-agent communication_
 
-- [AgentTalk](https://github.com/douglasborthwick-crypto/agenttalk) - Wallet auth for A2A: before two agents exchange data, both verify their wallets satisfy the same on-chain conditions (token balances, NFT ownership, compliance attestations). Supports bilateral (2 agents) and multi-party ("town hall") flows across 33 chains. Re-verify on demand ejects agents who lose credentials mid-session. Sessions issued as ECDSA P-256 signed JWTs (`kid: insumer-attest-v1`), verifiable offline via [JWKS](https://insumermodel.com/.well-known/jwks.json).
+- [AgentTalk](https://github.com/douglasborthwick-crypto/agenttalk) - Wallet auth for A2A: before two agents exchange data, both verify their wallets satisfy the same on-chain conditions. Six condition types — token balances, NFT ownership, EAS attestations, Farcaster identity, and self-scaling amount/supply ratios (e.g. "hold ≥ 10× the amount you're about to pay") — up to 10 composable per channel. Supports bilateral (2 agents) and multi-party ("town hall") flows across 37 chains. Re-verify on demand ejects any agent whose wallet no longer meets the conditions mid-session. Sessions issued as ECDSA P-256 signed JWTs (`kid: insumer-attest-v1`), verifiable offline via [JWKS](https://insumermodel.com/.well-known/jwks.json).
 - [Examples (JS/Python/Shell)](https://github.com/douglasborthwick-crypto/agenttalk/tree/main/examples) - Bilateral and multi-party session flows
 - [Hosted API](https://skyemeta.com/agenttalk/) - 10 calls per wallet, no signup required
+
+**[Cairn](https://github.com/echo-toolkit/cairn)** — _Append-only shared-state coordination layer for multi-agent systems, with ERC-8004 verifiable coordination receipts_
+
+- [Cairn](https://github.com/echo-toolkit/cairn) - Open-source (AGPLv3) Python library where multiple agents coordinate through a passive **append-only blackboard** + minimal per-agent context instead of conversation — so agents stop silently overwriting each other’s shared state (auditable, debuggable; ~half the tokens in a measured A/B). The shared-state / coordination layer A2A and MCP leave to you. Optional on-chain layer (live on Celo mainnet): ERC-8004 agent identity + verifiable coordination **receipts** (one per run) + agent payment. Framework-agnostic (LangChain/LangGraph/CrewAI adapters). `pip install cairn-coordination`.
 
 ### Commerce & Escrow
 
@@ -279,7 +293,23 @@ Identity, marketplace, and services platform for AI agents on Base L2. Productio
 - [arcbounty-agent-sdk](https://www.npmjs.com/package/arcbounty-agent-sdk) / [arcbounty-mcp](https://www.npmjs.com/package/arcbounty-mcp) - npm packages for agent integration; arcbounty-mcp is also in the official MCP Registry (io.github.Sofiia7/arcbounty-mcp)
 - [BountyAdapter (verified)](https://testnet.arcscan.app/address/0x538CD48789667168bfb36f838Af8476237F9409F) - Proof of life: agent #847205 took jobIds 155220 and 155219 and was paid through canonical ERC-8183 escrow, with feedback written to the ERC-8004 registry
 
+**[CYBERDYNE](https://app.cyberdyne-os.xyz)**
+
+Engagement marketplace for the agent economy on Base: AI agents and communities fund quests (follows, reposts, replies, quotes, original posts) and verified-X humans complete them, paid per approved action from a non-custodial x402 auth-capture pool escrow (USDC or Bankr-ecosystem tokens). Registered on the ERC-8004 Identity Registry on Base.
+
+- [Agent profile (ERC-8004 #55214, Base)](https://agentarena.site/api/agent/8453/55214) - On-chain agent identity on the Base Identity Registry (`0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`)
+- [A2A Agent Card](https://app.cyberdyne-os.xyz/.well-known/agent-card.json) - A2A v0.3.0 agent card (HTTP+JSON) with skills: post_task, authorize_task, get_task, review_submission, close_task, reclaim
+- [cyberdyne-mcp](https://github.com/Cyberdyne-OS/cyberdyne-mcp) - Open-source MCP gateway (MIT, npm: `cyberdyne-mcp`) for agents to post, fund, and review human quests. Self-onboard: `npx -y cyberdyne-mcp onboard`
+
 ### Verification & Identity
+
+**[Z1N Protocol](https://www.z1nprotocol.xyz)**
+
+Identity-over-time layer for AI agents on Polygon mainnet. Agents accumulate a standalone record across 21-hour epochs — signals, consent-based bonds, and permanent self-marked anchors. Deliberately not a reputation score: it records who an agent has been, not how it scored. Complementary to ERC-8004 identity (the 8004 Identity Registry is also deployed on Polygon); a history an Agent Card's services list could point to.
+
+- [Live Field & docs](https://www.z1nprotocol.xyz) - Protocol and NBI integration guide
+- [Contracts (Polygon mainnet)](https://polygonscan.com/address/0xc09b7dEE30635EeaD79e0d23da9598F9d3BaFF7b) - Verified, ~150 epochs live
+- [Machine-readable field state](https://z1n-backend-production.up.railway.app/api/protocol/snapshot) - Full protocol snapshot, no auth
 
 **[ORIGIN Protocol](https://origindao.ai)** — _Proof of Agency: Cognitive verification for AI agents_
 
@@ -358,6 +388,18 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 
 ### Agent Services (x402 + ERC-8004)
 
+**[CompraBTC](https://comprabtc.vercel.app)**
+
+- Non-custodial Bitcoin DCA agent on Celo: users (or agent treasuries) approve USDT once and the agent buys WBTC on schedule, straight back to the owner's wallet. Keeper pays its own execution API via x402; execution endpoint is permissionless for any x402 client.
+- Registered as Agent #9665 on the Celo Identity Registry (`0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`) with full registration-v1 metadata (OASF skills, agentWallet, circular domain verification via `/.well-known/agent-registration.json`)
+- [MCP Server](https://www.npmjs.com/package/comprabtc-mcp) - treasury DCA tools (create/renew/cancel plan, portfolio) · [Metadata](https://comprabtc.vercel.app/metadata.json) · [Code](https://github.com/csacanam/comprabtc)
+
+**[HashProof](https://hashproof.dev)**
+
+- Verifiable credentials API: agents issue diplomas/certificates for $0.10 USDC via x402 (Base or Celo) — registered on-chain on Celo, pinned to IPFS, verifiable by QR against three independent sources.
+- Registered as Agent #9669 on the Celo Identity Registry with registration-v1 metadata and circular domain verification
+- [MCP Server](https://www.npmjs.com/package/hashproof-mcp) - issue/preview/verify tools · [Agent skill](https://hashproof.dev/skill.md) · [Metadata](https://hashproof.dev/metadata.json) · [Code](https://github.com/csacanam/hashproof)
+
 **[xbird](https://github.com/checkra1neth/xbird-skill)**
 
 - [xbird MCP Server](https://www.npmjs.com/package/xbird-mcp) - Twitter/X API with 30 tools (read, search, post, engage, media upload) using x402 micropayments on Base
@@ -405,7 +447,26 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 - [Agent Review API (Cloudflare Worker)](https://laplace-agent-review.laplace0x.workers.dev) - Agent trust assessment service
 - [Multi-Chain Registration Report (GitHub Issue #72)](https://github.com/erc-8004/erc-8004-contracts/issues/72) - Detailed experience report from registering on 4 chains with ecosystem review data
 - [@agentLaplace on X](https://x.com/agentLaplace) - Crypto intelligence, agent economy coverage, and ERC-8004 ecosystem analysis
+- [MainStreet](https://avisradar-production.up.railway.app/mainstreet.html) - Onchain reputation oracle for agent-to-agent payments on Base. Returns a SAFE/CAUTION/BLOCK verdict + 0–100 score for any wallet, agent, or token deployer as an EIP-712-signed attestation, verifiable against the MainStreetVerifier contract (`0x7397adb9713934c36d22aa54b4dbbcd70263592b`). Folds ERC-8004 ReputationRegistry feedback into the score. Free 100 checks/day; paid re-score/audit via x402 (USDC on Base).
+- [MainStreet MCP Server](https://avisradar-production.up.railway.app/mcp) - 17 MCP tools (`mainstreet_score`, `mainstreet_vet`, `mainstreet_attestation`, ...): `claude mcp add --transport http mainstreet https://avisradar-production.up.railway.app/mcp`
+- [@raskhaaa/mainstreet-oracle](https://www.npmjs.com/package/@raskhaaa/mainstreet-oracle) - SDK with `requireMinScore()` to gate an x402 payment on a signed score before USDC moves.
 
+**[2s](https://2s.io)**
+
+- [2s API](https://2s.io) - The everything API for AI agents: 570+ pay-per-call endpoints across public records, finance, crypto, legal, health, geo, security, and EDI. Settled in USDC via x402 on Base + Solana — no signup, no API keys.
+- [@2sio/mcp](https://www.npmjs.com/package/@2sio/mcp) - Hosted + stdio MCP server exposing every endpoint as an agent tool (`npx -y @2sio/mcp`); also live at `https://2s.io/mcp`.
+- [Agent Card](https://2s.io/.well-known/agent-card.json) - ERC-8004 + A2A compliant agent card with a live `/a2a` JSON-RPC transport.
+- Registered on ERC-8004 Identity Registry on Base (`0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`, agent #57911)
+
+**[invinoveritas](https://api.babyblueviper.com)**
+- [invinoveritas](https://api.babyblueviper.com) - The verification layer for autonomous agents: capital-scale-aware pre-action verdicts (`/review` — the same gate our own trading has been governed through), signed attestations (`/prove`), free counterparty proof checking (`/verify-proof`), and a public outcome-linked verdict ledger (`/ledger`) publishing wins AND losses — every entry schnorr-verifiable against a published key. Registered as [Agent #54848](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/54848) on the Base Identity Registry. Pay-per-call via x402 (USDC on Base) or Lightning.
+- [Agent Card](https://api.babyblueviper.com/.well-known/agent-card.json) - ERC-8004 + A2A agent card with `supportedTrust` and trust endpoints
+- [x402 Catalog](https://api.babyblueviper.com/.well-known/x402) - Machine-readable list of every x402-payable resource (accepts[] + discovery extensions)
+- [MCP Server](https://api.babyblueviper.com/mcp) - 32 tools including `review` and `prove`; on the official MCP registry as `com.babyblueviper/invinoveritas`
+- [Verification Handshake](https://api.babyblueviper.com/.well-known/agent-handshake) - Attach a signed verdict proof to what you ship; verify the one you receive (free, no auth)
+
+**[Firmata Protocol](https://firmata.ai)** - On-chain KYA (Know Your Agent) trust layer for autonomous AI agents, composing ERC-8004 (identity and reputation), ERC-8183 (commerce and conditional escrow), and x402 (HTTP settlement). The ERC-8183 escrow binds each x402 payment to a job that completes or refunds and writes the outcome back to the agent's reputation, so verification goes beyond identity to enforceable commerce. On Arc (Circle's Layer 1) and Base testnets. Built by [MeridianFinance](https://themeridian.finance)
+  
 ### Applications & Demos
 
 **[AgentStamp](https://agentstamp.org)**
