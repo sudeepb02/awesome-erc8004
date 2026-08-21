@@ -239,7 +239,7 @@ Python CLI + policy engine for agent payments. Combines ERC-8004 (trust gates), 
 
 **[AgentTalk](https://github.com/douglasborthwick-crypto/agenttalk)** — _Condition-gated sessions for agent-to-agent communication_
 
-- [AgentTalk](https://github.com/douglasborthwick-crypto/agenttalk) - Wallet auth for A2A: before two agents exchange data, both verify their wallets satisfy the same on-chain conditions (token balances, NFT ownership, compliance attestations). Supports bilateral (2 agents) and multi-party ("town hall") flows across 33 chains. Re-verify on demand ejects agents who lose credentials mid-session. Sessions issued as ECDSA P-256 signed JWTs (`kid: insumer-attest-v1`), verifiable offline via [JWKS](https://insumermodel.com/.well-known/jwks.json).
+- [AgentTalk](https://github.com/douglasborthwick-crypto/agenttalk) - Wallet auth for A2A: before two agents exchange data, both verify their wallets satisfy the same on-chain conditions. Six condition types — token balances, NFT ownership, EAS attestations, Farcaster identity, and self-scaling amount/supply ratios (e.g. "hold ≥ 10× the amount you're about to pay") — up to 10 composable per channel. Supports bilateral (2 agents) and multi-party ("town hall") flows across 37 chains. Re-verify on demand ejects any agent whose wallet no longer meets the conditions mid-session. Sessions issued as ECDSA P-256 signed JWTs (`kid: insumer-attest-v1`), verifiable offline via [JWKS](https://insumermodel.com/.well-known/jwks.json).
 - [Examples (JS/Python/Shell)](https://github.com/douglasborthwick-crypto/agenttalk/tree/main/examples) - Bilateral and multi-party session flows
 - [Hosted API](https://skyemeta.com/agenttalk/) - 10 calls per wallet, no signup required
 
