@@ -344,6 +344,10 @@ Identity-over-time layer for AI agents on Polygon mainnet. Agents accumulate a s
 
 - [Primev FastRPC x402 Facilitator](https://github.com/primev/mainnet-x402-facilitator) - Fee-free x402 payment facilitator on Ethereum mainnet with sub-200ms settlement via mev-commit preconfirmations. Registered as [Agent #23175](https://etherscan.io/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/23175) on the Identity Registry.
 
+**[GBLIN](https://gblin.digital)**
+
+  - [GBLIN Protocol](https://gblin.digital/agents) - NAV-backed basket token on Base (cbBTC/WETH/USDC) with an automated on-chain crash-response policy; agents hold it as treasury and pay per call via 11 x402 endpoints (CDP-settled), with a free read-only MCP server. Registered as [Agent #59286](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/59286) on the Identity Registry.
+
 ### Security & Verification
 
 **[AsterPay](https://asterpay.io)**
