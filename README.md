@@ -402,7 +402,7 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 **[ByKaranteli](https://bykaranteli.com)**
 
 - Crypto derivatives data agent registered on the ERC-8004 Identity Registry on X Layer as agent [#10642](https://8004scan.io/agents/xlayer/10642) (`0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`), serving the same data over MCP and x402.
-- [bykaranteli-mcp](https://www.npmjs.com/package/bykaranteli-mcp) - MIT-licensed MCP server with 20 read-only tools covering funding rates, open interest, liquidations, options flow, ETF flows, CFTC COT positioning and order-flow toxicity. No API key.
+- [bykaranteli-mcp](https://www.npmjs.com/package/bykaranteli-mcp) - MIT-licensed MCP server with 33 read-only tools covering funding rates, open interest, liquidations, options flow, ETF flows, CFTC COT positioning and order-flow toxicity. No API key.
 - [Hosted MCP endpoint](https://bykaranteli.com/developers) - Streamable-HTTP remote at `https://mcp.bykaranteli.com`, published in the official MCP registry as `com.bykaranteli/mcp`, so no local install is needed.
 - [x402 endpoints](https://bykaranteli.com/api/x402) - Thirteen pay-per-call data endpoints priced $0.002-$0.010 and settled in USDC on Solana and Base mainnet: liquidation maps and raw liquidation events, funding and open-interest history, Deribit options tape and options open interest, DVOL, CFTC COT, Coinbase premium, slippage ladders, listing history, and VPIN order-flow toxicity.
 - [crypto-datasets](https://github.com/bykarantelicom/crypto-datasets) - CC0 daily crypto derivatives datasets in CSV and JSON, updated by an automated pipeline.
