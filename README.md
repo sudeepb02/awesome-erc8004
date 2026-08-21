@@ -424,6 +424,8 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 - [MCP Server](https://api.babyblueviper.com/mcp) - 32 tools including `review` and `prove`; on the official MCP registry as `com.babyblueviper/invinoveritas`
 - [Verification Handshake](https://api.babyblueviper.com/.well-known/agent-handshake) - Attach a signed verdict proof to what you ship; verify the one you receive (free, no auth)
 
+**[Firmata Protocol](https://firmata.ai)** - On-chain KYA (Know Your Agent) trust layer for autonomous AI agents, composing ERC-8004 (identity and reputation), ERC-8183 (commerce and conditional escrow), and x402 (HTTP settlement). The ERC-8183 escrow binds each x402 payment to a job that completes or refunds and writes the outcome back to the agent's reputation, so verification goes beyond identity to enforceable commerce. On Arc (Circle's Layer 1) and Base testnets. Built by [MeridianFinance](https://themeridian.finance)
+  
 ### Applications & Demos
 
 **[AgentStamp](https://agentstamp.org)**
