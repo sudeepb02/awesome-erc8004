@@ -271,6 +271,7 @@ Python CLI + policy engine for agent payments. Combines ERC-8004 (trust gates), 
 **[Azeth](https://azeth.ai)** 
 
 Trust infrastructure for the machine economy. TypeScript SDK suite providing ERC-8004 identity registration, weighted reputation with Sybil-resistant opinions, capability-based service discovery, and x402 payment settlement with automatic reputation feedback. Agents get non-custodial ERC-4337 smart accounts with guardian-enforced guardrails. Deployed on Base Sepolia and Ethereum Sepolia with deterministic CREATE2 addresses.
+- [Veylux](https://github.com/kenjimoto999/veylux) - Sybil-resistant reputation reference implementation combining stake-weighted bonding with dual graph-structural signals (local conductance + SybilRank-style propagation). Adversarially tested against a bridge-attack construction and a whitewashing attack. Open, MIT-licensed, no token.
 
 - [Azeth SDK (`@azeth/sdk`)](https://www.npmjs.com/package/@azeth/sdk) - Smart account creation, ERC-8004 registry operations, x402 payments, and XMTP messaging
 - [Azeth MCP Server (`@azeth/mcp-server`)](https://www.npmjs.com/package/@azeth/mcp-server) - MCP tools for AI agents to create accounts, discover services, pay, and submit reputation
