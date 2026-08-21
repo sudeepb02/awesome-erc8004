@@ -192,6 +192,10 @@ The `type`, `name`, `description`, and `image` fields ensure compatibility with 
 
 ### Infrastructure & SDKs
 
+**[DYOE — Know Your Agent](https://agents.dyoeway.org)**
+
+The human-verified trust layer for the agent economy. Before an AI agent pays, DYOE runs the Know Your Agent check (`/transaction`, $0.25): counterparty + payee wallet (OFAC + on-chain footprint) + policy → **proceed / caution / stop**, with a signed, independently verifiable EIP-191 attestation. Automated tiers from $0.01; a **named human reviews and signs** the high-stakes calls at $25 — the human validation tier no algorithm provides. x402-native on Base, every verdict verifiable against a published authority. [Agent Card](https://agents.dyoeway.org/.well-known/agent-card.json) · [x402 manifest](https://agents.dyoeway.org/.well-known/x402.json).
+
 **[agent-reputation-sdk](https://github.com/hanjoonchoe/agent-reputation-sdk)**
 
 ERC-8004 extensions for each ecosystem's canonical Ethereum SDK — viem actions (TypeScript), a web3.py external module (Python), and an alloy provider trait (Rust): typed registry reads plus a policy-driven reputation calculator (Beta Reputation System, Jøsang & Ismail 2002). No built-in score by design — results are expectation ± uncertainty with witness statistics, caveats, and the echoed policy, and shared golden test vectors (raw Base mainnet snapshots) keep all three implementations numerically identical. `npm install agent-reputation` · `pip install web3-agent-reputation` · `cargo add alloy-agent-reputation`. MIT licensed.
