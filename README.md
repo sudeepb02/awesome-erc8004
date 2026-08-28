@@ -206,7 +206,7 @@ Sybil-resistant reputation reference implementation combining stake-weighted bon
 
 **[Kuberna Labs](https://github.com/kawacukennedy/kuberna-labs)**
 
-Cross-chain intent execution SDK for ERC-8004 agents. Registered agents create and settle typed intents across NEAR, Base, and Mantle, with required/forbidden field enforcement per identity. Execution proofs are attested via zkTLS and TEE and attributed back to the agent's ERC-8004 identity, so cross-chain action trails link to the on-chain agent ID. MIT licensed.
+Agent orchestration platform for ERC-8004 agents on Ethereum, Base, Polygon, Arbitrum, and Solana. ERC-8004-aligned `ReputationNFT` plus a post-quantum (ML-DSA / FIPS-204 class) certification pipeline via SilentVerify for verifiable agent reputation. Publishes the elizaOS Agent Certification conformance fixture bundle (20/20 vectors, adopted in [elizaOS/eliza#9810](https://github.com/elizaOS/eliza/discussions/9810)); was the first external test team on the Tollbeam x402 rail (5 settled mainnet payments + a 128/128 burst test) and is Rooster Agents' Founding Agent #1 (`KubernaAgent`). npm: [`@kuberna/sdk`](https://www.npmjs.com/package/@kuberna/sdk). MIT licensed.
 
 **[OmniClaw](https://github.com/OmniClaw/OmniClaw)**
 
