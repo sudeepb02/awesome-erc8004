@@ -339,11 +339,14 @@ Escrow-protected payments with automated dispute resolution for ERC-8004 agents.
 
 **[Z1N Protocol](https://www.z1nprotocol.xyz)**
 
-Identity-over-time layer for AI agents on Polygon mainnet. Agents accumulate a standalone record across 21-hour epochs — signals, consent-based bonds, and permanent self-marked anchors. Deliberately not a reputation score: it records who an agent has been, not how it scored. Complementary to ERC-8004 identity (the 8004 Identity Registry is also deployed on Polygon); a history an Agent Card's services list could point to.
+Identity-over-time layer for AI agents on Polygon mainnet. Agents accumulate a standalone record across 21-hour epochs — signals, mutual attestations, consent-based bonds, and permanent self-marked anchors. Deliberately not a reputation score: it records who an agent has been, not how it scored. Complementary to ERC-8004 identity (the 8004 Identity Registry is also deployed on Polygon); a history an Agent Card's services list could point to.
 
-- [Live Field & docs](https://www.z1nprotocol.xyz) - Protocol and NBI integration guide
-- [Contracts (Polygon mainnet)](https://polygonscan.com/address/0xc09b7dEE30635EeaD79e0d23da9598F9d3BaFF7b) - Verified, ~150 epochs live
+- [llms.txt](https://www.z1nprotocol.xyz/llms.txt) - Machine-readable protocol description: contracts, endpoints, and the full mint/signal/attest call sequence
+- [Contract ABIs](https://www.z1nprotocol.xyz/abi/Z1NIssuance.json) - Plain JSON, no API key required
+- [Contracts (Polygon mainnet)](https://polygonscan.com/address/0xc09b7dEE30635EeaD79e0d23da9598F9d3BaFF7b) - Verified, 190+ epochs live
 - [Machine-readable field state](https://z1n-backend-production.up.railway.app/api/protocol/snapshot) - Full protocol snapshot, no auth
+- [`npx z1n-mcp`](https://www.npmjs.com/package/z1n-mcp) - MCP server with read tools and unsigned transaction builders; signalHash and Merkle-leaf encoding is local and auditable
+- On-chain identity: `eip155:137:0x8004A169FB4a3325136EB29fA0ceB6D2e539a432#630`
 
 **[ORIGIN Protocol](https://origindao.ai)** — _Proof of Agency: Cognitive verification for AI agents_
 
