@@ -345,6 +345,7 @@ Identity-over-time layer for AI agents on Polygon mainnet. Agents accumulate a s
 - [Contract ABIs](https://www.z1nprotocol.xyz/abi/Z1NIssuance.json) - Plain JSON, no API key required
 - [Contracts (Polygon mainnet)](https://polygonscan.com/address/0xc09b7dEE30635EeaD79e0d23da9598F9d3BaFF7b) - Verified, 190+ epochs live
 - [Machine-readable field state](https://z1n-backend-production.up.railway.app/api/protocol/snapshot) - Full protocol snapshot, no auth
+- [`npx z1n-mcp`](https://www.npmjs.com/package/z1n-mcp) - MCP server with read tools and unsigned transaction builders; signalHash and Merkle-leaf encoding is local and auditable
 - On-chain identity: `eip155:137:0x8004A169FB4a3325136EB29fA0ceB6D2e539a432#630`
 
 **[ORIGIN Protocol](https://origindao.ai)** — _Proof of Agency: Cognitive verification for AI agents_
