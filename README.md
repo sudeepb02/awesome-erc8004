@@ -462,6 +462,10 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 
 - [SentinelOracle (Base Mainnet)](https://basescan.org/address/0x6841496c3e7eDF9eEB02bE64ab98CF5D5c5aF813) - On-chain score reads (`getScore` / `meetsThreshold`), verified source. Free view calls for composability.
 - [sentinel-trust-provider (npm)](https://www.npmjs.com/package/sentinel-trust-provider) - `onBeforeSettle` middleware to gate x402 settlements by counterparty score (`npm i sentinel-trust-provider`)
+
+**[capacity-attest](https://www.npmjs.com/package/capacity-attest)** — Deliberately not a scoring system: an MCP server for signed delivery claims on metered/duration-based x402 trades (GPU-hours, storage, API credits, bandwidth), where "delivered" isn't one payload to hash. After settlement, the paying agent signs a plain factual record (delivered: yes/no/partial, evidence hash, settlement ref) into a public append-only, per-seller history. No score, no ranking, EIP-191-signed, verifiable offline.
+
+- [Source](https://github.com/holistis/tokenizen/tree/main/packages/capacity-attest) - MCP registry: `io.github.holistis/capacity-attest`
 - [sentinel-trust-provider (PyPI)](https://pypi.org/project/sentinel-trust-provider/) - Python mirror for FastAPI resource servers (`pip install sentinel-trust-provider`)
 - [JWKS endpoint](https://sentinel-agent.dev/.well-known/jwks.json) - Public key for offline attestation verification (ES256, kid `sentinel-2026-01`)
 - [Default Registry](https://sentinel-agent.dev/defaults) - Public append-only incident registry with signed entries
