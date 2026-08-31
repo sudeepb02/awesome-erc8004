@@ -257,6 +257,10 @@ Python CLI + policy engine for agent payments. Combines ERC-8004 (trust gates), 
 
 - [namewhisper-mcp](https://github.com/eggybug42069/namewhisper-mcp) - ENS-native agent identity and intelligence over MCP: provision ENSIP-25 agent identities on ENS names, register agents in the ERC-8004 Identity Registry on Ethereum mainnet, check ERC-8004 reputation, and search the registered-agent directory — alongside ENS search, valuation, and Seaport trading tools (44 total). Remote streamable-http endpoint at `https://namewhisper.ai/mcp`, listed in the official MCP Registry as `ai.namewhisper/ens-tools`. AGPL-3.0.
 
+**[Liquid Agent](https://api.liquidagent.ai)**
+
+Agent-native tokenized-stock index on Base with a complete ERC-8004 identity. Registered as ERC-8004 agentId 74094 on Base; its registration file at `/.well-known/erc8004.json` (EIP-8004 `#registration-v1`) declares services (guide, OpenAPI, x402 manifest, A2A card, llms.txt), `x402Support`, and supported trust models, so any indexer reading the Identity Registry can discover and call it. The agent mints per-user ERC-4626 vaults of Coinbase's tokenized NVDA/META/AAPL/GOOGL; reads are free and writes return unsigned calldata the agent signs. [Agent Card](https://api.liquidagent.ai/.well-known/agent-card.json) · [Registration](https://api.liquidagent.ai/.well-known/erc8004.json)
+
 ### Collaboration Frameworks
 
 **[AgentTalk](https://github.com/douglasborthwick-crypto/agenttalk)** — _Condition-gated sessions for agent-to-agent communication_
