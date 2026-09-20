@@ -543,6 +543,7 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 
 - [MolTrust](https://moltrust.ch) - Swiss trust infrastructure for the AI agent economy. W3C DID-based identity, Ed25519 signed Verifiable Credentials anchored on Base mainnet. ERC-8004 registered (agentId [#21023](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/21023)). 7 verticals including [MT Salesguard](https://moltrust.ch/salesguard.html) for brand product provenance — BrandRegistryCredentials, AuthorizedResellerCredentials, and ProductProvenanceCredentials verifiable by any shopping agent before purchase.
 - [MolTrust MCP Server](https://github.com/MoltyCel/moltrust-mcp-server) - 30 MCP tools for agent identity, trust scoring, skill verification, and credential issuance (`pip install moltrust-mcp-server`)
+- [Anchoring specification](https://moltrust.ch/anchoring.html) - Leaf rule, Merkle tree construction and the anchor calldata format (`MolTrust/VC/v1/<root>`, UTF-8 rather than ABI), so any credential proof can be replayed against Base without contacting the issuer. Proofs are served inline with each credential.
 - [@moltrust/x402](https://www.npmjs.com/package/@moltrust/x402) - Trust verification middleware for x402 payments (Hono + Express). Extracts wallet from X-PAYMENT header, verifies via MoltGuard trust scoring.
 
 **[DJD Agent Score](https://djdagentscore.dev)**
