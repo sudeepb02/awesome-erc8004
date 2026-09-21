@@ -192,6 +192,10 @@ The `type`, `name`, `description`, and `image` fields ensure compatibility with 
 
 ### Infrastructure & SDKs
 
+**[源·ORIGIN (ORIGIN)](https://github.com/source-origin/l5-protocol)**
+
+Settlement & clearing layer for the AI-agent economy — chain-native rather than stacked on an existing L1. Runs its own chain `origin-1` (DPoS, 21 validators, 100 YUAN min stake) with a native settlement token `YUAN` and Article 0 — *"Human will is the supreme law"* — hard-coded into the genesis block. Reference components already shipped: identity + agreement + escrow + delegation + x402 + credit-score contracts, crash-recoverable off-chain orchestration (state graph, checkpoints, idempotency), dual-ledger escrow, and a default-state interceptor. ([Portal](https://source-origin.github.io/source-origin/) · [Chain](https://github.com/source-origin/origin-chain))
+
 **[DYOE — Know Your Agent](https://agents.dyoeway.org)**
 
 The human-verified trust layer for the agent economy. Before an AI agent pays, DYOE runs the Know Your Agent check (`/transaction`, $0.25): counterparty + payee wallet (OFAC + on-chain footprint) + policy → **proceed / caution / stop**, with a signed, independently verifiable EIP-191 attestation. Automated tiers from $0.01; a **named human reviews and signs** the high-stakes calls at $25 — the human validation tier no algorithm provides. x402-native on Base, every verdict verifiable against a published authority. [Agent Card](https://agents.dyoeway.org/.well-known/agent-card.json) · [x402 manifest](https://agents.dyoeway.org/.well-known/x402.json).
