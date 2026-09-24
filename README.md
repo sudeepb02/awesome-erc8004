@@ -381,6 +381,10 @@ Identity-over-time layer for AI agents on Polygon mainnet. Agents accumulate a s
 
 - [GBLIN Protocol](https://gblin.digital/agents) - NAV-backed basket token on Base (cbBTC/WETH/USDC) with an automated on-chain crash-response policy; agents hold it as treasury and pay per call via 11 x402 endpoints (CDP-settled), with a free read-only MCP server. Registered as [Agent #59286](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/59286) on the Identity Registry.
 
+**[Nano (XNO)](https://nano.org)**
+
+- [nano-settlement-verify](https://github.com/dhyabi2/nano-settlement-verify) - Drop-in settlement-receipt verifier: prove a Nano payment settled with no node and no trust. Calls any public Nano node (rpc.nano.to) to confirm amount, account, and finality. Sub-second finality, zero fees. Stdlib only, no third-party dependency. Companion to x402 exact-scheme facilitators supporting nano:mainnet (e.g., [pursekeeper.dev](https://facilitator.pursekeeper.dev/supported)).
+
 ### Security & Verification
 
 **[AsterPay](https://asterpay.io)**
