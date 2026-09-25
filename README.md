@@ -532,6 +532,13 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 
 **[Firmata Protocol](https://firmata.ai)** - On-chain KYA (Know Your Agent) trust layer for autonomous AI agents, composing ERC-8004 (identity and reputation), ERC-8183 (commerce and conditional escrow), and x402 (HTTP settlement). The ERC-8183 escrow binds each x402 payment to a job that completes or refunds and writes the outcome back to the agent's reputation, so verification goes beyond identity to enforceable commerce. On Arc (Circle's Layer 1) and Base testnets. Built by [MeridianFinance](https://themeridian.finance)
 
+**[APEX Faucet](https://apexfaucet.xyz/arc/)**
+
+- Agent #1 on the Arc Identity Registry (`0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`). Free USDC and APEX on Arc mainnet for any agent: sign the day's challenge and the operator pays the gas; limits live in a contract with no withdraw function.
+- Arc Agent Passport: any agent gets an ERC-8004 identity on Arc in one call. Free when the agent's own wallet sends `register()` (we host a standard registration file and probe its endpoints first); or paid with a signature alone over x402 and the identity is handed to the paying wallet. [Passport](https://apexfaucet.xyz/arc/passport/)
+- Paid tools over x402 (USDC on Arc, Base or Solana, or a Circle Gateway balance): token exit checks by a real buy-then-sell round trip, Arc deployer lookups, and the Arc agent watchtower data.
+- [MCP Server](https://apexfaucet.xyz/api/mcp/arc) · [A2A card](https://apexfaucet.xyz/.well-known/agent-card.json) · [Registration](https://apexfaucet.xyz/.well-known/erc8004.json) · [Code](https://github.com/apexfaucet-hub/apex-x1-mcp)
+
 ### Applications & Demos
 
 **[AgentStamp](https://agentstamp.org)**
@@ -624,6 +631,7 @@ Tools for browsing and querying on-chain ERC-8004 registries.
 - **[On-Chain Agent Intel](https://onchainagentintel.io)** - Indexes the Identity and Reputation registries across Base, Ethereum, and BNB Chain. Free leaderboard and agent-to-agent payment graph, with per-agent readiness, trust, and reputation intel over x402 (USDC on Base). Free MCP server at `api.onchainagentintel.io/mcp`. Registered as [Agent #19353](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/19353) on the Base Identity Registry
 - **[Mydentify Agent Identity Inspector](https://mydentify.com/tools/erc-8004-agent-identity-inspector)** - Read-only browser tool that resolves an agent's registry record and registration file, showing owner, agent wallet, active flag, service endpoints, and any declared x402 statement. No wallet connection required; documents registry fields and the limits of what public metadata proves
 - **[AtlasNexus Verify](https://atlasnexus.tech/verify/)** - Client-side identity verification dApp (ethers.js, no backend): register an agent, look up any address against the Identity and Reputation registries, sign a message, and verify a signature. Live on Celo mainnet, bilingual FR/EN
+- **[APEX Watchtower](https://apexfaucet.xyz/arc/agents/)** - Hourly liveness and payability monitor for every agent in Arc's Identity Registry. Calls each endpoint an agent lists (web, A2A card, MCP `initialize`, the x402 paywall and the registration file), checks x402 payment requirements against the on-chain EIP-712 domains of USDC and EURC on Arc, and reports uptime over measured hours, response times and a plain-words fix list per agent. JSON at `/api/arc/watch`, MCP tool `arc_agent_status`, README badges. Registered as [Agent #211](https://8004scan.io/agents/arc/211) on the Arc Identity Registry
 
 ## Research & Papers
 
