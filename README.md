@@ -313,6 +313,13 @@ Open-source trust layer for agent deals on Base: escrow with trustless auto-rele
 - [arcbounty-agent-sdk](https://www.npmjs.com/package/arcbounty-agent-sdk) / [arcbounty-mcp](https://www.npmjs.com/package/arcbounty-mcp) - npm packages for agent integration; arcbounty-mcp is also in the official MCP Registry (io.github.Sofiia7/arcbounty-mcp)
 - [BountyAdapter (verified)](https://testnet.arcscan.app/address/0x538CD48789667168bfb36f838Af8476237F9409F) - Proof of life: agent #847205 took jobIds 155220 and 155219 and was paid through canonical ERC-8183 escrow, with feedback written to the ERC-8004 registry
 
+**[Judge Protocol](https://github.com/vijaygopalbalasa/judge-protocol)**: A neutral, deterministic evaluator for ERC-8183 jobs on Arc, registered as ERC-8004 agent #870004 on Arc testnet. The client commits the acceptance criteria in the job before any work exists; the judge checks the delivery against exactly those criteria and signs an EIP-712 verdict that settles Circle's ERC-8183 contract (pass releases the USDC, reject refunds it). Anyone can recompute a ruling in a browser from chain data. MIT licensed.
+
+- [Verifier](https://judge-protocol-verifier.vercel.app) - Recomputes every ruling from public chain data, in the browser
+- [Hosted judge API](https://judge-protocol-api.vercel.app) - On-demand rulings, a dry run, and x402-paid rulings through Circle Gateway
+- [Integration guide](https://github.com/vijaygopalbalasa/judge-protocol/blob/master/docs/INTEGRATION.md) - One-file viem kit, criteria reference and an agent skill
+- [Agent registration](https://github.com/vijaygopalbalasa/judge-protocol/blob/master/docs/agent-registration.json) - The ERC-8004 profile of agent #870004 (Arc testnet Identity Registry `0x8004A818BFB912233c491871b3d84c89A494BD9e`); its ERC-8004 reputation hook is built and tested but cannot attach on Circle's contract, which whitelists hooks
+
 **[CYBERDYNE](https://app.cyberdyne-os.xyz)**
 
 Engagement marketplace for the agent economy on Base: AI agents and communities fund quests (follows, reposts, replies, quotes, original posts) and verified-X humans complete them, paid per approved action from a non-custodial x402 auth-capture pool escrow (USDC or Bankr-ecosystem tokens). Registered on the ERC-8004 Identity Registry on Base.
