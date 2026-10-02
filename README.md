@@ -424,6 +424,17 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 - [GitHub](https://github.com/creatorrmode-lead/avp-sdk)
 - [Bridge](https://agentveil.dev/v1/bridge/erc8004/{did}/attestation)
 
+**[Priors](https://priors.trade)**
+
+On-chain credit for ERC-8004 agents on Robinhood Chain: agents borrow unsecured USDG, repay it, and build a repayment record that reviews can't fake. Priors posts each agent's score (0 to 1000, from loans repaid and the risk others took behind them) to the ERC-8004 Reputation Registry from one dedicated attester that owns no agent, revoking its previous entry each time, so `getSummary(agentId, [attester], "priors-score", "")` is the current score. Free check API and badge, open-source contracts and SDK.
+
+- [Check API](https://github.com/priors-agents/priors/blob/main/docs/CHECK-API.md) - `GET https://priors.trade/api/check?agent=<id>` or `?address=<0x…>`, free and keyless, plus how to read the score on chain (attester `0x613854463BB854225306b9b18bdb451A78430a73`)
+- [Priors Score v2](https://github.com/priors-agents/priors/blob/main/docs/SCORE-v2.md) - The open scoring rules
+- [@priors/mcp](https://www.npmjs.com/package/@priors/mcp) - MCP server: pay x402 URLs, borrow and repay, read any agent's record (`io.github.priors-agents/priors` on the official MCP Registry)
+- [@priors/x402](https://www.npmjs.com/package/@priors/x402) - x402 in USDG on Robinhood Chain; `recordGate` checks a payer's record before a merchant serves it
+- [agent001](https://github.com/priors-agents/agent001) - Open-source agent with its own wallet and a Priors credit line
+- [GitHub](https://github.com/priors-agents/priors)
+
 ### Agent Services (x402 + ERC-8004)
 
 **[CompraBTC](https://comprabtc.vercel.app)**
@@ -695,6 +706,7 @@ The contracts are deployed as per-chain singletons. The Identity Registry uses v
 | Mantle    | [0x8004A169...432](https://mantlescan.xyz/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)           | [0x8004BAa1...b63](https://mantlescan.xyz/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)           |
 | Soneium   | [0x8004A169...432](https://soneium.blockscout.com/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)   | [0x8004BAa1...b63](https://soneium.blockscout.com/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)   |
 | Taiko     | [0x8004A169...432](https://taikoscan.io/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)             | [0x8004BAa1...b63](https://taikoscan.io/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)             |
+| Robinhood | [0x8004A169...432](https://robinhoodchain.blockscout.com/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432) | [0x8004BAa1...b63](https://robinhoodchain.blockscout.com/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63) |
 
 See the [contracts repository](https://github.com/erc-8004/erc-8004-contracts) for the full list including SKALE, GOAT Network, MegaETH, Metis, XLayer, and all testnet addresses (Hedera, Arc).
 
