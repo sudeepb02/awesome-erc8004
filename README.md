@@ -624,6 +624,7 @@ Tools for browsing and querying on-chain ERC-8004 registries.
 - **[On-Chain Agent Intel](https://onchainagentintel.io)** - Indexes the Identity and Reputation registries across Base, Ethereum, and BNB Chain. Free leaderboard and agent-to-agent payment graph, with per-agent readiness, trust, and reputation intel over x402 (USDC on Base). Free MCP server at `api.onchainagentintel.io/mcp`. Registered as [Agent #19353](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/19353) on the Base Identity Registry
 - **[Mydentify Agent Identity Inspector](https://mydentify.com/tools/erc-8004-agent-identity-inspector)** - Read-only browser tool that resolves an agent's registry record and registration file, showing owner, agent wallet, active flag, service endpoints, and any declared x402 statement. No wallet connection required; documents registry fields and the limits of what public metadata proves
 - **[AtlasNexus Verify](https://atlasnexus.tech/verify/)** - Client-side identity verification dApp (ethers.js, no backend): register an agent, look up any address against the Identity and Reputation registries, sign a message, and verify a signature. Live on Celo mainnet, bilingual FR/EN
+- **[Agentic Finance Graph](https://agenticfinancegraph.com)** - Ranks ERC-8004 agents by the payments they are observed making (L0–L9 liveness ladder): bound wallets, payment graphs, drain and poisoning detections, and three-hourly Ed25519-signed agent statements. Free JSON API and MCP server; evidence packs over x402
 
 ## Research & Papers
 
