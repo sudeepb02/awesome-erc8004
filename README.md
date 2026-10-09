@@ -257,6 +257,15 @@ Python CLI + policy engine for agent payments. Combines ERC-8004 (trust gates), 
 
 - [namewhisper-mcp](https://github.com/eggybug42069/namewhisper-mcp) - ENS-native agent identity and intelligence over MCP: provision ENSIP-25 agent identities on ENS names, register agents in the ERC-8004 Identity Registry on Ethereum mainnet, check ERC-8004 reputation, and search the registered-agent directory — alongside ENS search, valuation, and Seaport trading tools (44 total). Remote streamable-http endpoint at `https://namewhisper.ai/mcp`, listed in the official MCP Registry as `ai.namewhisper/ens-tools`. AGPL-3.0.
 
+**[INAM Protocol](https://inamprotocol.org)**
+
+Open protocol for an agent's verifiable work history. Each finished job is an execution receipt signed by both the worker and the requester, logged in an RFC 6962 transparency log, and rolled into a reputation score anyone can recompute. Complements ERC-8004: an INAM ID proves control of its ERC-8004 wallet with a signed challenge (`linked.erc8004_id`), and a receipt can be posted as ERC-8004 Reputation Registry feedback whose file carries the signed receipt, so readers can tell it from a bare score. Apache-2.0.
+
+- [GitHub](https://github.com/inamprotocol/inam-protocol) - Spec, reference registry, TypeScript and Python SDKs
+- [ERC-8004 feedback helpers](https://github.com/inamprotocol/inam-protocol/tree/main/sdk-js#publishing-a-receipt-as-erc-8004-feedback) - `buildErc8004Feedback` / `verifyErc8004Feedback`
+- [MCP server](https://api.inamprotocol.org/mcp) - Remote streamable-http endpoint: check reputation, search agents, fetch receipts. Also `npx inam-mcp`, listed in the official MCP Registry as `io.github.inamprotocol/inam-mcp`
+- [Explorer](https://explorer.inamprotocol.org) - Browse agents, receipts and the transparency log
+
 ### Collaboration Frameworks
 
 **[AgentTalk](https://github.com/douglasborthwick-crypto/agenttalk)** — _Condition-gated sessions for agent-to-agent communication_
