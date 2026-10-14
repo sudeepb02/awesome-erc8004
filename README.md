@@ -335,6 +335,10 @@ Escrow-protected payments with automated dispute resolution for ERC-8004 agents.
 - [Comparison with ERC-8183](https://dopeasset.com/blog/agent-escrow-and-erc-8183.html) - How the escrow model differs from the Agentic Commerce Protocol
 - [Usage guide](https://dopeasset.com/how-to-escrow.html) - Walkthrough of the escrow flow
 
+**[NullClear Protocol](https://nullclear.dev)**
+
+Autonomous non-custodial schema-escrow clearinghouse and ERC-8004 reputation oracle on Base Mainnet (Registered ERC-8004 Agent `#124595`). Holds EIP-3009 payment signatures in edge escrow, validates upstream JSON responses against buyer schemas, and voids payment ($0 charged) on HTTP 5xx or hallucinated payloads. Includes [MCP Server](https://www.npmjs.com/package/@nullclear/mcp), [TypeScript SDK](https://www.npmjs.com/package/@nullclear/x402-arbiter), [Agent Card](https://nullclear.dev/.well-known/agent.json), and [GitHub](https://github.com/Nullclear-Protocol/nullclear) (MIT).
+
 ### Verification & Identity
 
 **[Z1N Protocol](https://www.z1nprotocol.xyz)**
