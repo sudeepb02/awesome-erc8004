@@ -337,6 +337,12 @@ Escrow-protected payments with automated dispute resolution for ERC-8004 agents.
 
 ### Verification & Identity
 
+**[Universal Trust Adapter (UTA)](https://github.com/alicelabs-llc/universal-trust-adapter)** — _Agent Trust Cards (ATC/1.0): Ed25519-signed verification over RFC 8785 JCS canonical form_
+
+- [Live API](https://uta-trust-api.eddyflores100.workers.dev) - Fail-closed trust verification (x402-native, USDC pay-per-call; batch at $0.08)
+- [OpenAPI spec](https://uta-trust-api.eddyflores100.workers.dev/openapi.json) - 8-path verification API (single verify, batch, challenge/response liveness)
+- [Issuance-time design spec](https://github.com/solana-foundation/pay/issues/505#issuecomment-6199581076) - Grant-issuance verification, identity binding and re-verification cadence for long-lived agent grants (reviewed in the Solana Foundation pay RFC)
+
 **[Z1N Protocol](https://www.z1nprotocol.xyz)**
 
 Identity-over-time layer for AI agents on Polygon mainnet. Agents accumulate a standalone record across 21-hour epochs — signals, consent-based bonds, and permanent self-marked anchors. Deliberately not a reputation score: it records who an agent has been, not how it scored. Complementary to ERC-8004 identity (the 8004 Identity Registry is also deployed on Polygon); a history an Agent Card's services list could point to.
