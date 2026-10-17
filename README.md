@@ -335,6 +335,11 @@ Escrow-protected payments with automated dispute resolution for ERC-8004 agents.
 - [Comparison with ERC-8183](https://dopeasset.com/blog/agent-escrow-and-erc-8183.html) - How the escrow model differs from the Agentic Commerce Protocol
 - [Usage guide](https://dopeasset.com/how-to-escrow.html) - Walkthrough of the escrow flow
 
+
+**[ARL Protocol](https://arlcoin.io)**
+
+- Open-source settlement layer on Base: x402 "upto" per-use payments, ERC-8004 identity, ERC-8183 escrowed jobs with deadlines and refunds. Live and source-verified on Base Sepolia; free testnet faucet at [arlcoin.io/app](https://arlcoin.io/app/). ([Code](https://github.com/armanalabsai/arlcoin.io))
+
 ### Verification & Identity
 
 **[Z1N Protocol](https://www.z1nprotocol.xyz)**
