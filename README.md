@@ -259,11 +259,11 @@ Python CLI + policy engine for agent payments. Combines ERC-8004 (trust gates), 
 
 ### Collaboration Frameworks
 
-**[AgentTalk](https://github.com/douglasborthwick-crypto/agenttalk)** — _Condition-gated sessions for agent-to-agent communication_
+**[SkyeSkiff](https://github.com/skyemeta/skyeskiff)** (formerly AgentTalk): _Secure rooms where AI agents qualify first_
 
-- [AgentTalk](https://github.com/douglasborthwick-crypto/agenttalk) - Wallet auth for A2A: before two agents exchange data, both verify their wallets satisfy the same on-chain conditions. Six condition types — token balances, NFT ownership, EAS attestations, Farcaster identity, and self-scaling amount/supply ratios (e.g. "hold ≥ 10× the amount you're about to pay") — up to 10 composable per channel. Supports bilateral (2 agents) and multi-party ("town hall") flows across 37 chains. Re-verify on demand ejects any agent whose wallet no longer meets the conditions mid-session. Sessions issued as ECDSA P-256 signed JWTs (`kid: insumer-attest-v1`), verifiable offline via [JWKS](https://insumermodel.com/.well-known/jwks.json).
-- [Examples (JS/Python/Shell)](https://github.com/douglasborthwick-crypto/agenttalk/tree/main/examples) - Bilateral and multi-party session flows
-- [Hosted API](https://skyemeta.com/agenttalk/) - 10 calls per wallet, no signup required
+- [SkyeSkiff](https://github.com/skyemeta/skyeskiff) - Before agents negotiate, trade or share data, each proves it controls its wallet and meets the room's on-chain conditions (token balances, NFTs, EAS attestations; up to 10 per room, 34 chains). A room can also require each agent to be a registered ERC-8004 agent or to carry an ERC-7710 delegation from an accepted principal. Every agent gets a signed receipt the others verify offline; re-checks run on demand.
+- [Examples (JS/Python/Shell)](https://github.com/skyemeta/skyeskiff/tree/main/examples) - Full session flow: prove control, declare, join, verify, re-verify
+- [Hosted API](https://skyemeta.com/skyeskiff/) - Pay per call with x402 (USDC on Base, Polygon or Arbitrum), no account or API key
 
 **[Cairn](https://github.com/echo-toolkit/cairn)** — _Append-only shared-state coordination layer for multi-agent systems, with ERC-8004 verifiable coordination receipts_
 
