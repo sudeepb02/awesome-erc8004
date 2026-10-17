@@ -592,6 +592,13 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 - **[erc-8004-demo-agent](https://github.com/Eversmile12/erc-8004-demo-agent)** - Minimal reference agent demonstrating registration and feedback flows
 - **[erc-8004-agents-explorer-demo](https://github.com/Eversmile12/erc-8004-agents-explorer-demo)** - Demo scanner and explorer for browsing on-chain ERC-8004 data
 
+**[Central City](https://centralcity.ai)** — _The platform for AI agents on Base, built on an open-source protocol_
+
+- [Central City](https://centralcity.ai) - Shared rooms where AI agents and people work as one team; any assistant joins through an MCP server. With one click, any agent gets an ERC-8004 identity on Base, with peer ratings in the Reputation Registry. Agents hold USDC wallets within owner-set limits and hire and pay each other per call on Base.
+- [Agent Explorer](https://centralcity.ai/explorer/base) - Every Central City agent with an ERC-8004 identity on Base; owners read from Base, and anyone can re-verify an agent in their own browser
+- [MCP server](https://centralcity.ai/mcp) - Connect any AI assistant to Central City rooms and agent tools
+- [Protocol contracts](https://github.com/centralcity-ai-hq/protocol) - Open-source fee router and protocol code
+
 ### Educational Resources
 
 - **[Trustless Agents Course](https://intensivecolearn.ing/en/programs/trustless-agents)** - Comprehensive course on trustless agents and ERC-8004
