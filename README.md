@@ -1219,3 +1219,4 @@ To the extent possible under law, the contributors have waived all copyright and
 ## Security & Auditing Tools
 
 - **[MASSAT Framework](https://github.com/craigmbrown/massat-framework)** - Open-source security audit toolkit for multi-agent AI systems with ERC-8004 passport verification. Covers OWASP ASI01-ASI10 threat categories. Validates agent identity, delegation chains, and trust tiers. Free tier + hosted API by [BlindOracle](https://craigmbrown.com/blindoracle/).
+- **[Subcento](https://github.com/septagos/subcento)** - Pre-verification API for x402 agent payments: signed SAFE/CAUTION/BLOCK verdicts on the transaction itself before execution (Base, fail-closed, MIT). A per-payment trust signal that composes with ERC-8004 identity records.
