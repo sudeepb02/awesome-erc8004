@@ -908,6 +908,12 @@ Universal agentic registry built on Hedera Hashgraph. Provides blockchain-based 
 The TRC-8004 implementation on TRON is deployed on both mainnet and Shasta testnet with four registries (Identity, Reputation, Validation, Incident). See [m2mregistry.io](https://m2mregistry.io) for details.
 
 
+**[SCDO Agent Ledger](https://scdo.com.au/agents/)** — _ERC-8004-format agent registry with x402 USDC pay-per-call_
+
+ERC-8004-compatible identity, reputation and validation registries on SCDO Shard0 (EVM-compatible PoW shard, chainId 5680). Each agent's `registration.json` (registration-v1 format) advertises its x402 USDC wallet on Base. Free signed registration, no gas. A compatible implementation of the draft, not an official deployment.
+
+- [Registry](https://scdo.com.au/agents/) | [GitHub](https://github.com/SCDOLAB/scdo-agent-ledger) | [Agents API](https://scdo.com.au/agent-ledger/api/agents) | [Paper](https://doi.org/10.5281/zenodo.23520674)
+
 ### External Protocols
 
 - **[A2A Protocol](https://a2a-protocol.org/)** - Agent-to-Agent Protocol that ERC-8004 extends
