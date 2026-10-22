@@ -371,6 +371,11 @@ Identity-over-time layer for AI agents on Polygon mainnet. Agents accumulate a s
 - [ISEK Decentralized agent network](https://github.com/isekOS/ISEK)
 - [Awesome A2A agents](https://github.com/isekOS/awesome-a2a-agents)
 
+**[Predge](https://predge.io)** — _Signed delivery verdicts for paid agent calls_
+
+- [Verdicts API docs](https://predge.io/docs#verdicts) - Did the paid service deliver? Returns `delivered` / `not_delivered` / `inconclusive` with reason codes, ed25519-signed and verifiable offline
+- [Contracts](https://github.com/predgeAI/predge-deploy) - `PredgeAgentValidator` (ERC-8004 Validation-Registry-shaped validator with commit-before-outcome) and `AgentJob` (ERC-8183 job escrow with Predge as evaluator), same addresses on every chain, verified on Sourcify
+
 ### Payment Infrastructure
 
 **[Primev](https://primev.xyz)**
