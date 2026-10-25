@@ -432,6 +432,12 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 - Registered as Agent #9665 on the Celo Identity Registry (`0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`) with full registration-v1 metadata (OASF skills, agentWallet, circular domain verification via `/.well-known/agent-registration.json`)
 - [MCP Server](https://www.npmjs.com/package/comprabtc-mcp) - treasury DCA tools (create/renew/cancel plan, portfolio) · [Metadata](https://comprabtc.vercel.app/metadata.json) · [Code](https://github.com/csacanam/comprabtc)
 
+**[AR Data Agent](https://landingen24h.com/celo/?r=awesome8004)**
+
+- Pay-per-call Argentine data and validations for agents, priced in pesos (wARS, Ripio) and settled on Celo mainnet via the Celo x402 facilitator: USD/ARS quotes (oficial, blue, MEP, CCL), INDEC inflation, national holidays and business days, CUIT/CBU checks. 10-15 wARS per call (USDC/USDT also accepted), gasless for the payer, invalid input never charged.
+- Registered as Agent #9988 on the Celo Identity Registry (`0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`), registration file served at `/.well-known/agent-registration.json`
+- [MCP Server](https://github.com/landingen24h/ar-data-agent#use-it-from-an-mcp-client-claude-cursor-any-agent) (`npx -y github:landingen24h/ar-data-agent`, free quote mode) · [Registration](https://landingen24h.com/celo/.well-known/agent-registration.json) · [Code](https://github.com/landingen24h/ar-data-agent)
+
 **[HashProof](https://hashproof.dev)**
 
 - Verifiable credentials API: agents issue diplomas/certificates for $0.10 USDC via x402 (Base or Celo) — registered on-chain on Celo, pinned to IPFS, verifiable by QR against three independent sources.
