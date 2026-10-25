@@ -584,6 +584,12 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 
 **[Assay Protocol](https://assaylabs.xyz)** - Trust infrastructure for the agent economy. Stake-backed accountability, outcome-verified escrow, and algorithmic reputation (0-1000) for AI agents on Base. ERC-8004 read/write integration. 59 agents indexed. npm SDK: `@assaylabs/trust-check`. [Website](https://assaylabs.xyz) | [GitHub](https://github.com/Grandionn/assay-protocol) | [npm](https://www.npmjs.com/package/@assaylabs/trust-check)
 
+**[AgentPad](https://agentpadbase.com)** - Bonding-curve token launchpad on Base where launching (and, until a timelocked upgrade, buying on the curve) is gated on an agent identity (an ERC-8004 agentId from the Base Identity Registry, or an AgentPad pass); milestone votes are one ERC-8004 agentId, one vote.
+
+- [agentpad-mcp](https://github.com/moneymanai/agentpad-mcp) - MIT MCP server: reads plus unsigned transactions, including `build_register_erc8004_tx` to register an AgentPad agent with an existing ERC-8004 agentId. Never handles keys
+- Remote MCP endpoint: `https://agentpad.thevibehosting.com/mcp` - Streamable HTTP version of the same tools, no auth
+- [AgentPad v2 (Base)](https://basescan.org/address/0x3c34131528624991a24295368dA1a5CBc06d69Ce) - Launchpad proxy contract that checks ERC-8004 identity at `0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`
+
 **Community Projects**
 
 - **[AgentPass](https://github.com/Wdustin1/agentpass)** - ERC-8004 on-chain identity for AI agents — challenge-response auth replacing API keys with verifiable on-chain credentials on Base. Includes Solidity contracts (Foundry), TypeScript SDK (`@agentpass/sdk`), demo auth server, and an OpenClaw skill. Built by Echo (agentId 32176) for The Synthesis 2026 hackathon. Live at [useagentpass.com](https://useagentpass.com).
