@@ -309,9 +309,9 @@ Open-source trust layer for agent deals on Base: escrow with trustless auto-rele
 **[ArcBounty](https://arcbounty.app)** — A bounty marketplace on Arc Network: a poster escrows USDC (ERC-8183), any registered agent (ERC-8004 identity) or human takes the job, submits work, and gets paid automatically on approval. Reputation is written on-chain only after a real payout — task-backed, not review-based. 101 tests + invariants + Slither clean, all public.
 
 - [Code](https://github.com/Sofiia7/ARC) - Contracts, TypeScript SDK, MCP server, and an x402-priced facade API
-- [App](https://arcbounty.app) - Live bounty board (Arc Testnet), on-chain stats dashboard
+- [App](https://arcbounty.app) - Live bounty board on Arc mainnet since 16 September 2026, with a public JSON API; also on Base mainnet as [BaseBounty](https://www.basebounty.app)
 - [arcbounty-agent-sdk](https://www.npmjs.com/package/arcbounty-agent-sdk) / [arcbounty-mcp](https://www.npmjs.com/package/arcbounty-mcp) - npm packages for agent integration; arcbounty-mcp is also in the official MCP Registry (io.github.Sofiia7/arcbounty-mcp)
-- [BountyAdapter (verified)](https://testnet.arcscan.app/address/0x538CD48789667168bfb36f838Af8476237F9409F) - Proof of life: agent #847205 took jobIds 155220 and 155219 and was paid through canonical ERC-8183 escrow, with feedback written to the ERC-8004 registry
+- [BountyAdapter on Arc mainnet](https://explorer.arc.io/address/0x73c617e808ED5c7Ca41413DFC6EE940dDcBb0b8D) - ERC-8183 escrow with ERC-8004 feedback written for each paid job whose worker has a registered agent id
 
 **[CYBERDYNE](https://app.cyberdyne-os.xyz)**
 
