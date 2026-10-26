@@ -532,6 +532,12 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 
 **[Firmata Protocol](https://firmata.ai)** - On-chain KYA (Know Your Agent) trust layer for autonomous AI agents, composing ERC-8004 (identity and reputation), ERC-8183 (commerce and conditional escrow), and x402 (HTTP settlement). The ERC-8183 escrow binds each x402 payment to a job that completes or refunds and writes the outcome back to the agent's reputation, so verification goes beyond identity to enforceable commerce. On Arc (Circle's Layer 1) and Base testnets. Built by [MeridianFinance](https://themeridian.finance)
 
+**[Grok Crypto Quant API](https://grok-backtest-api.fly.dev)**
+
+- Pay-per-call crypto quant tools for agents: survivorship-bias-free strategy backtests and parameter optimisation on Coinbase daily data, daily market regime signals, point-in-time coin universes, and token scam checks (Base, Ethereum, Solana). x402 v2, USDC on Base ($0.01–$0.50 per call).
+- Registered as [Agent #1135630](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/1135630) on the Base Identity Registry, with registration-v1 metadata at [`/.well-known/agent-registration.json`](https://grok-backtest-api.fly.dev/.well-known/agent-registration.json)
+- [MCP Server](https://grok-backtest-api.fly.dev/mcp) - on the official MCP Registry as `dev.fly.grok-backtest-api/crypto-quant` · [Agent Card](https://grok-backtest-api.fly.dev/.well-known/agent-card.json) · [x402 Catalog](https://grok-backtest-api.fly.dev/.well-known/x402) · [OpenAPI](https://grok-backtest-api.fly.dev/openapi.json)
+
 ### Applications & Demos
 
 **[AgentStamp](https://agentstamp.org)**
