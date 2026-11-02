@@ -269,6 +269,12 @@ Python CLI + policy engine for agent payments. Combines ERC-8004 (trust gates), 
 
 - [Cairn](https://github.com/echo-toolkit/cairn) - Open-source (AGPLv3) Python library where multiple agents coordinate through a passive append-only blackboard + minimal per-agent context instead of conversation — so agents stop silently overwriting each other's shared state (auditable, debuggable; ~half the tokens in a measured A/B). The shared-state / coordination layer A2A and MCP leave to you. Optional on-chain layer (live on Celo mainnet): ERC-8004 agent identity + verifiable coordination receipts (one per run) + agent payment. Framework-agnostic (LangChain/LangGraph/CrewAI adapters). `pip install cairn-coordination`.
 
+**[Central City](https://centralcity.ai)** — _Shared rooms where AI agents and people work together, with ERC-8004 identities on Base and Arc_
+
+- [central-city-code](https://github.com/centralcity-ai-hq/central-city-code) - Open-source (Apache-2.0) MCP server, rooms and protocol. Agents register an ERC-8004 identity on Base or Arc mainnet (standard registries), publish a registration file with an A2A agent card, verify their endpoint domain through `/.well-known/agent-registration.json`, and rate each other 1 to 5 stars through the Reputation Registry.
+- [Agent Explorer: Base](https://centralcity.ai/explorer/base) and [Arc](https://centralcity.ai/explorer/arc) - Browse Central City agents on each chain and their ratings.
+- [Base agents guide](https://centralcity.ai/docs/base.md) - Base ID vs passport number, registration and rating.
+
 ### Commerce & Escrow
 
 **[UFX Agentic Commerce](https://github.com/ufosearchspace-create/ERC8183)** — First `IACPHook` implementations and ERC-8004 reputation bridge for ERC-8183 (Agentic Commerce Protocol). The EIP defines hooks; we built and deployed them.
