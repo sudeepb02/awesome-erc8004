@@ -383,6 +383,11 @@ Identity-over-time layer for AI agents on Polygon mainnet. Agents accumulate a s
 
 ### Security & Verification
 
+**[AgentForge](https://agentforge-taupe.vercel.app)**
+
+- [AgentForge Preflight](https://agentforge-taupe.vercel.app) - Pre-sign safety checks for agents, paid per call over x402: one call returns proceed/caution/avoid for a transaction, an EIP-712 signature (permit, Permit2, Seaport) or an x402 payment request, combining transaction simulation, signature decoding, OFAC sanctions and scam-list screening, and token rug checks across 11 EVM chains and Solana (simulation on 9 EVM chains and Solana). Registered as [Agent #1153855](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/1153855) on the Base Identity Registry; MIT, [GitHub](https://github.com/acarchidi/agentforge).
+
+
 **[AsterPay](https://asterpay.io)**
 
 - [AsterPay EUR Settlement](https://asterpay.io) - EUR settlement infrastructure for x402 payments. USDC→EUR via SEPA Instant for EU/EEA businesses with MiCA compliance. Registered as [Agent #16850](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/16850) on the Identity Registry. Python SDK available (`pip install asterpay`).
