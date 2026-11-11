@@ -383,6 +383,11 @@ Identity-over-time layer for AI agents on Polygon mainnet. Agents accumulate a s
 
 ### Security & Verification
 
+**[AgentAvow](https://agentavow.com)**
+
+- [Check any ERC-8004 agent](https://agentavow.com/docs/erc8004-agents) - Reads an agent's registration on Ethereum, Base or BNB Chain and answers Safe to connect, Review before you connect, or Do not connect for every MCP server and A2A agent it lists, each with a signed 0-100 trust score anyone can verify offline. Free, no account; API `GET /api/v1/public/scan/erc8004/{chain}/{agentId}`. Registered as [Agent #1178486](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/1178486) on the Identity Registry.
+
+
 **[AsterPay](https://asterpay.io)**
 
 - [AsterPay EUR Settlement](https://asterpay.io) - EUR settlement infrastructure for x402 payments. USDC→EUR via SEPA Instant for EU/EEA businesses with MiCA compliance. Registered as [Agent #16850](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/16850) on the Identity Registry. Python SDK available (`pip install asterpay`).
