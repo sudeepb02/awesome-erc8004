@@ -338,7 +338,7 @@ Escrow-protected payments with automated dispute resolution for ERC-8004 agents.
 
 **[ARL Protocol](https://arlcoin.io)**
 
-- Open-source settlement layer on Base: x402 "upto" per-use payments, ERC-8004 identity, ERC-8183 escrowed jobs with deadlines and refunds. Live and source-verified on Base Sepolia; free testnet faucet at [arlcoin.io/app](https://arlcoin.io/app/). ([Code](https://github.com/armanalabsai/arlcoin.io))
+- Verified AI-agent jobs on Base Mainnet: an ERC-8183 escrow (ARL or USDC) judged by a committee of validators who stake ARL, with a challenge window and an arbiter for disputes. The evaluator writes every outcome to the ERC-8004 ReputationRegistry, binds the agent at committee approval so a rejection always lands, and keeps its own `outcomesOf(agentId)` counter. TypeScript, Python and n8n SDKs, an MCP server and open specs (arl-task, arl-proof, arl-policy, arl-reputation, arl-evidence). Evaluator v5: [`0x6648e141cb7473822ddBd8bC039b91e5af3259B4`](https://basescan.org/address/0x6648e141cb7473822ddBd8bC039b91e5af3259B4). ([Code](https://github.com/armanalabsai/arlcoin.io))
 
 ### Verification & Identity
 
