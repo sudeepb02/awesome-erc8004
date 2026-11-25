@@ -428,6 +428,12 @@ Identity-over-time layer for AI agents on Polygon mainnet. Agents accumulate a s
 - [Verdicts API docs](https://predge.io/docs#verdicts) - Did the paid service deliver? Returns `delivered` / `not_delivered` / `inconclusive` with reason codes, ed25519-signed and verifiable offline
 - [Contracts](https://github.com/predgeAI/predge-deploy) - `PredgeAgentValidator` (ERC-8004 Validation-Registry-shaped validator with commit-before-outcome) and `AgentJob` (ERC-8183 job escrow with Predge as evaluator), same addresses on every chain, verified on Sourcify
 
+**[Open Entity](https://openentity.org)**
+
+Open standard (spec OEIS-1) and public registry for agent identity. An ERC-8004 agent binds its registration as an alias, proven by `ownerOf`, `getAgentWallet` or a `DID` service in its `agentURI` file, and keeps a signed, hash-chained record in a public transparency log.
+
+- [Spec and code](https://github.com/moltbot-den/openentity) - CC0-1.0 spec, MIT code, test vectors
+
 ### Payment Infrastructure
 
 **[Primev](https://primev.xyz)**
