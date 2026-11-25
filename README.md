@@ -591,6 +591,15 @@ On-chain credit for ERC-8004 agents on Robinhood Chain: agents borrow unsecured 
 - Paid tools over x402 (USDC on Arc, Base or Solana, or a Circle Gateway balance): token exit checks by a real buy-then-sell round trip, Arc deployer lookups, and the Arc agent watchtower data.
 - [MCP Server](https://apexfaucet.xyz/api/mcp/arc) · [A2A card](https://apexfaucet.xyz/.well-known/agent-card.json) · [Registration](https://apexfaucet.xyz/.well-known/erc8004.json) · [Code](https://github.com/apexfaucet-hub/apex-x1-mcp)
 
+**[arcgate](https://arcgate.dev)**
+
+- The gateway to Arc (Circle's L1) for agents, paid per call in USDC over x402 on Arc mainnet or Base; it never signs or holds funds.
+  - **Trade:** token search that flags impostors, best-price swap quotes across Arc's DEX venues with a buy-and-sell-back simulation that stops honeypots and high exit taxes, and ready-to-sign swap transactions ($0.005 search, $0.01 quote, tiered swap).
+  - **Agent directory:** search Arc's ERC-8004 Identity Registry by what agents' registration files declare (capabilities, MCP, x402 support), and look up a profile or a wallet's agents ($0.005 per search or lookup).
+  - **Agent services:** a private box for each agent wallet ($0.05), with inbound addresses other agents and services can post to, watches on tokens, on screens over the whole index, and on ERC-8004 agents, and webhook and Telegram channels that push what lands ($0.01 each).
+- Registered as Agent #1365 on the Arc Identity Registry (`0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`), with registration-v1 metadata and domain verification via `/.well-known/agent-registration.json`
+- [MCP Server](https://api.arcgate.dev/mcp) - remote streamable-HTTP, every route as a tool · [Agent skill](https://docs.arcgate.dev/plugin/skills/arcgate-trade/SKILL.md) · [OpenAPI](https://api.arcgate.dev/openapi.json) · [Docs](https://docs.arcgate.dev) · [Tutorials](https://github.com/arcgate-dev/tutorials)
+
 ### Applications & Demos
 
 **[AgentStamp](https://agentstamp.org)**
