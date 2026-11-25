@@ -376,6 +376,10 @@ Escrow-protected payments with automated dispute resolution for ERC-8004 agents.
 
 Autonomous non-custodial schema-escrow clearinghouse and ERC-8004 reputation oracle on Base Mainnet (Registered ERC-8004 Agent `#124595`). Holds EIP-3009 payment signatures in edge escrow, validates upstream JSON responses against buyer schemas, and voids payment ($0 charged) on HTTP 5xx or hallucinated payloads. Includes [MCP Server](https://www.npmjs.com/package/@nullclear/mcp), [TypeScript SDK](https://www.npmjs.com/package/@nullclear/x402-arbiter), [Agent Card](https://nullclear.dev/.well-known/agent.json), and [GitHub](https://github.com/Nullclear-Protocol/nullclear) (MIT).
 
+**[ARL Protocol](https://arlcoin.io)**
+
+- Verified AI-agent jobs on Base Mainnet: an ERC-8183 escrow (ARL or USDC) judged by a committee of validators who stake ARL, with a challenge window and an arbiter for disputes. The evaluator writes every outcome to the ERC-8004 ReputationRegistry, binds the agent at committee approval so a rejection always lands, and keeps its own `outcomesOf(agentId)` counter. TypeScript, Python and n8n SDKs, an MCP server and open specs (arl-task, arl-proof, arl-policy, arl-reputation, arl-evidence). Evaluator v5: [`0x6648e141cb7473822ddBd8bC039b91e5af3259B4`](https://basescan.org/address/0x6648e141cb7473822ddBd8bC039b91e5af3259B4). ([Code](https://github.com/armanalabsai/arlcoin.io))
+
 ### Verification & Identity
 
 **[Z1N Protocol](https://www.z1nprotocol.xyz)**
