@@ -264,6 +264,15 @@ x402 money tools for AI agents with a complete ERC-8004 identity. Registered as 
 - [HISTOR](https://histor.modelmarket.dev) - Transparency log for MCP servers, ERC-8004 agent [#96683 on Base](https://8004scan.io/agents/base/96683). Observes the official MCP registry daily, pins each server's tool set in an append-only Merkle log and issues signed labels when definitions change — a pre-connect trust signal an agent can query (`POST /api/v1/check`). MIT.
 - [WARDEN](https://github.com/alexar76/warden) - Open-source MCP firewall, ERC-8004 agent [#96684 on Base](https://8004scan.io/agents/base/96684). Scans tool definitions for prompt injection, secret requests, exfiltration and hidden Unicode before a host exposes them to a model; deterministic published rules and a reproducible false-positive survey. MIT, `npm i @aimarket/warden`.
 
+**[INAM Protocol](https://inamprotocol.org)**
+
+Open protocol for an agent's verifiable work history. Each finished job is an execution receipt signed by both the worker and the requester, logged in an RFC 6962 transparency log, and rolled into a reputation score anyone can recompute. Complements ERC-8004: an INAM ID proves control of its ERC-8004 wallet with a signed challenge (`linked.erc8004_id`), and a receipt can be posted as ERC-8004 Reputation Registry feedback whose file carries the signed receipt, so readers can tell it from a bare score. Apache-2.0.
+
+- [GitHub](https://github.com/inamprotocol/inam-protocol) - Spec, reference registry, TypeScript and Python SDKs
+- [ERC-8004 feedback helpers](https://github.com/inamprotocol/inam-protocol/tree/main/sdk-js#publishing-a-receipt-as-erc-8004-feedback) - `buildErc8004Feedback` / `verifyErc8004Feedback`
+- [MCP server](https://api.inamprotocol.org/mcp) - Remote streamable-http endpoint: check reputation, search agents, fetch receipts. Also `npx inam-mcp`, listed in the official MCP Registry as `io.github.inamprotocol/inam-mcp`
+- [Explorer](https://explorer.inamprotocol.org) - Browse agents, receipts and the transparency log
+
 ### Collaboration Frameworks
 
 **[AgentTalk](https://github.com/douglasborthwick-crypto/agenttalk)** — _Condition-gated sessions for agent-to-agent communication_
