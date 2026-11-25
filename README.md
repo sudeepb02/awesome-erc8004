@@ -261,6 +261,9 @@ Python CLI + policy engine for agent payments. Combines ERC-8004 (trust gates), 
 
 x402 money tools for AI agents with a complete ERC-8004 identity. Registered as ERC-8004 agent #74094 on Base; its registration file at `/.well-known/erc8004.json` (EIP-8004 `#registration-v1`) declares services, `x402Support` and supported trust models, so any indexer reading the Identity Registry can discover and call it. Paid x402 services (USDC on Base or Polygon): a one-signature USDC bridge between Base and Arc via Circle CCTP (1% fee, referrers earn 20% on-chain), the live official Polymarket price to beat for crypto Up/Down markets ($0.002 per call), tokenized US stock basket vaults on Base from $1, and a USDC gas sponsor from $0.03. Free USDC and x402 debugging tools, plus a remote MCP server (no auth, 24 tools). [Registration](https://api.liquidagent.ai/.well-known/erc8004.json) · [MCP](https://api.liquidagent.ai/mcp) · [OpenAPI](https://api.liquidagent.ai/openapi.json) · [Code](https://github.com/LiquidAgent/liquidagentx402)
 
+- [HISTOR](https://histor.modelmarket.dev) - Transparency log for MCP servers, ERC-8004 agent [#96683 on Base](https://8004scan.io/agents/base/96683). Observes the official MCP registry daily, pins each server's tool set in an append-only Merkle log and issues signed labels when definitions change — a pre-connect trust signal an agent can query (`POST /api/v1/check`). MIT.
+- [WARDEN](https://github.com/alexar76/warden) - Open-source MCP firewall, ERC-8004 agent [#96684 on Base](https://8004scan.io/agents/base/96684). Scans tool definitions for prompt injection, secret requests, exfiltration and hidden Unicode before a host exposes them to a model; deterministic published rules and a reproducible false-positive survey. MIT, `npm i @aimarket/warden`.
+
 ### Collaboration Frameworks
 
 **[AgentTalk](https://github.com/douglasborthwick-crypto/agenttalk)** — _Condition-gated sessions for agent-to-agent communication_
@@ -351,6 +354,8 @@ Escrow-protected payments with automated dispute resolution for ERC-8004 agents.
 - [Contracts + Relay + SDKs (TS/Python)](https://github.com/Stakemate369/8004swap) - Solidity Registry/Settlement, WebSocket RFQ relay, agent SDKs in TypeScript and Python
 - [PROTOCOL.md](https://github.com/Stakemate369/8004swap/blob/main/PROTOCOL.md) - Message format and settlement flow
 - Live on Base Sepolia (testnet, pre-audit): [Registry](https://sepolia.basescan.org/address/0x7Bb793b6Ada038cf9c26c6BB54cA15Db6BD35ed1) · [Settlement](https://sepolia.basescan.org/address/0x5Cc2558dF13739c05cb57Caf0E9cfe1629a6a945)
+
+- [AIMarket Hub](https://modelmarket.dev) - Federated agent-capability market registered as ERC-8004 agent [#96682 on Base](https://8004scan.io/agents/base/96682). Declares that identity inside its signed `/.well-known/ai-market.json` and marks it self-declared, so a reader confirms it against the IdentityRegistry; sells per call over MCP, A2A and x402 with escrow channels and signed receipts. Apache-2.0.
 
 ### Verification & Identity
 
