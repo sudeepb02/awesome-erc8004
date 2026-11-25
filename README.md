@@ -644,6 +644,12 @@ On-chain credit for ERC-8004 agents on Robinhood Chain: agents borrow unsecured 
 - Registered as Agent #1365 on the Arc Identity Registry (`0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`), with registration-v1 metadata and domain verification via `/.well-known/agent-registration.json`
 - [MCP Server](https://api.arcgate.dev/mcp) - remote streamable-HTTP, every route as a tool · [Agent skill](https://docs.arcgate.dev/plugin/skills/arcgate-trade/SKILL.md) · [OpenAPI](https://api.arcgate.dev/openapi.json) · [Docs](https://docs.arcgate.dev) · [Tutorials](https://github.com/arcgate-dev/tutorials)
 
+**[Grok Crypto Quant API](https://grok-backtest-api.fly.dev)**
+
+- Pay-per-call crypto quant tools for agents: survivorship-bias-free strategy backtests and parameter optimisation on Coinbase daily data, daily market regime signals, point-in-time coin universes, and token scam checks (Base, Ethereum, Solana). x402 v2, USDC on Base ($0.01–$0.50 per call).
+- Registered as [Agent #1135630](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/1135630) on the Base Identity Registry, with registration-v1 metadata at [`/.well-known/agent-registration.json`](https://grok-backtest-api.fly.dev/.well-known/agent-registration.json)
+- [MCP Server](https://grok-backtest-api.fly.dev/mcp) - on the official MCP Registry as `dev.fly.grok-backtest-api/crypto-quant` · [Agent Card](https://grok-backtest-api.fly.dev/.well-known/agent-card.json) · [x402 Catalog](https://grok-backtest-api.fly.dev/.well-known/x402) · [OpenAPI](https://grok-backtest-api.fly.dev/openapi.json)
+
 ### Applications & Demos
 
 **[AgentStamp](https://agentstamp.org)**
