@@ -257,6 +257,10 @@ Python CLI + policy engine for agent payments. Combines ERC-8004 (trust gates), 
 
 - [namewhisper-mcp](https://github.com/eggybug42069/namewhisper-mcp) - ENS-native agent identity and intelligence over MCP: provision ENSIP-25 agent identities on ENS names, register agents in the ERC-8004 Identity Registry on Ethereum mainnet, check ERC-8004 reputation, and search the registered-agent directory — alongside ENS search, valuation, and Seaport trading tools (44 total). Remote streamable-http endpoint at `https://namewhisper.ai/mcp`, listed in the official MCP Registry as `ai.namewhisper/ens-tools`. AGPL-3.0.
 
+**[Liquid Agent](https://api.liquidagent.ai)**
+
+x402 money tools for AI agents with a complete ERC-8004 identity. Registered as ERC-8004 agent #74094 on Base; its registration file at `/.well-known/erc8004.json` (EIP-8004 `#registration-v1`) declares services, `x402Support` and supported trust models, so any indexer reading the Identity Registry can discover and call it. Paid x402 services (USDC on Base or Polygon): a one-signature USDC bridge between Base and Arc via Circle CCTP (1% fee, referrers earn 20% on-chain), the live official Polymarket price to beat for crypto Up/Down markets ($0.002 per call), tokenized US stock basket vaults on Base from $1, and a USDC gas sponsor from $0.03. Free USDC and x402 debugging tools, plus a remote MCP server (no auth, 24 tools). [Registration](https://api.liquidagent.ai/.well-known/erc8004.json) · [MCP](https://api.liquidagent.ai/mcp) · [OpenAPI](https://api.liquidagent.ai/openapi.json) · [Code](https://github.com/LiquidAgent/liquidagentx402)
+
 ### Collaboration Frameworks
 
 **[AgentTalk](https://github.com/douglasborthwick-crypto/agenttalk)** — _Condition-gated sessions for agent-to-agent communication_
