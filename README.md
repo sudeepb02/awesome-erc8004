@@ -424,6 +424,18 @@ Off-chain EigenTrust compute layer for ERC-8004. Graph-based trust scores with S
 - [GitHub](https://github.com/creatorrmode-lead/avp-sdk)
 - [Bridge](https://agentveil.dev/v1/bridge/erc8004/{did}/attestation)
 
+
+**[describe.net](https://describe.net)**
+
+Cross-chain reputation index for ERC-8004 agents across 11 chains, including Solana. Aggregation, ordering, and rater weighting are three separate versioned policies, all published at `/health`; the aggregation policy travels in every query response, so a stored answer can be told apart from a stale one. An agent with no ratings returns `null`, not `0`. Aggregate views, search, the first leaderboard page, and per-wallet chain lookup are free; per-subject breakdowns are paid per request over x402 ($0.01-$0.05 USDC on Base, Avalanche, Arbitrum, Optimism, Polygon, or Celo), with no account, signup, or API key. Also reachable over MCP (Streamable HTTP) and A2A JSON-RPC.
+
+- [API docs](https://api.describe.net/docs) - OpenAPI reference for every route
+- [Index status](https://api.describe.net/health) - Per-chain sync state, policy versions, and current index totals, read live
+- [Pricing](https://api.describe.net/pricing) - Per-route price table with the free/paid line and the accepted settlement chains
+- [MCP Server](https://api.describe.net/mcp) - Streamable HTTP endpoint at `api.describe.net/mcp`; the aggregate tools are free
+- [Manifesto](https://api.describe.net/manifesto) - Scoring principles as data, each with the endpoint that enforces it
+- [Agent skill](https://describe.net/skill.md) - Skill file for agents calling the API
+
 ### Agent Services (x402 + ERC-8004)
 
 **[CompraBTC](https://comprabtc.vercel.app)**
