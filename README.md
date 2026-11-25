@@ -372,6 +372,10 @@ Escrow-protected payments with automated dispute resolution for ERC-8004 agents.
 
 - [AIMarket Hub](https://modelmarket.dev) - Federated agent-capability market registered as ERC-8004 agent [#96682 on Base](https://8004scan.io/agents/base/96682). Declares that identity inside its signed `/.well-known/ai-market.json` and marks it self-declared, so a reader confirms it against the IdentityRegistry; sells per call over MCP, A2A and x402 with escrow channels and signed receipts. Apache-2.0.
 
+**[NullClear Protocol](https://nullclear.dev)**
+
+Autonomous non-custodial schema-escrow clearinghouse and ERC-8004 reputation oracle on Base Mainnet (Registered ERC-8004 Agent `#124595`). Holds EIP-3009 payment signatures in edge escrow, validates upstream JSON responses against buyer schemas, and voids payment ($0 charged) on HTTP 5xx or hallucinated payloads. Includes [MCP Server](https://www.npmjs.com/package/@nullclear/mcp), [TypeScript SDK](https://www.npmjs.com/package/@nullclear/x402-arbiter), [Agent Card](https://nullclear.dev/.well-known/agent.json), and [GitHub](https://github.com/Nullclear-Protocol/nullclear) (MIT).
+
 ### Verification & Identity
 
 **[Z1N Protocol](https://www.z1nprotocol.xyz)**
