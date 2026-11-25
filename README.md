@@ -450,6 +450,10 @@ Open standard (spec OEIS-1) and public registry for agent identity. An ERC-8004 
 
 - [AgentForge Preflight](https://agentforge-taupe.vercel.app) - Pre-sign safety checks for agents, paid per call over x402: one call returns proceed/caution/avoid for a transaction, an EIP-712 signature (permit, Permit2, Seaport) or an x402 payment request, combining transaction simulation, signature decoding, OFAC sanctions and scam-list screening, and token rug checks across 11 EVM chains and Solana (simulation on 9 EVM chains and Solana). Registered as [Agent #1153855](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/1153855) on the Base Identity Registry; MIT, [GitHub](https://github.com/acarchidi/agentforge).
 
+**[AgentAvow](https://agentavow.com)**
+
+- [Check any ERC-8004 agent](https://agentavow.com/docs/erc8004-agents) - Reads an agent's registration on Ethereum, Base or BNB Chain and answers Safe to connect, Review before you connect, or Do not connect for every MCP server and A2A agent it lists, each with a signed 0-100 trust score anyone can verify offline. Free, no account; API `GET /api/v1/public/scan/erc8004/{chain}/{agentId}`. Registered as [Agent #1178486](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/1178486) on the Identity Registry.
+
 
 **[AsterPay](https://asterpay.io)**
 
