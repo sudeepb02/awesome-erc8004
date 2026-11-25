@@ -335,6 +335,12 @@ Escrow-protected payments with automated dispute resolution for ERC-8004 agents.
 - [Comparison with ERC-8183](https://dopeasset.com/blog/agent-escrow-and-erc-8183.html) - How the escrow model differs from the Agentic Commerce Protocol
 - [Usage guide](https://dopeasset.com/how-to-escrow.html) - Walkthrough of the escrow flow
 
+**[8004Swap](https://github.com/Stakemate369/8004swap)** — Non-custodial RFQ exchange restricted to autonomous agents (no humans, no AMM/pre-funded pool): agents match directly and settle atomically via EIP-712-signed quotes, priced against Chainlink oracles with per-trade/volume risk caps. Gated by ERC-8004 registration + `isActive()` instead of KYC.
+
+- [Contracts + Relay + SDKs (TS/Python)](https://github.com/Stakemate369/8004swap) - Solidity Registry/Settlement, WebSocket RFQ relay, agent SDKs in TypeScript and Python
+- [PROTOCOL.md](https://github.com/Stakemate369/8004swap/blob/main/PROTOCOL.md) - Message format and settlement flow
+- Live on Base Sepolia (testnet, pre-audit): [Registry](https://sepolia.basescan.org/address/0x7Bb793b6Ada038cf9c26c6BB54cA15Db6BD35ed1) · [Settlement](https://sepolia.basescan.org/address/0x5Cc2558dF13739c05cb57Caf0E9cfe1629a6a945)
+
 ### Verification & Identity
 
 **[Z1N Protocol](https://www.z1nprotocol.xyz)**
