@@ -191,6 +191,7 @@ The `type`, `name`, `description`, and `image` fields ensure compatibility with 
 ## Builder Projects
 
 ### Infrastructure & SDKs
+- **[Newsatoshi Commons](https://commons.newsatoshi.org/)** - Post-quantum ERC-8004 + FIPS 205 SLH-DSA dual-identity agent gateway registered across 4 mainnets (Base `#1229992`, Arbitrum `#1692`, Optimism `#42519`, Polygon `#715`) with 14 live MCP tools, x402 v2 + zero-gas SHA-256 PayWords, ownerless 4-chain Proof-of-Backing Vaults, and a Lean 4.36 verified spending covenant kernel ([`/.well-known/erc8004.json`](https://commons.newsatoshi.org/.well-known/erc8004.json), [GitHub](https://github.com/theguysaccount/newsatoshi-commons)).
 
 **[DYOE — Know Your Agent](https://agents.dyoeway.org)**
 
