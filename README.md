@@ -382,6 +382,13 @@ Autonomous non-custodial schema-escrow clearinghouse and ERC-8004 reputation ora
 
 - Verified AI-agent jobs on Base Mainnet: an ERC-8183 escrow (ARL or USDC) judged by a committee of validators who stake ARL, with a challenge window and an arbiter for disputes. The evaluator writes every outcome to the ERC-8004 ReputationRegistry, binds the agent at committee approval so a rejection always lands, and keeps its own `outcomesOf(agentId)` counter. TypeScript, Python and n8n SDKs, an MCP server and open specs (arl-task, arl-proof, arl-policy, arl-reputation, arl-evidence). Evaluator v5: [`0x6648e141cb7473822ddBd8bC039b91e5af3259B4`](https://basescan.org/address/0x6648e141cb7473822ddBd8bC039b91e5af3259B4). ([Code](https://github.com/armanalabsai/arlcoin.io))
 
+**[G2 Jobs](https://apexfaucet.xyz/g2/jobs/)**
+
+Immutable USDC job escrow on Base and Arc mainnet that emits the ERC-8183 event set, with no owner and a 2% fee. If the evaluator stays silent after delivery, anyone can `settle()` and the provider is paid; rejecting delivered work pays a kill fee fixed at creation. The provider side is the APEX Faucet ERC-8004 agent. Not yet audited.
+
+- [Contract source](https://github.com/apexfaucet-hub/g2-agentkit/blob/main/contracts/G2Jobs.sol) - `G2Jobs.sol`, plus the `@apexfaucet/g2-agentkit` plugin that builds unsigned transactions
+- [Descriptor](https://apexfaucet.xyz/.well-known/g2-jobs.json) - Machine-readable deployments, ABI, terms and job lifecycle
+
 ### Verification & Identity
 
 **[Z1N Protocol](https://www.z1nprotocol.xyz)**
@@ -514,6 +521,21 @@ On-chain credit for ERC-8004 agents on Robinhood Chain: agents borrow unsecured 
 - [@priors/x402](https://www.npmjs.com/package/@priors/x402) - x402 in USDG on Robinhood Chain; `recordGate` checks a payer's record before a merchant serves it
 - [agent001](https://github.com/priors-agents/agent001) - Open-source agent with its own wallet and a Priors credit line
 - [GitHub](https://github.com/priors-agents/priors)
+
+**[Neptuv](https://neptuv.xyz)**
+
+Explained 0-100 trust scores for ERC-8004 agents on Base and Ethereum, where every point shows its reason, with fake-review checks (new wallets, rating rings, review bursts) on each agent page. Also offers Know Your Agent verification, delegation chains, an API and an MCP server.
+
+- [erc8004-agent-auth](https://github.com/EfajTahamidRifat/erc8004-agent-auth) - MIT-licensed library for builders
+
+**[Sigvara](https://sigvara.xyz)**
+
+Computed reputation and slashable bonds for ERC-8004 agents on Arc. Payment-verified 0 to 100 scores with a Merkle evidence root and a challenge window, bonds a committee can slash, and ERC-8004 feedback counted only from paying, bonded reviewers. Live on Arc testnet, MIT licensed, not yet audited.
+
+- [Agent explorer](https://sigvara.xyz/agents) - Scores, bonds and evidence for each registered agent
+- [Reputation model](https://sigvara.xyz/docs/reputation.html) - The factors, caps and how ERC-8004 feedback is filtered
+- [SDK](https://www.npmjs.com/package/@sigvara/protocol-sdk) - TypeScript SDK (`@sigvara/protocol-sdk` on npm), with the `sigvara-mcp` MCP server
+- [GitHub](https://github.com/RunTimeAdmin/Sigvara)
 
 ### Agent Services (x402 + ERC-8004)
 
@@ -659,6 +681,18 @@ On-chain credit for ERC-8004 agents on Robinhood Chain: agents borrow unsecured 
 
 x402 money tools for AI agents with a complete ERC-8004 identity. Registered as ERC-8004 agent #74094 on Base; its registration file at `/.well-known/erc8004.json` (EIP-8004 `#registration-v1`) declares services, `x402Support` and supported trust models, so any indexer reading the Identity Registry can discover and call it. Paid x402 services (USDC on Base or Polygon): a one-signature USDC bridge between Base and Arc via Circle CCTP (1% fee, referrers earn 20% on-chain), the live official Polymarket price to beat for crypto Up/Down markets ($0.002 per call), tokenized US stock basket vaults on Base from $1, and a USDC gas sponsor from $0.03. Free USDC and x402 debugging tools, plus a remote MCP server (no auth, 24 tools). [Registration](https://api.liquidagent.ai/.well-known/erc8004.json) · [MCP](https://api.liquidagent.ai/mcp) · [OpenAPI](https://api.liquidagent.ai/openapi.json) · [Code](https://github.com/LiquidAgent/liquidagentx402)
 
+**[MusedIn](https://musedin.com)**
+
+Job network where AI agents join, get hired, post jobs and start projects, with paid endpoints over x402. Registered as [Agent #96162](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/96162) on the Base Identity Registry.
+
+- [MCP docs](https://github.com/molonlav3/musedin-mcp) - Public MCP documentation
+- [Agent skill](https://musedin.com/skill.md) - Skill file for agents using the service
+
+**[Akashi Notari](https://github.com/self-reality/verifier)**
+
+- [Akashi Notari](https://github.com/self-reality/verifier) - Proof-of-existence notary for agents: anchors a file's SHA-256 hash on Base for $0.01 USDC over x402 (HTTP or MCP), with free proof lookups. Registered as [Agent #98097](https://basescan.org/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/98097) on the Base Identity Registry
+- [MCP Server](https://anchor.akashi-notari.com/mcp) - Listed on the official MCP Registry as `io.github.self-reality/akashi-notari`
+
 ### Applications & Demos
 
 **[AgentStamp](https://agentstamp.org)**
@@ -732,6 +766,7 @@ x402 money tools for AI agents with a complete ERC-8004 identity. Registered as 
 - **[8004 Implementation](https://github.com/zpaynow/8004)** - Community-driven ERC-8004 implementation
 - **[erc-8004-demo-agent](https://github.com/Eversmile12/erc-8004-demo-agent)** - Minimal reference agent demonstrating registration and feedback flows
 - **[erc-8004-agents-explorer-demo](https://github.com/Eversmile12/erc-8004-agents-explorer-demo)** - Demo scanner and explorer for browsing on-chain ERC-8004 data
+- **[SCVD General Store](https://github.com/seancrecord/scvd-general-store-repo)** - Open-source evidence observatory for agentic commerce with an ERC-8004 identity on Base (agent #86957); its public [registration file](https://scvd.store/.well-known/agent-registration.json) links its MCP, A2A, OASF and x402 discovery surfaces
 
 ### Educational Resources
 
@@ -771,6 +806,7 @@ Tools for browsing and querying on-chain ERC-8004 registries.
 - **[Toll agent census](https://t0ll.xyz/agents/census)** - Reads the ERC-8004 agents registered on Robinhood Chain and records, per agent, whether its registration card loads, whether its MCP server answers an initialize call, whether its x402 endpoint returns payment terms, and whether the x402 payTo is the registered agentWallet. One agent at a time through the `check_agent` tool on the remote MCP server `https://t0ll.xyz/mcp` (no key). Toll is registered as agent #20030 on Robinhood Chain
 - **[TradingAgentStack ERC-8004 Trading Agents](https://tradingagentstack.com/erc-8004-trading-agents/)** - Daily index of the Identity Registry on Ethereum, Base, BNB Chain and Arbitrum that keeps only agents whose wallets actually trade, with returns and drawdowns computed from Hyperliquid data and an open per-chain funnel.
 - **[Agent Audit Office](https://agentauditoffice.com)** - Independent auditor that grades ERC-8004 agents from observed endpoint uptime and verified third-party x402 payments; free API and MCP server
+- **[Sato Hub](https://satohub.ai/agent-economy/erc8004)** - Weekly ERC-8004 Identity Registry measurements across ten EVM chains (registered ids, new registrations, sampled owner activity and registration-file resolution), reported per chain and never summed; CC-BY-4.0 export at `/api/export/adoption.{json,csv,ndjson}` with method, evidence tier and sample size on every row, plus a free MCP server
 
 ## Research & Papers
 
@@ -872,6 +908,7 @@ See the [contracts repository](https://github.com/erc-8004/erc-8004-contracts) f
 - **[OASF (Open Agent Specification Format)](https://github.com/agntcy/oasf)** - Skill and capability taxonomy for AI agents; used alongside ERC-8004 agent cards
 - **[PayAI](https://payai.network/)** - x402 payment facilitator enabling per-request micropayments for agents on Base and Polygon
 - **[Registry Brokers by HashgraphDAO](https://registry.hashgraphonline.com/)** - Cross-network agent discovery bridging Hedera and EVM registries
+- **[HEY Research Lab](https://heyresearch.xyz/developers/agents/stats)** - Daily ERC-8004 registration counts on Robinhood Chain (4663), read from the Identity Registry's events with the as-of block and definition (`/api/agent/stats`); also registered agent #8783 with A2A and MCP endpoints
 
 ---
 
