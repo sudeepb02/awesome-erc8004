@@ -36,20 +36,9 @@ We welcome the following types of contributions:
 
 ### 3. Contribution Process
 
-#### Option A: GitHub Issues (Recommended for single additions)
+New resources and updates to existing entries are accepted through pull requests. Issues that propose a new resource are closed with a request to open a pull request.
 
-1. [Create a new issue](https://github.com/sudeepb02/awesome-erc8004/issues/new)
-2. Use the title format: `Add: [Resource Name]`
-3. Provide the following information:
-   ```
-   **Resource Name**:
-   **URL**:
-   **Category**:
-   **Description**:
-   **Why it should be included**:
-   ```
-
-#### Option B: Pull Request (For multiple additions or changes)
+#### Pull Request
 
 1. Fork this repository
 2. Create a new branch: `git checkout -b add-resource-name`
@@ -58,6 +47,10 @@ We welcome the following types of contributions:
 5. Commit your changes: `git commit -m "Add [Resource Name]"`
 6. Push to your branch: `git push origin add-resource-name`
 7. Create a pull request
+
+#### GitHub Issues
+
+Use [issues](https://github.com/sudeepb02/awesome-erc8004/issues/new) for questions, broken links, or outdated entries you cannot fix yourself.
 
 ### 4. Formatting Guidelines
 
