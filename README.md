@@ -718,6 +718,13 @@ x402 money tools for AI agents with a complete ERC-8004 identity. Registered as 
 - Remote MCP endpoint: `https://agentpad.thevibehosting.com/mcp` - Streamable HTTP version of the same tools, no auth
 - [AgentPad v2 (Base)](https://basescan.org/address/0x3c34131528624991a24295368dA1a5CBc06d69Ce) - Launchpad proxy contract that checks ERC-8004 identity at `0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`
 
+**[Brain On BNB AI ($BOBAI)](https://brainonbnb.com)** — _Read-only on-chain data agent for a live BNB Chain token_
+
+- [MCP Server](https://brainonbnb.com/mcp) - 6 tools exposing verifiable $BOBAI on-chain data: token info, total burned, circulating supply, any-wallet balances, official links, and DEX trade info (PancakeSwap V2 router/pair plus fee-on-transfer swap parameters so an agent can swap the token without reverting)
+- [Agent Card](https://brainonbnb.com/.well-known/agent-card.json) - ERC-8004 + A2A compliant agent card
+- Registered as [Agent #49467](https://bscscan.com/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/49467) on the BNB Chain Identity Registry (`eip155:56:0x8004A169FB4a3325136EB29fA0ceB6D2e539a432#49467`)
+- [Source](https://github.com/mmxrealQQ/bobai-buyburn) - Open source; contract verified on BscScan & renounced, fair launch on Four.Meme
+
 **Community Projects**
 
 - **[AgentPass](https://github.com/Wdustin1/agentpass)** - ERC-8004 on-chain identity for AI agents — challenge-response auth replacing API keys with verifiable on-chain credentials on Base. Includes Solidity contracts (Foundry), TypeScript SDK (`@agentpass/sdk`), demo auth server, and an OpenClaw skill. Built by Echo (agentId 32176) for The Synthesis 2026 hackathon. Live at [useagentpass.com](https://useagentpass.com).
