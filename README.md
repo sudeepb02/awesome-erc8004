@@ -28,7 +28,7 @@
 
 ## What is ERC-8004?
 
-ERC-8004 is an Ethereum standard that extends the Agent-to-Agent (A2A) Protocol with a trust layer, enabling participants to discover, choose, and interact with agents across organizational boundaries without pre-existing trust. It introduces three lightweight, on-chain registries:
+ERC-8004 is an Ethereum standard for discovering, choosing, and interacting with agents across organizational boundaries without pre-existing trust. It adds discovery and trust to agent protocols such as A2A and MCP through three lightweight, on-chain registries:
 
 ### Core Components
 
@@ -50,25 +50,26 @@ ERC-8004 is an Ethereum standard that extends the Agent-to-Agent (A2A) Protocol 
 ### Trust Models
 
 1. **Reputation-based** - Client feedback using signed fixed-point values, tags, and metadata
-2. **Crypto-economic** - Stake-secured validation with economic incentives
-3. **Crypto-verification** - TEE attestations and zkML proofs for cryptographic trust
+2. **Crypto-economic** - Validation through stake-secured re-execution of the agent's work
+3. **zkML proofs** - Zero-knowledge machine learning proofs checked by validators
+4. **TEE attestation** - Trusted execution environment (TEE) oracles that attest to the agent's work
 
 ## Official Resources
 
-- **[ERC-8004 Official Website](http://8004.org)** - Official website for ERC-8004: Trustless Agents
+- **[ERC-8004 Official Website](https://www.8004.org)** - Official website for ERC-8004: Trustless Agents
 - **[EIP-8004 Specification](https://eips.ethereum.org/EIPS/eip-8004)** - Official Ethereum Improvement Proposal
 - **[ERC8004SPEC.md](https://github.com/erc-8004/erc-8004-contracts/blob/master/ERC8004SPEC.md)** - Specification file in the contracts repository
 - **[ERC-8004 Best Practices](https://github.com/erc-8004/best-practices)** - Official guides covering agent registration (`Registration.md`) and reputation usage (`Reputation.md`)
 - **[8004.org/build](https://www.8004.org/build)** - Developer hub with tools, SDKs, and integration resources
 - **[8004.org Blog](https://www.8004.org/blog)** - Official blog
-- **[A2A Protocol Specification](https://a2a-protocol.org/latest/specification/)** - Agent-to-Agent Protocol that ERC-8004 extends
+- **[A2A Protocol Specification](https://a2a-protocol.org/latest/specification/)** - Agent-to-Agent Protocol; ERC-8004 registration files can list A2A endpoints
 
 ## Specification
 
 ### Current Status
 
-- **Status**: Draft (EIP process), contracts are audited and final
-- **Registries**: Identity and Reputation final contracts deployed; Validation Registry under active revision
+- **Status**: Draft (EIP process); contracts audited by Cyfrin, Nethermind, and the Ethereum Foundation Security Team
+- **Registries**: Identity and Reputation registries deployed as upgradeable contracts; Validation Registry under active revision
 - **Specification**: [ERC8004SPEC.md](https://github.com/erc-8004/erc-8004-contracts/blob/master/ERC8004SPEC.md) in the contracts repository
 
 ### Architecture Overview
@@ -168,7 +169,7 @@ ERC-8004 is an Ethereum standard that extends the Agent-to-Agent (A2A) Protocol 
 }
 ```
 
-The `type`, `name`, `description`, and `image` fields ensure compatibility with ERC-721 apps. The `services` list is fully customizable. The `supportedTrust` field is optional; if absent, the registration is used for discovery only.
+The `type`, `name`, `description`, and `image` fields ensure compatibility with ERC-721 apps. The `services` list is fully customizable. The `supportedTrust` field is optional; if absent or empty, the registration is used for discovery only.
 
 ## Community Calls & Content
 
@@ -178,13 +179,13 @@ The `type`, `name`, `description`, and `image` fields ensure compatibility with 
 - **[Community Call #1 Slides](https://docs.google.com/presentation/d/1DUAl2MxHw0J5jSr7Ap5eCCzNLMSbCQ3LcCZyFMNm3Y4/edit?usp=sharing)** - Presentation slides from September 23, 2025 call
 - **[Trustless Agents Call #2](https://www.youtube.com/watch?v=J3PkdQEZWK0)** - Second community call recording
 
-### Events & Conferences
+### Past Events
 
-- **[Trustless Agents Day - Devconnect](https://devconnect.org/calendar?event=trustlessagentsday)** - Full-day summit at Devconnect exploring Ethereum as coordination layer for AI economy (November 21, 2025)
+- **[Trustless Agents Day - Devconnect](https://luma.com/i1vu0n7p)** - Full-day summit at Devconnect exploring Ethereum as coordination layer for AI economy (November 21, 2025)
 - **[8004 Community Call #3](https://lu.ma/2kvxberc)** - Third community call (November 12, 2025)
 - **[Builder Nights Denver](https://lu.ma/bndenver)** - In-person builder event in Denver (February 17, 2026)
 - **[Agentic Brunch - ERC-8004](https://lu.ma/j57z0k64)** - Community brunch event (February 25, 2026)
-- **[8004 Launch Day](https://lu.ma/658en7zs)** - Official mainnet launch event (March 17, 2026)
+- **[8004 Launch Day](https://lu.ma/658en7zs)** - Online launch event (March 17, 2026)
 
 ---
 
@@ -770,7 +771,6 @@ Job network where AI agents join, get hired, post jobs and start projects, with 
 
 ### Educational Resources
 
-- **[Trustless Agents Course](https://intensivecolearn.ing/en/programs/trustless-agents)** - Comprehensive course on trustless agents and ERC-8004
 - **[Sparsity AI Workshop](https://www.youtube.com/watch?v=jqOZj399BLE)** - Build an ERC-8004 Trustless Agent with TEE
 
 ## Discussions & Forums
@@ -778,7 +778,7 @@ Job network where AI agents join, get hired, post jobs and start projects, with 
 ### Official Channels
 
 - **[Ethereum Magicians Discussion](https://ethereum-magicians.org/t/erc-8004-trustless-agents/25098)** - Official discussion thread for ERC-8004
-- **[GitHub Issues](https://github.com/ethereum/ERCs/pull/1170)** - Technical discussions and feedback on the specification
+- **[Original ERC Pull Request](https://github.com/ethereum/ERCs/pull/1170)** - Pull request that added ERC-8004 to the ERCs repository (merged August 2025)
 
 ### Community Groups
 
@@ -881,7 +881,7 @@ The contracts are deployed as per-chain singletons. The Identity Registry uses v
 | Arc       | [0x8004A169...432](https://explorer.arc.io/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432)          | [0x8004BAa1...b63](https://explorer.arc.io/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63)          |
 | Robinhood | [0x8004A169...432](https://robinhoodchain.blockscout.com/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432) | [0x8004BAa1...b63](https://robinhoodchain.blockscout.com/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63) |
 
-See the [contracts repository](https://github.com/erc-8004/erc-8004-contracts) for the full list including SKALE, GOAT Network, MegaETH, Metis, XLayer, and all testnet addresses (Hedera, Arc).
+See the [contracts repository](https://github.com/erc-8004/erc-8004-contracts) for the full list including SKALE, GOAT Network, MegaETH, Metis, XLayer, Billions, Injective, 0G, and all testnet addresses.
 
 ### SDKs and Libraries
 
@@ -891,15 +891,15 @@ See the [contracts repository](https://github.com/erc-8004/erc-8004-contracts) f
 - **[create-8004-agent](https://www.npmjs.com/package/create-8004-agent)** - CLI scaffolding package (`npx create-8004-agent`) for bootstrapping ERC-8004 agents
 - **[Lucid Agents / Daydreams](https://docs.daydreams.systems/)** - Agent framework with built-in ERC-8004 integration
 - **[ChaosChain SDK](https://github.com/ChaosChain/chaoschain/tree/main/packages/sdk)** - Full-featured JavaScript/TypeScript SDK
-- **[erc-8004-js](https://github.com/tetratorus/erc-8004-js)** - Lightweight JavaScript library
+- **[erc-8004-js](https://github.com/tetratorus/erc-8004-js)** - Lightweight JavaScript library (implements an earlier draft of the spec)
 - **[Azeth SDK (`@azeth/sdk`)](https://www.npmjs.com/package/@azeth/sdk)** - Full-stack TypeScript SDK for ERC-8004 identity, reputation, discovery, and x402 payments
+- **[agentwallet-sdk](https://www.npmjs.com/package/agentwallet-sdk)** - Non-custodial TypeScript SDK for AI agents: ERC-8004 identity, x402 payments, CCTP cross-chain transfers, Uniswap V3 swaps. First ERC-8004 implementation on npm with 158 tests.
 
 #### Python
 
 - **[Agent0 SDK](https://sdk.ag0.xyz/)** - Python support included alongside TypeScript
-- **[erc-8004-py](https://github.com/tetratorus/erc-8004-py)** - Python implementation
+- **[erc-8004-py](https://github.com/tetratorus/erc-8004-py)** - Python implementation (implements an earlier draft of the spec)
 - **[chaoschain-sdk](https://pypi.org/project/chaoschain-sdk/)** - Available on PyPI
-- **[agentwallet-sdk](https://www.npmjs.com/package/agentwallet-sdk)** - Non-custodial TypeScript SDK for AI agents: ERC-8004 identity, x402 payments, CCTP cross-chain transfers, Uniswap V3 swaps. First ERC-8004 implementation on npm with 158 tests.
 - **[trc8004-m2m](https://github.com/M2M-TRC8004-Registry/trc8004-m2m-sdk)** - TRC-8004 Python SDK for TRON (async, Pydantic models)
 
 ### Infrastructure & Data
@@ -1069,15 +1069,11 @@ function getValidatorRequests(address validatorAddress) external view returns (b
 - **[RFC 7071](https://datatracker.ietf.org/doc/html/rfc7071)** - A Media Type for Reputation Interchange (Reputons)
 - **[ERC-721](https://eips.ethereum.org/EIPS/eip-721)** - Non-Fungible Token Standard (base for Identity Registry)
 
-### Related Services
-
-- **[EAS (Ethereum Attestation Service)](https://attest.org/)** - Referenced for on-chain attestations
-
 ## Related Standards
 
 ### Ethereum Ecosystem
 
-- **[ERC-8001](https://github.com/ethereum/ERCs/issues/XXX)** - Agent-to-Agent coordination (mentioned in discussions)
+- **[ERC-8001](https://eips.ethereum.org/EIPS/eip-8001)** - Agent Coordination Framework for multi-party agent coordination using EIP-712 attestations
 - **[EAS](https://attest.org/)** - Ethereum Attestation Service for on-chain attestations
 
 
@@ -1096,8 +1092,8 @@ The TRC-8004 implementation on TRON is deployed on both mainnet and Shasta testn
 
 ### External Protocols
 
-- **[A2A Protocol](https://a2a-protocol.org/)** - Agent-to-Agent Protocol that ERC-8004 extends
-- **[x402 Payment Standard](https://www.x402.org/)** - Referenced for potential payment integration
+- **[A2A Protocol](https://a2a-protocol.org/)** - Agent-to-Agent Protocol; ERC-8004 registration files can list A2A endpoints
+- **[x402 Payment Standard](https://www.x402.org/)** - HTTP payment protocol; the ERC shows how x402 proof of payment can enrich feedback
 
 ## FAQ
 
@@ -1401,7 +1397,3 @@ To the extent possible under law, the contributors have waived all copyright and
 <p><em>Made with ❤️ by the ERC-8004 community</em></p>
 
 </div>
-
-## Security & Auditing Tools
-
-- **[MASSAT Framework](https://github.com/craigmbrown/massat-framework)** - Open-source security audit toolkit for multi-agent AI systems with ERC-8004 passport verification. Covers OWASP ASI01-ASI10 threat categories. Validates agent identity, delegation chains, and trust tiers. Free tier + hosted API by [BlindOracle](https://craigmbrown.com/blindoracle/).
