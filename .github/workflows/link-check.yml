@@ -1,0 +1,82 @@
+name: Link check
+
+on:
+  pull_request:
+    paths:
+      - "**.md"
+  schedule:
+    # Mondays at 03:30 UTC (9:00 am IST)
+    - cron: "30 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  # 403: sites that block bots (npm, block explorers); 405/406: POST-only MCP endpoints; 429: rate limits.
+  # URL templates with {placeholders} are not real links.
+  LYCHEE_ARGS: >-
+    --no-progress
+    --accept '200..=299,403,405,406,429'
+    --max-retries 2
+    --timeout 30
+    --exclude '(\{|%7B)'
+
+jobs:
+  pull-request-links:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      # Checks only lines added by the pull request, so existing links never block a contribution
+      - name: Collect added lines
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          git diff --unified=0 "origin/$BASE_REF...HEAD" -- '*.md' \
+            | grep -E '^\+' | grep -vE '^\+\+\+' | sed 's/^+//' > added-lines.md || true
+
+      - name: Check added links
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
+        with:
+          args: ${{ env.LYCHEE_ARGS }} added-lines.md
+          failIfEmpty: false
+
+  weekly-links:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Check all links
+        id: lychee
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
+        with:
+          args: ${{ env.LYCHEE_ARGS }} README.md CONTRIBUTING.md
+          fail: false
+
+      # Reuses the open report issue, if any, instead of opening a new one each week
+      - name: Find open report issue
+        if: steps.lychee.outputs.exit_code != 0
+        id: report
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          issue_number=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --label broken-links \
+            --json number --jq '.[0].number // empty' || true)
+          echo "issue_number=$issue_number" >> "$GITHUB_OUTPUT"
+
+      - name: Open or update report issue
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@fca9117c27cdc29c6c4db3b86c48e4115a786710 # v6.0.0
+        with:
+          title: Broken links report
+          content-filepath: ./lychee/out.md
+          labels: broken-links
+          issue-number: ${{ steps.report.outputs.issue_number }}
