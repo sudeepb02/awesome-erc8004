@@ -99,7 +99,7 @@ Place resources in the most appropriate section:
 
 ### 6. Review Process
 
-1. **Automated Checks**: Links will be automatically checked for availability
+1. **Automated Checks**: Links added in a pull request are checked automatically, and all links are checked weekly
 2. **Community Review**: Other contributors may review and comment
 3. **Maintainer Approval**: Final approval by repository maintainers
 4. **Feedback**: You may receive feedback for improvements
